@@ -1,0 +1,23 @@
+[project]
+name = sitio-web-pypereira
+url = https://PyPereira.co
+url_style = absolute
+
+[alternatives.es]
+name = Spanish
+primary = yes
+locale = es
+
+[alternatives.en]
+name = English
+url_prefix = /en/
+locale = en
+
+[servers.develop]
+name = Develop
+target = ghpages+https://pythonpereira/sitio-web-desarrollo?cname=develop.pypereira.co
+default = yes
+
+[servers.production]
+name = Production
+target = ghpages+https://pythonpereira/sitio-web-produccion?cname=www.pypereira.co
