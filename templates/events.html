@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% from "macros/events.html" import render_event %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <h1>lISTA DE EVENTOS</h1>
+
+  {% for child in this.pagination.items %}
+    {{ render_event(child, from_index=true) }}
+  {% endfor %}
+
+  {{ render_pagination(this.pagination) }}
+{% endblock %}

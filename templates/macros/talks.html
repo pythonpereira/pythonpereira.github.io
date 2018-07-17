@@ -1,0 +1,19 @@
+{% macro render_talk(talk, from_index=false) %}
+<div class="blog-post">
+  {% if from_index %}
+  <h2>
+    <a href="{{ talk|url }}">{{ talk.title }}</a>
+  </h2>
+  {% else %}
+  <h2>{{ talk.title }}</h2>
+  {% endif %}
+  <p class="meta">
+    written by {% if talk.twitter_handle %}
+    <a href="https://twitter.com/{{ talk.twitter_handle
+        }}">{{ talk.author or talk.twitter_handle }}</a>
+    {% else %} {{ talk.author }} {% endif %} on {{ talk.pub_date }}
+  </p>
+  {{ talk.body }}
+  <hr />
+</div>
+{% endmacro %}

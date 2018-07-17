@@ -1,0 +1,21 @@
+{% macro render_event(event, from_index=false) %}
+  <div class="blog-post">
+  {% if from_index %}
+    <h2><a href="{{ event|url }}">{{ event.title }}</a></h2>
+  {% else %}
+    <h2>{{ event.title }}</h2>
+  {% endif %}
+  <p class="meta">
+    written by
+    {% if event.twitter_handle %}
+      <a href="https://twitter.com/{{ event.twitter_handle
+        }}">{{ event.author or event.twitter_handle }}</a>
+    {% else %}
+      {{ event.author }}
+    {% endif %}
+    on {{ event.pub_date }}
+  </p>
+  {{ event.body }}
+  </div>
+  <hr />
+{% endmacro %}
