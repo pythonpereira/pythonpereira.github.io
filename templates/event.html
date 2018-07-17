@@ -3,12 +3,13 @@
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-
+  <h1>{{ this.title }}</h1>
+  {{ this.body }}
   <hr />
   <h2>Lista de Charlas</h2>
   {% for child in this.pagination.items %}
     {{ render_talk(child, from_index=true) }}
   {% endfor %}
 
-  {{ render_talk(this) }}
+  {{ render_pagination(this.pagination) }}
 {% endblock %}
