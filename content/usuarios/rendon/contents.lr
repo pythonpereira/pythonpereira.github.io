@@ -7,3 +7,11 @@ last_name: Rendon
 name: Alejandro E.
 ---
 type: persona
+---
+city: Pereira
+---
+country: Colombia
+---
+dob: 1995-01-15
+---
+province: Risaralda
