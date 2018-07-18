@@ -1,5 +1,4 @@
 {% macro render_event(event, from_index=false) %}
-  <div class="blog-post">
   {% if from_index %}
     <h2><a href="{{ event|url }}">{{ event.title }}</a></h2>
   {% else %}
@@ -15,7 +14,4 @@
     {% endif %}
     on {{ event.pub_date }}
   </p>
-  {{ event.body }}
-  </div>
-  <hr />
 {% endmacro %}
