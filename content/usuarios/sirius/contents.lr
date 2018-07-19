@@ -1,0 +1,28 @@
+username: sirius
+---
+city: Pereira
+---
+country: Colombia
+---
+email: info@sirius.utp.edu.co
+---
+github_handle: labsirius
+---
+members:
+
+#### member ####
+username: aerendon
+----
+position: Investigador
+----
+date_start: 2015-06-01
+----
+date_end: 
+---
+name: Grupo de Investigación Sirius
+---
+province: Risaralda
+---
+image_alt: logo_sirius_horizontal.png
+---
+type: organizacion
