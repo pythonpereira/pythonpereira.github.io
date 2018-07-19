@@ -20,4 +20,4 @@ default = yes
 
 [servers.production]
 name = Production
-target = ghpages+https://pythonpereira/sitio-web-produccion?cname=www.pypereira.co
+target = ghpages+https://pythonpereira/sitio-web-produccion?cname=pypereira.co

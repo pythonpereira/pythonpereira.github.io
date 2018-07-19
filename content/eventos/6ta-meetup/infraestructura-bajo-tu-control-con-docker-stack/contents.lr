@@ -1,0 +1,9 @@
+title: Infraestructura bajo tu control con Docker Stack
+---
+information:
+
+¿Balanceo de carga a través de uno o más servidores, despliegues sin tiempo de inactividad y escalamiento autónomo de micro servicios?
+Estas son características que obtienes comprando servicios avanzados como AWS o Google Cloud Platform, pero qué pasa si no quieres usarlos, no tienes acceso a ellos o no eres un experto para configurarlos? Y bien, cómo los pruebas en tu máquina local o en tu ambiente de integración continua? En esta charla aprenderás a configurar docker stack en tu máquina local o en un servidor privado virtual para obtener todas estas ventajas usando código fácil de entender y que tú mismo controlas.
+
+---
+pub_date: 2018-07-25
