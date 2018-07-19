@@ -1,8 +1,7 @@
-title: Welcome to sitio-web-pypereira!
+title: Python Pereira
 ---
 body:
 
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages and a blog.
+PyPereira, Comunidad Pereirana creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados 
 ---
 _template: index.html

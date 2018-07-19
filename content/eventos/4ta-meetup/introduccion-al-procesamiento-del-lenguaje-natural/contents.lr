@@ -1,0 +1,19 @@
+title: Introducción al procesamiento del lenguaje natural
+---
+information:
+
+Durante la historia de humanidad el conocimiento, en su mayor parte se comunica, se guarda y se maneja en la forma de lenguaje natural,Sin embargo, lo que es conocimiento para nosotros no lo es para las computadoras.
+En esta charla aprenderemos acerca de ¿Qué es el procesamiento del Lenguaje?, ¿Qué se encarga de hacer? y algunas técnicas se usan para afrontar los problemas de este tipo, además en que campos de la investigación esta siendo utilizado, Finalmente aprenderemos a hacer un clasificador de críticas de un restaurante apoyandonos en el uso de la librería NTLK una de las mas populares para el procesamiento de texto en python.
+---
+pub_date: 2018-04-25
+---
+repository_url: https://github.com/pythonpereira/4MeetupPyPereira
+---
+slides_url: https://slides.com/pythonpereira/intro-procesamiento-lenguaje-natural
+---
+speakers:
+
+#### user ####
+username: germangrandas
+----
+description: 
