@@ -1,17 +1,17 @@
 {% macro render_event(event, from_index=false) %}
-  {% if from_index %}
-    <h2><a href="{{ event|url }}">{{ event.title }}</a></h2>
-  {% else %}
-    <h2>{{ event.title }}</h2>
-  {% endif %}
-  <p class="meta">
-    written by
-    {% if event.twitter_handle %}
-      <a href="https://twitter.com/{{ event.twitter_handle
-        }}">{{ event.author or event.twitter_handle }}</a>
-    {% else %}
-      {{ event.author }}
-    {% endif %}
-    on {{ event.pub_date }}
-  </p>
+  <article class="style2">
+    <span class="image">
+      {% if event.image %} 
+      <img src="{{ event|url }}{{ event.image }}" alt="" />
+      {% else %}
+      <img src="/static/images/pic01.jpg" alt="" /> 
+      {% endif %}
+    </span>
+    <a href="{{ event|url }}">
+      <h2>{{ event.title }}</h2>
+      <div class="content">
+        <p>{{event.summary}}</p>
+      </div>
+    </a>
+  </article>
 {% endmacro %}

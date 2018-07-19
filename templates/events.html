@@ -3,11 +3,12 @@
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <h1>lISTA DE EVENTOS</h1>
-
+  <h1>Lista de Eventos</h1>
+  <section class="tiles">
   {% for child in this.pagination.items %}
     {{ render_event(child, from_index=true) }}
   {% endfor %}
+  </section>
 
   {{ render_pagination(this.pagination) }}
 {% endblock %}
