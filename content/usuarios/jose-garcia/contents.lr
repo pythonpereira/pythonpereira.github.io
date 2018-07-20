@@ -9,3 +9,5 @@ last_name: Garcia
 name: Jose
 ---
 type: persona
+---
+image: perfil.jpg

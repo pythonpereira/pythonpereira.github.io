@@ -2,6 +2,6 @@ _model: users
 ---
 title: Lista de Usuarios
 ---
-body: # Lista de usuarios
+body: ## Lista de usuarios
 ---
 _template: users.html

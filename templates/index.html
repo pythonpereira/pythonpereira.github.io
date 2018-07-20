@@ -1,18 +1,23 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h2>Sobre PyPereira</h2>
+<div class="row justify-content-md-center">
+  <h2>Sobre PyPereira</h2>
+</div>
 <section>
-  <p>Comunidad creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados, con el fin de crear y fortalecer una red de conocimiento que ayude con el progreso de la región.</p>
-
-  <a href="/acerca-de" class="button primary">Más información</a>
+  <p class="text-center">Comunidad creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados, con el fin de crear y fortalecer una red de conocimiento que ayude con el progreso de la región.</p>
+  <div class="row justify-content-md-center">
+    <a href="/acerca-de" class="button primary">Más información</a>
+  </div>
 </section>
 
 <hr />
-<h2>Equipo Organizador</h2>
+<div class="row justify-content-md-center">
+  <h2>Equipo Organizador</h2>
+</div>
 
 <section>
-  <div class="row gtr-uniform">
+  <div class="row justify-content-md-center">
     {%- for block in this.team.blocks -%}
     {%- set user = site.get('/usuarios/' + block.username) -%}
     <div class="col-3">
@@ -62,9 +67,11 @@
   </div>
 </section>
 <hr />
-<section>
+<div class="row justify-content-md-center">
   <h2>Sponsors</h2>
-  <div class="row gtr-uniform">
+</div>
+<section>
+  <div class="row justify-content-md-center">
     {%- for block in this.sponsors.blocks -%} {%- set user = site.get('/usuarios/' + block.username) -%}
     <div class="col-3">
       {% if user.image_alt %}
