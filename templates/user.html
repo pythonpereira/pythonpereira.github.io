@@ -1,4 +1,6 @@
-{% extends "page.html" %} {% block title %}{{ this.name }} {{ this.last_name }}{% endblock %} {% block content %}
+{% extends "page.html" %}
+{% block title %}{{ this.name }} {{ this.last_name }}{% endblock %}
+{% block content %}
 <section class="about" id="about">
   <div class="content">
     <div class="row">
@@ -86,7 +88,8 @@
         <h2>Equipo Organizador</h2>
 
         <div class="row justify-content-md-center">
-          {%- for block in this.members.blocks -%} {%- set user = site.get('/usuarios/' + block.username) -%}
+          {%- for block in this.members.blocks -%}
+          {%- set user = site.get('/usuarios/' + block.username) -%}
           <div class="col-lg-3 col-md-3 col-xs-12">
 
             <a href="{{ user|url }}">

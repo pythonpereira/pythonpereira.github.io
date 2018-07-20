@@ -5,3 +5,35 @@ body:
 PyPereira, Comunidad Pereirana creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados 
 ---
 _template: index.html
+---
+sponsors:
+
+#### organization ####
+username: sirius
+#### organization ####
+username: monoku
+#### organization ####
+username: netha
+---
+team:
+
+#### user ####
+username: aerendon
+----
+description: 
+#### user ####
+username: anaguicas
+----
+description: 
+#### user ####
+username: carogomezt
+----
+description: 
+#### user ####
+username: jotangutierrez
+----
+description: 
+#### user ####
+username: leiverandres
+----
+description: 
