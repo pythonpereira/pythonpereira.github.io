@@ -3,13 +3,97 @@
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <h1>{{ this.title }}</h1>
+  <div class="row justify-content-center">
+    <h1>{{ this.title }}</h1>
+  </div>
   {{ this.body }}
   <hr />
-  <h2>Lista de Charlas</h2>
-  {% for child in this.pagination.items %}
-    {{ render_talk(child, from_index=true) }}
-  {% endfor %}
-
-  {{ render_pagination(this.pagination) }}
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-xs-12">
+      <img src="{{ this|url }}{{ this.image }}" class="image fit" alt="">
+    </div>
+  </div>
+  {% if this.meetup_url %}
+  <div class="row justify-content-center">
+    <a href="{{ this.meetup_url }}" target="blank_" class="button primary">Inscripción</a>
+  </div>
+  {% endif %}
+  <hr />
+  <div class="row justify-content-center">
+    <h2>Lista de Charlas</h2>
+  </div>
+  <div class="row">
+    {% for child in this.pagination.items %}
+    <div class="col-md-6 col-xs-12">
+      <div class="row justify-content-center">
+        <a href="{{ child|url }}"><h4>{{ child.title }}</h4></a>
+        <p>{{ child.summary }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <hr />
+  <div class="row justify-content-center">
+    <h3>Organizadores</h3>
+  </div>
+  <div class="row justify-content-center">
+    {%- for block in this.team.blocks -%} {%- set user = site.get('/usuarios/' + block.username) -%}
+    <div class="col-3">
+      {% if user.image %}
+      <img class="image fit" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" /> {% endif %}
+      <div class="row justify-content-center">
+        <h4>{{ user.name }} {{ user.last_name }}</h4>
+      </div>
+      <div class="row justify-content-center">
+        <ul class="icons">
+          {% if user.web %}
+          <li>
+            <a href="{{ user.web }}" class="icon fa-globe" target="_blank">
+              <span class="label">Website</span>
+            </a>
+          </li>
+          {% endif %} {% if user.email %}
+          <li>
+            <a href="mailto:{{ user.email }}" class="icon fa-envelope" target="_blank">
+              <span class="label">Email</span>
+            </a>
+          </li>
+          {% endif %} {% if user.facebook_handle %}
+          <li>
+            <a href="https://facebook.com/{{ user.facebook_handle}}" class="icon fa-facebook" target="_blank">
+              <span class="label">Facebook</span>
+            </a>
+          </li>
+          {% endif %} {% if user.twitter_handle %}
+          <li>
+            <a href="https://twitter.com/{{ user.twitter_handle}}" class="icon fa-twitter" target="_blank">
+              <span class="label">Twitter</span>
+            </a>
+          </li>
+          {% endif %} {% if user.github_handle %}
+          <li>
+            <a href="https://github.com/{{ user.github_handle}}" class="icon fa-github-alt" target="_blank">
+              <span class="label">Github</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="row justify-content-center">
+    <h3>Sponsors</h3>
+  </div>
+  <div class="row justify-content-center">
+    {%- for block in this.sponsors.blocks -%} {%- set user = site.get('/usuarios/' + block.username) -%}
+    <div class="col-3">
+      {% if user.image_alt %}
+      <a href="{{ user.web }}" target="blank_">
+        <img class="image fit" src="{{ user|url }}/{{ user.image_alt }}" alt="{{ user.username }}" />
+      </a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
 {% endblock %}

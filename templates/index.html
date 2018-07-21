@@ -1,33 +1,33 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<div class="row justify-content-md-center">
+<div class="row justify-content-center">
   <h2>Sobre PyPereira</h2>
 </div>
 <section>
   <p class="text-center">Comunidad creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados, con el fin de crear y fortalecer una red de conocimiento que ayude con el progreso de la región.</p>
-  <div class="row justify-content-md-center">
+  <div class="row justify-content-center">
     <a href="/acerca-de" class="button primary">Más información</a>
   </div>
 </section>
 
 <hr />
-<div class="row justify-content-md-center">
+<div class="row justify-content-center">
   <h2>Equipo Organizador</h2>
 </div>
 
 <section>
-  <div class="row justify-content-md-center">
+  <div class="row justify-content-center">
     {%- for block in this.team.blocks -%}
     {%- set user = site.get('/usuarios/' + block.username) -%}
     <div class="col-3">
       {% if user.image %}
       <img class="image fit" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
       {% endif %}
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-center">
         <h4>{{ user.name }} {{ user.last_name }}</h4>
       </div>
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-center">
         <ul class="icons">
           {% if user.web %}
           <li>
@@ -67,11 +67,11 @@
   </div>
 </section>
 <hr />
-<div class="row justify-content-md-center">
+<div class="row justify-content-center">
   <h2>Sponsors</h2>
 </div>
 <section>
-  <div class="row justify-content-md-center">
+  <div class="row justify-content-center">
     {%- for block in this.sponsors.blocks -%} {%- set user = site.get('/usuarios/' + block.username) -%}
     <div class="col-3">
       {% if user.image_alt %}

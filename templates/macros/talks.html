@@ -1,18 +1,64 @@
 {% macro render_talk(talk, from_index=false) %}
-<div class="blog-post">
+<div class="col-md-6 col-xs-12">
   {% if from_index %}
-  <h2>
-    <a href="{{ talk|url }}">{{ talk.title }}</a>
-  </h2>
+  <div class="row justify-content-center">
+    <h2>
+      <a href="{{ talk|url }}">{{ talk.title }}</a>
+    </h2>
+  </div>
   {% else %}
-  <h2>{{ talk.title }}</h2>
+  <div class="row justify-content-center">
+    <h2>{{ talk.title }}</h2>
+  </div>
   {% endif %}
-  <p class="meta">
-    written by {% if talk.twitter_handle %}
-    <a href="https://twitter.com/{{ talk.twitter_handle
-        }}">{{ talk.author or talk.twitter_handle }}</a>
-    {% else %} {{ talk.author }} {% endif %} on {{ talk.pub_date }}
-  </p>
-  <hr />
+  
+  {% for child in talk.children %}
+    <div class="col-3">
+      {% if child.image %}
+      <img class="image fit" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" /> {% endif %}
+      <div class="row justify-content-md-center">
+        <h4>{{ child.name }} {{ child.last_name }}</h4>
+      </div>
+      <div class="row justify-content-md-center">
+        <ul class="icons">
+          {% if child.web %}
+          <li>
+            <a href="{{ child.web }}" class="icon fa-globe" target="_blank">
+              <span class="label">Website</span>
+            </a>
+          </li>
+          {% endif %} {% if child.email %}
+          <li>
+            <a href="mailto:{{ child.email }}" class="icon fa-envelope" target="_blank">
+              <span class="label">Email</span>
+            </a>
+          </li>
+          {% endif %} {% if child.facebook_handle %}
+          <li>
+            <a href="https://facebook.com/{{ child.facebook_handle}}" class="icon fa-facebook" target="_blank">
+              <span class="label">Facebook</span>
+            </a>
+          </li>
+          {% endif %} {% if child.twitter_handle %}
+          <li>
+            <a href="https://twitter.com/{{ child.twitter_handle}}" class="icon fa-twitter" target="_blank">
+              <span class="label">Twitter</span>
+            </a>
+          </li>
+          {% endif %} {% if child.github_handle %}
+          <li>
+            <a href="https://github.com/{{ child.github_handle}}" class="icon fa-github-alt" target="_blank">
+              <span class="label">Github</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+    {%- if child._id != child.username -%}
+    <h1>ERROR</h1>
+    {%- endif -%}
+  {% endfor %}
 </div>
 {% endmacro %}
