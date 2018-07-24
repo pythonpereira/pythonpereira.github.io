@@ -2,128 +2,135 @@
 
 <!DOCTYPE HTML>
 <!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  TXT by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Python Pereira</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-		<link rel="stylesheet" href="{{ base_url }}static/css/main.css" />
-		<noscript><link rel="stylesheet" href="{{ base_url }}static/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <head>
+    <title>Python Pereira</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ base_url }}static/css/main.css" />
+  </head>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+      <!-- Header -->
+        <!-- <header id="header">
+          <div class="logo container">
+            <div>
+              <h1><a href="index.html" id="logo">TXT</a></h1>
+              <p>A responsive site template by HTML5 UP</p>
+            </div>
+          </div>
+        </header> -->
 
-							<!-- Logo -->
-								<!-- <a href="{{ base_url }}" class="logo">
-									<span class="symbol"><img src="{{ base_url }}static/images/logo.svg" alt="" /></span><span class="title">Python Pereira</span>
-								</a> -->
-								<div class="row justify-content-center">
-									<a href="{{ base_url }}" class="logo">
-										<img src="{{ base_url }}static/images/python-pereira.svg" style="width: 200px" alt="" />
-									</a>
-								</div>
+      <!-- Nav -->
+        <nav id="nav">
+          <!-- <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li>
+              <a href="#">Dropdown</a>
+              <ul>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Magna phasellus</a></li>
+                <li>
+                  <a href="#">Phasellus consequat</a>
+                  <ul>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Phasellus consequat</a></li>
+                    <li><a href="#">Magna phasellus</a></li>
+                    <li><a href="#">Etiam dolore nisl</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Veroeros feugiat</a></li>
+              </ul>
+            </li>
+            <li><a href="left-sidebar.html">Left Sidebar</a></li>
+            <li><a href="right-sidebar.html">Right Sidebar</a></li>
+            <li><a href="no-sidebar.html">No Sidebar</a></li>
+          </ul> -->
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li{% if this._path=='/' %} class="active" {% endif %}>
+          <ul>
+            <li{% if this._path=='/' %} class="current" {% endif %}>
               <a href="{{ '/'|url }}">Inicio</a>
-              </li>
-              {% for href, title in [
-                ['/eventos', 'Eventos'],
-								['/usuarios', 'Usuarios'],
-								['/acerca-de', 'Acerca de'],
-              ] -%}
-              <li{% if this.is_child_of(href) %} class="active" {% endif%}>
-                <a href="{{ href|url }}">{{ title }}</a>
-              </li>
-              {% endfor -%}
-						</ul>
-					</nav>
+            </li>
+            {% for href, title in [ ['/eventos', 'Eventos'], ['/usuarios', 'Usuarios'], ['/acerca-de', 'Acerca de'], ] -%}
+            <li{% if this.is_child_of(href) %} class="current" {% endif%}>
+              <a href="{{ href|url }}">{{ title }}</a>
+            </li>
+            {% endfor -%}
+          </ul>
+        </nav>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header class="text-center">
-								<p>PyPereira, Comunidad Pereirana creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y
-								sus derivados</p>
-							</header>
+      <!-- Banner -->
+        <section id="banner">
+          <div class="content">
+            <h2>Welcome to TXT by HTML5 UP</h2>
+            <p>A free responsive site template built on HTML5, CSS3, and some other stuff</p>
+            <a href="#main" class="button scrolly">Alright let's go</a>
+          </div>
+        </section>
 
-              {% block body %}{% endblock %}
-							
-						</div>
-					</div>
+      {% block body %}{% endblock %}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<!-- <section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section> -->
-							<section>
-								<h2>Síguenos</h2>
-								<ul class="icons">
-									<li><a href="http://twitter.com/pythonpereira" target="blank_" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="http://facebook.com/pythonpereira" target="blank_" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="http://instagram.com/pythonpereira" target="blank_" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="http://meetup.com/pythonpereira" target="blank_" class="icon style2 fa-meetup"><span class="label">Meetup</span></a></li>
-									<li><a href="http://github.com/pythonpereira" target="blank_" class="icon style2 fa-github-alt"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:python.pereira@gmail.com" target="blank_" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+      <!-- Footer -->
+        <footer id="footer">
+          <div class="container">
+            <div class="row gtr-200">
+              <div class="col-12">
 
-			</div>
+                <!-- About -->
+                  <section>
+                    <h2 class="major"><span>Sobre PyPereira</span></h2>
+                    <a href="{{ base_url }}" class="logo">
+                      <img src="{{ base_url }}static/images/python-pereira.svg" style="width: 200px" alt="" />
+                    </a>
+                    <p>
+                      Comunidad creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados, con el fin de crear y fortalecer una red de conocimiento que ayude con el progreso de la región.
+                    </p>
+                  </section>
 
-		<!-- Scripts -->
-			<script src="{{ base_url }}static/js/jquery.min.js"></script>
-			<script src="{{ base_url }}static/js/browser.min.js"></script>
-			<script src="{{ base_url }}static/js/breakpoints.min.js"></script>
-			<script src="{{ base_url }}static/js/util.js"></script>
-			<script src="{{ base_url }}static/js/main.js"></script>
-			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-	</body>
+              </div>
+              <div class="col-12">
+
+                <!-- Contact -->
+                  <section>
+                    <h2 class="major"><span>Síguenos</span></h2>
+                    <ul class="contact">
+                      <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                      <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                      <li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+                      <li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+                      <li><a class="icon fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                  </section>
+
+              </div>
+            </div>
+
+            <!-- Copyright -->
+              <div id="copyright">
+                <ul class="menu">
+                  <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+              </div>
+
+          </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+      <script src="{{ base_url }}static/js/jquery.min.js"></script>
+      <script src="{{ base_url }}static/js/jquery.dropotron.min.js"></script>
+      <script src="{{ base_url }}static/js/jquery.scrolly.min.js"></script>
+      <script src="{{ base_url }}static/js/browser.min.js"></script>
+      <script src="{{ base_url }}static/js/breakpoints.min.js"></script>
+      <script src="{{ base_url }}static/js/util.js"></script>
+      <script src="{{ base_url }}static/js/main.js"></script>
+
+  </body>
 </html>
