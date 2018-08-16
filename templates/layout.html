@@ -58,7 +58,7 @@
             <li{% if this._path=='/' %} class="current" {% endif %}>
               <a href="{{ '/'|url }}">Inicio</a>
             </li>
-            {% for href, title in [ ['/eventos', 'Eventos'], ['/usuarios', 'Usuarios'], ['/acerca-de', 'Acerca de'], ] -%}
+            {% for href, title in [ ['/eventos', 'Eventos'], ['/usuarios', 'Usuarios'], ['/acerca-de', 'Acerca de'], ['/calendario', 'Calendario'] ] -%}
             <li{% if this.is_child_of(href) %} class="current" {% endif%}>
               <a href="{{ href|url }}">{{ title }}</a>
             </li>
