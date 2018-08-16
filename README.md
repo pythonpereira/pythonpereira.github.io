@@ -14,8 +14,8 @@
 [![Twitter Jopmi](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/pythonpereiran)
 
 Este es el repositorio del sitio web de la comunidad servido por
-[Github](https://colombiapython.github.io/sitio-web-desarrollo/), y
-construido utilizando [lektor](https://www.getlektor.com). Se utilizó la plantilla [Editorial](https://html5up.net/editorial) como base.
+[Github](https://pythonpereiragithub.io/sitio-web-desarrollo/), y
+construido utilizando [lektor](https://www.getlektor.com). Se utilizó la plantilla [txt](https://html5up.net/txt) como base.
 
 </div>
 
