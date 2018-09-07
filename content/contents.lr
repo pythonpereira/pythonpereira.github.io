@@ -1,8 +1,6 @@
 title: Python Pereira
 ---
-body:
-
-PyPereira, Comunidad Pereirana creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados 
+body: 
 ---
 _template: index.html
 ---
@@ -41,3 +39,5 @@ description:
 username: xergioalex
 ----
 description: 
+---
+summary: Comunidad Pereirana creada con el objetivo de reunir a los usuarios desarrolladores y apasionados por Python y sus derivados 🐍💻

@@ -1,0 +1,36 @@
+{% extends "layout_generic.html" %}
+
+{% block body %}
+
+<!-- Main -->
+<section id="main" class="container">
+  <header>
+    <img src="{{ base_url }}static/images/python-pereira.svg" style="max-width: 150px;" />
+    <h2>{{ this.title }}</h2>
+    <p>{{ this.summary }}</p>
+  </header>
+  <div class="box">
+    <span class="image featured"><img src="{{ base_url }}static/images/pic01.jpg" alt="" /></span>
+    {{ this.body }}
+  </div>
+
+  <div class="box">
+    <div class="text-center">
+      <img src="https://www.python.org.co/static/images/about-us.jpg" style="max-width: 300px;" />
+    </div>
+    <p>Somos una comunidad enfocada en extender en el territorio nacional el uso y aprendizaje de las distintas tecnologías python y sus numerosas aplicaciones.<br />
+    Nuestra comunidad está conformada por personas con diferentes niveles de conocimiento siempre dispuestas a aprender y compartir nuestro saber mostrando una gran empatía y respeto hacia los demás.<br />
+    Siempre motivados a crecer mucho más y totalmente comprometidos a promover la diversidad y la inclusión en cada una de nuestras actividades y eventos.</p>
+  </div>
+
+  <div class="box">
+    <h2 class="text-center">Comunidades de Python en Colombia</h2>
+    <p>Las siguientes son las comunidades Python a lo largo del territorio colombiano</p>
+    <iframe src="https://colombiapython.github.io/map-meetups/" height="500" width="100%"></iframe>
+    <blockquote>
+      <a href="https://github.com/ColombiaPython/map-meetups" target="_blank">Código Fuente</a>. Sobre <a href="https://github.com/ColombiaPython/map-meetups" target="_blank">Comunidades Python Colombia</a>
+  </blockquote>
+  </div>
+</section>
+
+{% endblock %}
