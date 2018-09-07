@@ -1,14 +1,36 @@
-{% extends "layout.html" %}
+{% extends "layout_generic.html" %}
 {% from "macros/events.html" import render_event %}
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <h1>Lista de Eventos</h1>
-  <section class="tiles">
-  {% for child in this.pagination.items %}
-    {{ render_event(child, from_index=true) }}
-  {% endfor %}
-  </section>
+  <!-- Main -->
+  <section id="main" class="container">
+    <header>
+      <img src="{{ base_url }}static/images/python-pereira.svg" style="max-width: 150px;" />
+      <h2>{{ this.title }}</h2>
+      <p>{{ this.body }}</p>
+    </header>
 
-  {{ render_pagination(this.pagination) }}
+    <div class="row">
+      {% for child in this.pagination.items %} {{ render_event(child, from_index=true) }} {% endfor %}
+    </div>
+    
+    {{ render_pagination(this.pagination) }}
+
+    
+      <!-- <div class="col-6 col-12-narrower">
+    
+        <section class="box special">
+          <span class="image featured"><img src="{{ base_url }}static/images/pic02.jpg" alt="" /></span>
+          <h3>Sed lorem adipiscing</h3>
+          <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis
+            accumsan dolore magna aliquam veroeros.</p>
+          <ul class="actions special">
+            <li><a href="#" class="button alt">Learn More</a></li>
+          </ul>
+        </section>
+    
+      </div> -->
+  
+  </section>
 {% endblock %}

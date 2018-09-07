@@ -1,5 +1,5 @@
 {% macro render_event(event, from_index=false) %}
-  <article class="style2">
+  <!-- <article class="style2">
     <span class="image">
       {% if event.image %} 
       <img src="{{ event|url }}{{ event.image }}" alt="" />
@@ -13,5 +13,25 @@
         <p>{{event.summary}}</p>
       </div>
     </a>
-  </article>
+  </article> -->
+  <div class="col-6 col-12-narrower">
+  
+    <section class="box special">
+      <span class="image featured">
+        {% if event.image %}
+        <img src="{{ event|url }}{{ event.image }}" alt="" />
+        {% else %}
+        <img src="{{ base_url }}static/images/pic02.jpg" alt="" />
+        {% endif %}
+      </span>
+      <a href="{{ event|url }}">
+        <h3>{{ event.title }}</h3>
+      </a>
+      <p>{{event.summary}}</p>
+      <ul class="actions special">
+        <li><a href="#" class="button small alt">Learn More</a></li>
+      </ul>
+    </section>
+  
+  </div>
 {% endmacro %}
