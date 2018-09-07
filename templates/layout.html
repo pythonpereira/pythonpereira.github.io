@@ -7,19 +7,19 @@
 -->
 <html>
   <head>
-    <title>PyPereira | Python Pereira</title>
+    <title>{% block title %}{% if this._path=='/' %} PyPereira {% else %} {{ this.title }} {% endif %}{% endblock %} | Python Pereira</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"   crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ base_url }}static/css/main.css" />
   </head>
-  <body class="landing is-preload">
+  <body {% if this._path=='/' %} class="landing is-preload" {% else %} class="is-preload" {% endif %}>
     <div id="page-wrapper">
       <div class="ga-script">{{ generate_google_analytics() }}</div>
 
       <!-- Header -->
-        <header id="header" class="alt">
+        <header id="header" {% if this._path=='/' %} class="alt" {% endif %} >
           <h1><a href="index.html">PyPereira</h1>
           <nav id="nav">
             <ul>
@@ -50,15 +50,15 @@
         <!-- Footer -->
         <footer id="footer">
           <ul class="icons">
-            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-            <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+            <li><a href="https://twitter.com/pythonpereira" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/pythonpereira/" target="blank_" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/pythonpereira/" target="blank_" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://github.com/pythonpereira" target="blank_" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://meetup.com/pythonpereira" target="blank_" class="icon fa-meetup"><span class="label">Meetup</span></a></li>
+            <li><a href="mailto:python.pereira@gmail.com" target="blank_" class="icon fa-envelope"><span class="label">Email</span></a></li>
           </ul>
           <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Python Pereira. All rights reserved.</li><li>Diseño base: <a href="http://html5up.net">HTML5 UP</a></li>
           </ul>
         </footer>
 
