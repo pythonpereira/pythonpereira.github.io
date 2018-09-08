@@ -3,20 +3,26 @@
 
 {% block body %}
 
+{%- set proximos = site.query('/eventos', alt=this.alt).filter(F.success).order_by('pub_date').limit(1) -%}
 <!-- Banner -->
   <section id="banner">
     <img src="{{ base_url }}static/images/python-pereira.svg" style="max-width: 150px;" />
     <p>{{ this.summary }}</p>
     <ul class="actions special">
-      <li><a href="#" class="button primary">Sign Up</a></li>
-      <li><a href="#" class="button">Learn More</a></li>
+      {% if proximos %}
+      {% for proximo in proximos %}
+      <li><a href="{{ proximo|url }}" class="button primary">Próximo Evento</a></li>
+      {% endfor %}
+      {% endif %}
+      <li><a href="/acerca-de" class="button">Más información</a></li>
     </ul>
   </section>
 
 <!-- Main -->
   <section id="main" class="container">
-
     <section class="box special">
+      {% if proximos %}
+      {% for proximo in proximos %}
       <header class="major">
         <h2>Introducing the ultimate mobile app
         <br />
@@ -24,7 +30,11 @@
         <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
         adipiscing nunc adipiscing. Condimentum turpis massa.</p>
       </header>
-      <span class="image featured"><img src="{{ base_url }}static/images/pic01.jpg" alt="" /></span>
+      <span class="image featured"><img src="{{ proximo|url }}{{ proximo.image }}" alt="" /></span>
+      {% endfor %}
+      {% else %}
+      <p>No hay</p>
+      {% endif %}
     </section>
 
     <section class="box special features">
