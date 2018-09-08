@@ -1,0 +1,53 @@
+title: 7ma Meetup
+---
+_slug: 2018/08/7ma-meetup
+---
+information:
+
+👉Transferencia de estilo: Creando arte con redes neuronales por Juan Sebastián Vega (@sebasvega95)
+
+🔎 Descripción:
+En esta charla aprenderemos cómo podemos entrenar redes neuronales para componer imágenes en el estilo de una imagen dada (como si supiéramos pintar como Van Gogh o Picasso 🎨). Esta técnica—conocida como style transfer— toma una imagen e intenta minimizar una medida de distancia, para poder generar imágenes que se vean como la imagen de entrada pero recreadas en el estilo de otra imagen. Veremos cómo se pueden entender conceptos matemáticos de una manera intuitiva por medio de código en Python en lugar de ecuaciones.
+
+👉 Creando un SaaS: Multi tenancy con Django 2 por Diego Alejandro Castaño - CTO Apptitud (@dialcg_)
+
+🔎 Descripción:
+En ésta charla estaremos introduciéndonos en la arquitectura de un Software as a Service en Django y su característica más radical: La multitenencia.
+---
+meetup_url: https://www.meetup.com/es/pythonpereira/events/253466794/
+---
+place: El Escondido Bar
+---
+sponsors:
+
+#### organization ####
+username: monoku
+---
+team:
+
+#### user ####
+username: aerendon
+----
+description: 
+#### user ####
+username: anaguicas
+----
+description: 
+#### user ####
+username: carogomezt
+----
+description: 
+#### user ####
+username: jotangutierrez
+----
+description: 
+#### user ####
+username: leiverandres
+----
+description: 
+---
+end_date: 2018-08-27 20:00:00 -0500
+---
+pub_date: 2018-08-27 18:30:00 -0500
+---
+image: highres_473543384.jpeg

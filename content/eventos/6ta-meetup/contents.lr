@@ -1,6 +1,23 @@
 title: 6ta Meetup
 ---
+_slug: 2018/07/6ta-meetup
+---
+end_date: 2018-07-25 20:30:00 -0500
+---
+information:
+
+👉Introducción a Django REST Framework por 😎 Gabriel Mejía (https://github.com/elgartoinf)
+
+👉Infraestructura bajo tu control con Docker Stack 🐳📦 por 😎 Oscar Arbelaez (https://github.com/odarbelaeze)
+
+¿Balanceo de carga a través de uno o más servidores, despliegues sin tiempo de inactividad y escalamiento autónomo de micro servicios?
+Estas son características que obtienes comprando servicios avanzados como AWS o Google Cloud Platform, pero qué pasa si no quieres usarlos, no tienes acceso a ellos o no eres un experto para configurarlos? Y bien, cómo los pruebas en tu máquina local o en tu ambiente de integración continua? En esta charla aprenderás a configurar docker stack en tu máquina local o en un servidor privado virtual para obtener todas estas ventajas usando código fácil de entender y que tú mismo controlas.
+---
 meetup_url: https://www.meetup.com/es/pythonpereira/events/252487758/
+---
+place: Universidad Tecnológica de Pereira. Edificio 15C-102
+---
+pub_date: 2018-07-25 18:30:00 -0500
 ---
 sponsors:
 
@@ -28,8 +45,8 @@ username: jotangutierrez
 ----
 description: 
 #### user ####
-username: leiverandres
+username: xergioalex
 ----
 description: 
 ---
-image: highres_472661875.jpeg
+image: meetup.jpeg

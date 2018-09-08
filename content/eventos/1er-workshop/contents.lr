@@ -1,11 +1,8 @@
 title: 1er Workshop
 ---
-sponsors:
-
-#### organization ####
-username: netha
-#### organization ####
-username: sirius
+_slug: 2018/03/1er-workshop
+---
+meetup_url: https://www.meetup.com/es/pythonpereira/events/248414192/
 ---
 team:
 
@@ -21,7 +18,32 @@ description:
 username: carogomezt
 ----
 description: 
+#### user ####
+username: jotangutierrez
+----
+description: 
 ---
-image: Meetup.png
+sponsors:
+
+#### organization ####
+username: sirius
+#### organization ####
+username: netha
 ---
-meetup_url: https://www.meetup.com/es/pythonpereira/events/248414192/
+end_date: 2018-03-24 17:00:00 -0500
+---
+image: meetup.jpeg
+---
+latitude: 4.7936485
+---
+longitude: -75.6891025
+---
+place: Universidad Tecnológica de Pereira. Edificio 3. Sala 205 (CRIE)
+---
+pub_date: 2018-03-24 14:00:00 -0500
+---
+information:
+
+## Testing automatizado de despliegues web usando Selenium y procesamiento de imágenes con OpenCV by José García (https://github.com/jotathebest).
+
+Durante este workshop desarrollaremos un algoritmo para revisar si un sitio web (o parte de él) cambia su apariencia luego de finalizado un despliegue de código con nuevas funcionalidades. Lo que haremos será aprender lo básico sobre Selenium, una herramienta muy conocida para obtener información del sitio web objetivo de análisis, y luego con ayuda de OpenCV compararemos si el website se ve cómo debería y, en caso contrario, generaremos una alerta para notificar al DevOps a través de Slack u otro medio de comunicación (SMS, correo electrónico, etc).
