@@ -1,0 +1,10 @@
+title: Revisión automática de despliegues web usando Selenium y Tratamiento de Imágenes
+---
+speakers:
+
+#### user ####
+username: jose-garcia
+----
+description: 
+---
+information: Durante este workshop desarrollaremos un algoritmo para revisar si un sitio web (o parte de él) cambia su apariencia luego de finalizado un despliegue de código con nuevas funcionalidades. Lo que haremos será aprender lo básico sobre Selenium, una herramienta muy conocida para obtener información del sitio web objetivo de análisis, y luego con ayuda de OpenCV compararemos si el website se ve cómo debería y, en caso contrario, generaremos una alerta para notificar al DevOps a través de Slack u otro medio de comunicación (SMS, correo electrónico, etc).

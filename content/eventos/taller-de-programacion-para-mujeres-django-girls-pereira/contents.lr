@@ -1,4 +1,4 @@
-title: Django Girls Pereira 2017
+title: Taller de Programación para Mujeres Django Girls Pereira
 ---
 sponsors:
 
@@ -10,6 +10,8 @@ username: github
 username: sirius
 #### organization ####
 username: monoku
+#### organization ####
+username: python-colombia
 #### organization ####
 username: rocka
 #### organization ####
@@ -42,4 +44,6 @@ username: johnjairoroa87
 ----
 description: 
 ---
-image: poster.png
+_slug: 2017/12/taller-de-programacion-para-mujeres-django-girls-pereira
+---
+image: flyer.jpg

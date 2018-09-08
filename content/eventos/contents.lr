@@ -2,4 +2,6 @@ _model: events
 ---
 title: Eventos
 ---
-body: Lista de Eventos
+summary: Eventos de la Comunidad
+---
+_template: events.html

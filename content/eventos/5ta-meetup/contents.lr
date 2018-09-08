@@ -1,13 +1,29 @@
 title: 5ta Meetup
 ---
-image: highres_471348355.jpeg
+end_date: 2018-05-30 19:30:00 -0500
+---
+information:
+
+👉Optimización Mediante Algoritmos genéticos por 😎 Jonatan Gutierrez (https://twitter.com/jotangutierrez)
+
+La búsqueda de la mejor solución a un problema determinado puede resultar restrictivo en cuanto al costo computacional. Un algoritmo genético es un conjunto de técnicas para obtener soluciones excelentes en un tiempo de cómputo extremadamente menor al de los métodos exactos.
+---
+latitude: 4.7936485
+---
+longitude: -75.6891025
+---
+meetup_url: https://www.meetup.com/es/pythonpereira/events/251029709/
+---
+place: Universidad Tecnológica de Pereira. Edificio 13A - 312
+---
+pub_date: 2018-05-30 18:30:00 -0500
 ---
 sponsors:
 
 #### organization ####
 username: sirius
 #### organization ####
-username: netha
+username: python-colombia
 ---
 team:
 
@@ -24,10 +40,14 @@ username: carogomezt
 ----
 description: 
 #### user ####
-username: jotangutierrez
-----
-description: 
-#### user ####
 username: leiverandres
 ----
 description: 
+#### user ####
+username: jotangutierrez
+----
+description: 
+---
+_slug: 2018/05/5ta-meetup
+---
+image: meetup.jpeg

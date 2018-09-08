@@ -1,6 +1,17 @@
-title: 2da Meetup
+title: 2da meetup
 ---
-place: Universidad Tecnológica de Pereira
+_slug: 2017/11/2da-meetup
+---
+meetup_url: http://bit.ly/2daPyPereira
+---
+place: Universidad Tecnológica de Pereira. CIDT Edificio 15C Sala 204
+---
+sponsors:
+
+#### organization ####
+username: sirius
+#### organization ####
+username: pereiratechtalks
 ---
 team:
 
@@ -17,13 +28,12 @@ username: carogomezt
 ----
 description: 
 #### user ####
-username: jotangutierrez
+username: xergioalex
 ----
 description: 
 ---
-image: 2.png
+end_date: 2017-11-22 20:00:00 -0500
 ---
-sponsors:
-
-#### organization ####
-username: sirius
+image: flyer.png
+---
+pub_date: 2017-11-22 18:00:00 -0500

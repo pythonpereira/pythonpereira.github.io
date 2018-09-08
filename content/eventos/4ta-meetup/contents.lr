@@ -1,5 +1,13 @@
 title: 4ta Meetup
 ---
+end_date: 2018-04-25 20:30:00 -0500
+---
+meetup_url: https://www.meetup.com/es/pythonpereira/events/249433045/
+---
+place: Universidad Tecnológica de Pereira. Edificio 15C, Sala 206
+---
+pub_date: 2018-04-25 18:30:00 -0500
+---
 sponsors:
 
 #### organization ####
@@ -26,8 +34,21 @@ username: jotangutierrez
 ----
 description: 
 #### user ####
-username: leiverandres
+username: xergioalex
 ----
 description: 
 ---
-image: highres_470338094.jpeg
+_slug: 2018/04/4ta-meetup
+---
+image: meetup.jpeg
+---
+information:
+
+👉Introducción al procesamiento del lenguaje natural por 😎Germán Grandas(https://twitter.com/germangrandas)
+
+Durante la historia de humanidad el conocimiento, en su mayor parte se comunica, se guarda y se maneja en la forma de lenguaje natural,Sin embargo, lo que es conocimiento para nosotros no lo es para las computadoras.
+En esta charla aprenderemos acerca de ¿Qué es el procesamiento del Lenguaje?, ¿Qué se encarga de hacer? y algunas técnicas se usan para afrontar los problemas de este tipo, además en que campos de la investigación esta siendo utilizado, Finalmente aprenderemos a hacer un clasificador de críticas de un restaurante apoyandonos en el uso de la librería NTLK una de las mas populares para el procesamiento de texto en python.
+
+👉Programación asíncrona con Django Channels por 😎Felipe Salazar (https://twitter.com/elpipesalazar).
+
+Introducción a Django channels, la última y más importante funcionalidad en las últimas versiones de Django.

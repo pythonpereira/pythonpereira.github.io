@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% from "macros/events.html" import render_event %}
 
 {% block body %}
 
@@ -52,9 +53,14 @@
         </section>
       </div>
     </section>
-
+    
+    {%- set eventos = site.query('/eventos', alt=this.alt).limit(2) -%} 
     <div class="row">
-      <div class="col-6 col-12-narrower">
+      {% for evento in eventos %}
+      {{ render_event(evento, from_index=true) }}
+      {% endfor %}
+
+      <!-- <div class="col-6 col-12-narrower">
 
         <section class="box special">
           <span class="image featured"><img src="{{ base_url }}static/images/pic02.jpg" alt="" /></span>
@@ -77,7 +83,7 @@
           </ul>
         </section>
 
-      </div>
+      </div> -->
     </div>
 
   </section>

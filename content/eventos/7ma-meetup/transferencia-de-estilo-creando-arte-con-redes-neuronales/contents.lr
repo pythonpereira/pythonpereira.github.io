@@ -1,0 +1,14 @@
+title: Transferencia de estilo: Creando arte con redes neuronales
+---
+information: En esta charla aprenderemos cómo podemos entrenar redes neuronales para componer imágenes en el estilo de una imagen dada (como si supiéramos pintar como Van Gogh o Picasso 🎨). Esta técnica—conocida como style transfer— toma una imagen e intenta minimizar una medida de distancia, para poder generar imágenes que se vean como la imagen de entrada pero recreadas en el estilo de otra imagen. Veremos cómo se pueden entender conceptos matemáticos de una manera intuitiva por medio de código en Python en lugar de ecuaciones.
+---
+speakers:
+
+#### user ####
+username: sebasvega95
+----
+description: 
+---
+repository_url: https://github.com/pythonpereira/neural-style-transfer
+---
+slides_url: https://speakerdeck.com/pythonpereira/transferencia-de-estilo
