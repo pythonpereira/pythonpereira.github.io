@@ -1,0 +1,77 @@
+{%- set base_url = '/'|url(alt='es') -%}
+<!DOCTYPE HTML>
+<!--
+  Alpha by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>{% block title %}{% if this._path=='/' %} PyPereira {% else %} {{ this.title }} {% endif %}{% endblock %} | Python Pereira</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"   crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ base_url }}static/css/main.css" />
+  </head>
+  <body {% if this._path=='/' %} class="landing is-preload" {% else %} class="is-preload" {% endif %}>
+    <div id="page-wrapper">
+      <div class="ga-script">{{ generate_google_analytics() }}</div>
+
+      <!-- Header -->
+        <header id="header" {% if this._path=='/' %} class="alt" {% endif %} >
+          <h1><a href="index.html">PyPereira</a></h1>
+          <nav id="nav">
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li>
+                <a href="#" class="icon fa-angle-down">Layouts</a>
+                <ul>
+                  <li><a href="generic.html">Generic</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="elements.html">Elements</a></li>
+                  <li>
+                    <a href="#">Submenu</a>
+                    <ul>
+                      <li><a href="#">Option One</a></li>
+                      <li><a href="#">Option Two</a></li>
+                      <li><a href="#">Option Three</a></li>
+                      <li><a href="#">Option Four</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#" class="button">Sign Up</a></li>
+            </ul>
+          </nav>
+        </header>
+        {% block body %}{% endblock %}
+
+        <!-- Footer -->
+        <footer id="footer">
+          <ul class="icons">
+            <li><a href="https://twitter.com/pythonpereira" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/pythonpereira/" target="blank_" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/pythonpereira/" target="blank_" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://github.com/pythonpereira" target="blank_" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://meetup.com/pythonpereira" target="blank_" class="icon fa-meetup"><span class="label">Meetup</span></a></li>
+            <li><a href="mailto:python.pereira@gmail.com" target="blank_" class="icon fa-envelope"><span class="label">Email</span></a></li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Python Pereira. All rights reserved.</li><li>Diseño base: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+      <script src="{{ base_url }}static/js/jquery.min.js"></script>
+      <script src="{{ base_url }}static/js/jquery.dropotron.min.js"></script>
+      <script src="{{ base_url }}static/js/jquery.scrollex.min.js"></script>
+      <script src="{{ base_url }}static/js/browser.min.js"></script>
+      <script src="{{ base_url }}static/js/breakpoints.min.js"></script>
+      <script src="{{ base_url }}static/js/util.js"></script>
+      <script src="{{ base_url }}static/js/main.js"></script>
+
+  </body>
+</html>

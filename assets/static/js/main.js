@@ -1,84 +1,85 @@
-/*
-  Alpha by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
+  
+  "use strict";  
 
-  var  $window = $(window),
-    $body = $('body'),
-    $header = $('#header'),
-    $banner = $('#banner');
+  $(window).on('load', function() {
 
-  // Breakpoints.
-    breakpoints({
-      wide:      ( '1281px',  '1680px' ),
-      normal:    ( '981px',   '1280px' ),
-      narrow:    ( '737px',   '980px'  ),
-      narrower:  ( '737px',   '840px'  ),
-      mobile:    ( '481px',   '736px'  ),
-      mobilep:   ( null,      '480px'  )
+
+  /*Page Loader active
+  ========================================================*/
+  $('#preloader').fadeOut();
+
+  // Sticky Nav
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 50) {
+            $('.scrolling-navbar').addClass('top-nav-collapse');
+        } else {
+            $('.scrolling-navbar').removeClass('top-nav-collapse');
+        }
     });
 
-  // Play initial animations on page load.
-    $window.on('load', function() {
-      window.setTimeout(function() {
-        $body.removeClass('is-preload');
-      }, 100);
+    // one page navigation 
+    $('.navbar-nav').onePageNav({
+      currentClass: 'active'
     });
 
-  // Dropdowns.
-    $('#nav > ul').dropotron({
-      alignment: 'right'
-    });
-
-  // NavPanel.
-
-    // Button.
-      $(
-        '<div id="navButton">' +
-          '<a href="#navPanel" class="toggle"></a>' +
-        '</div>'
-      )
-        .appendTo($body);
-
-    // Panel.
-      $(
-        '<div id="navPanel">' +
-          '<nav>' +
-            $('#nav').navList() +
-          '</nav>' +
-        '</div>'
-      )
-        .appendTo($body)
-        .panel({
-          delay: 500,
-          hideOnClick: true,
-          hideOnSwipe: true,
-          resetScroll: true,
-          resetForms: true,
-          side: 'left',
-          target: $body,
-          visibleClass: 'navPanel-visible'
-        });
-
-  // Header.
-    if (!browser.mobile
-    &&  $header.hasClass('alt')
-    &&  $banner.length > 0) {
-
-      $window.on('load', function() {
-
-        $banner.scrollex({
-          bottom:    $header.outerHeight(),
-          terminate:  function() { $header.removeClass('alt'); },
-          enter:    function() { $header.addClass('alt reveal'); },
-          leave:    function() { $header.removeClass('alt'); }
-        });
-
+    /* slicknav mobile menu active  */
+    $('.mobile-menu').slicknav({
+        prependTo: '.navbar-header',
+        parentTag: 'liner',
+        allowParentLinks: true,
+        duplicate: true,
+        label: '',
+        closedSymbol: '<i class="fa fa-chevron-right"></i>',
+        openedSymbol: '<i class="fa fa-chevron-down"></i>',
       });
 
-    }
+    //MixitUp
+     $('#portfolio').mixItUp();
 
-})(jQuery);
+    /* Testimonials Carousel 
+    ========================================================*/
+    $('#single-testimonial-item').owlCarousel({     
+        items : 1,
+        navigation : true,
+        pagination: false,
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
+    });  
+
+    $('#single-testimonial-item').find('.owl-prev').html('<i class="fa fa-angle-left"></i>');
+    $('#single-testimonial-item').find('.owl-next').html('<i class="fa fa-angle-right"></i>');
+
+    /* Counter
+    ========================================================*/
+    $('.timer').countTo({
+      refreshInterval: 60,
+      formatter: function(value, options) {
+        return value.toFixed(options.decimals);
+      },
+    });
+
+    /* Back Top Link acive
+    ========================================================*/
+      var offset = 200;
+      var duration = 500;
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > offset) {
+          $('.back-to-top').fadeIn(400);
+        } else {
+          $('.back-to-top').fadeOut(400);
+        }
+      });
+
+      $('.back-to-top').on('click',function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: 0
+        }, 600);
+        return false;
+      });
+
+  });      
+
+}(jQuery));

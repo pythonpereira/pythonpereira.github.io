@@ -3,117 +3,547 @@
 
 {% block body %}
 
-{%- set proximos = site.query('/eventos', alt=this.alt).filter(F.success).order_by('pub_date').limit(1) -%}
-<!-- Banner -->
-  <section id="banner">
-    <img src="{{ base_url }}static/images/python-pereira.svg" style="max-width: 150px;" />
-    <p>{{ this.summary }}</p>
-    <ul class="actions special">
-      {% if proximos %}
-      {% for proximo in proximos %}
-      <li><a href="{{ proximo|url }}" class="button primary">Próximo Evento</a></li>
-      {% endfor %}
-      {% endif %}
-      <li><a href="/acerca-de" class="button">Más información</a></li>
-    </ul>
-  </section>
-
-<!-- Main -->
-  <section id="main" class="container">
-    <section class="box special">
-      {% if proximos %}
-      {% for proximo in proximos %}
-      <header class="major">
-        <h2>Introducing the ultimate mobile app
-        <br />
-        for doing stuff with your phone</h2>
-        <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-        adipiscing nunc adipiscing. Condimentum turpis massa.</p>
-      </header>
-      <span class="image featured"><img src="{{ proximo|url }}{{ proximo.image }}" alt="" /></span>
-      {% endfor %}
-      {% else %}
-      <p>No hay</p>
-      {% endif %}
-    </section>
-
-    <section class="box special features">
-      <div class="features-row">
-        <section>
-          <span class="icon major fa-bolt accent2"></span>
-          <h3>Magna etiam</h3>
-          <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-        </section>
-        <section>
-          <span class="icon major fa-area-chart accent3"></span>
-          <h3>Ipsum dolor</h3>
-          <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-        </section>
-      </div>
-      <div class="features-row">
-        <section>
-          <span class="icon major fa-cloud accent4"></span>
-          <h3>Sed feugiat</h3>
-          <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-        </section>
-        <section>
-          <span class="icon major fa-lock accent5"></span>
-          <h3>Enim phasellus</h3>
-          <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-        </section>
-      </div>
-    </section>
-    
-    {%- set eventos = site.query('/eventos', alt=this.alt).limit(2) -%} 
+<!-- Services Section Start -->
+<section id="services" class="section-padding">
+  <div class="container">
     <div class="row">
-      {% for evento in eventos %}
-      {{ render_event(evento, from_index=true) }}
-      {% endfor %}
-
-      <!-- <div class="col-6 col-12-narrower">
-
-        <section class="box special">
-          <span class="image featured"><img src="{{ base_url }}static/images/pic02.jpg" alt="" /></span>
-          <h3>Sed lorem adipiscing</h3>
-          <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-          <ul class="actions special">
-            <li><a href="#" class="button alt">Learn More</a></li>
-          </ul>
-        </section>
-
+      <div class="col-md-12">
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Our Services</h2>
       </div>
-      <div class="col-6 col-12-narrower">
-
-        <section class="box special">
-          <span class="image featured"><img src="{{ base_url }}static/images/pic03.jpg" alt="" /></span>
-          <h3>Accumsan integer</h3>
-          <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-          <ul class="actions special">
-            <li><a href="#" class="button alt">Learn More</a></li>
-          </ul>
-        </section>
-
-      </div> -->
     </div>
-
-  </section>
-
-<!-- CTA -->
-  <section id="cta">
-
-    <h2>Sign up for beta access</h2>
-    <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-    <form>
-      <div class="row gtr-50 gtr-uniform">
-        <div class="col-8 col-12-mobilep">
-          <input type="email" name="email" id="email" placeholder="Email Address" />
-        </div>
-        <div class="col-4 col-12-mobilep">
-          <input type="submit" value="Sign Up" class="fit" />
+    <div class="row">
+      <!-- Start Service Icon 1 -->
+      <div class="col-md-6 col-lg-4 col-xs-12">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="fa fa-cogs"></i>
+          </div>
+          <div class="service-content">
+            <h4><a href="#">Easy to Customize</a></h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
+            </p>
+          </div>
         </div>
       </div>
-    </form>
+      <!-- End Service Icon 1 -->
 
-  </section>
+      <!-- Start Service Icon 2 -->
+      <div class="col-md-6 col-lg-4 col-xs-12">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="fa fa-cubes"></i>
+          </div>
+          <div class="service-content">
+            <h4><a href="#">100+ Components</a></h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Icon 2 -->
+
+      <!-- Start Service Icon 3 -->
+      <div class="col-md-6 col-lg-4 col-xs-12">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="fa fa-tachometer"></i>
+          </div>
+          <div class="service-content">
+            <h4><a href="#">Super Fast</a></h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Icon 3 -->
+
+      <!-- Start Service Icon 4 -->
+      <div class="col-md-6 col-lg-4 col-xs-12">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="fa fa-check"></i>
+          </div>
+          <div class="service-content">
+            <h4><a href="#">Clean Design</a></h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Icon 4 -->
+
+      <!-- Start Service Icon 5 -->
+      <div class="col-md-6 col-lg-4 col-xs-12">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="fa fa-flash"></i>
+          </div>
+          <div class="service-content">
+            <h4><a href="#">Bootstrap 4 UI Kit</a></h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Icon 5 -->
+      
+      <!-- Start Service Icon 6 -->
+      <div class="col-md-6 col-lg-4 col-xs-12">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="fa fa-hand-pointer-o"></i>
+          </div>
+          <div class="service-content">
+            <h4><a href="#">Advanced Features</a></h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Icon 6 -->
+    </div>
+  </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="section-padding">
+  <!-- Container Starts -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Portfolio</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <!-- Portfolio Controller/Buttons -->
+        <div class="controls text-center wow fadeInUpQuick" data-wow-delay=".6s">
+          <a class="filter active btn btn-common" data-filter="all">
+            All 
+          </a>
+          <a class="filter btn btn-common" data-filter=".branding">
+            Branding 
+          </a>
+          <a class="filter btn btn-common" data-filter=".marketing">
+            Marketing
+          </a>
+          <a class="filter btn btn-common" data-filter=".planning">
+            Planning 
+          </a>
+          <a class="filter btn btn-common" data-filter=".research">
+            Research 
+          </a>
+        </div>
+        <!-- Portfolio Controller/Buttons Ends-->
+      </div>
+
+      <!-- Portfolio Recent Projects -->
+      <div id="portfolio" class="row wow fadeInUpQuick" data-wow-delay="0.8s">
+        <div class="col-lg-4 col-md-6 col-xs-12 mix marketing planning">
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="{{ base_url }}static/img/portfolio/img1.jpg" alt="" />
+            </div>
+            <div class="portfoli-content">
+              <div class="sup-desc-wrap">
+                <div class="sup-desc-inner">
+                  <div class="sup-link">
+                    <a class="left-link" href="#"><i class="fa fa-link"></i></a>
+                    <a class="right-link" href="#"><i class="fa fa-heart"></i></a>
+                  </div>
+                  <div class="sup-meta-wrap">
+                    <a class="sup-title" href="#">
+                      <h4>TITLE HERE</h4>
+                    </a>
+                    <p class="sup-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vel quisquam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mix branding planning">
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="{{ base_url }}static/img/portfolio/img2.jpg" alt="" />
+            </div>
+            <div class="portfoli-content">
+              <div class="sup-desc-wrap">
+                <div class="sup-desc-inner">
+                  <div class="sup-link">
+                    <a class="left-link" href="#"><i class="fa fa-link"></i></a>
+                    <a class="right-link" href="#"><i class="fa fa-heart"></i></a>
+                  </div>
+                  <div class="sup-meta-wrap">
+                    <a class="sup-title" href="#">
+                      <h4>TITLE HERE</h4>
+                    </a>
+                    <p class="sup-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vel quisquam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mix branding research">
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="{{ base_url }}static/img/portfolio/img3.jpg" alt="" />
+            </div>
+            <div class="portfoli-content">
+              <div class="sup-desc-wrap">
+                <div class="sup-desc-inner">
+                  <div class="sup-link">
+                    <a class="left-link" href="#"><i class="fa fa-link"></i></a>
+                    <a class="right-link" href="#"><i class="fa fa-heart"></i></a>
+                  </div>
+                  <div class="sup-meta-wrap">
+                    <a class="sup-title" href="#">
+                      <h4>TITLE HERE</h4>
+                    </a>
+                    <p class="sup-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vel quisquam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Container Ends -->
+</section>
+<!-- Portfolio Section Ends -->
+
+<!-- facts Section Start -->
+<div id="counter">
+  <div class="container">
+    <div class="row count-to-sec">
+      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
+        <span class="icon"><i class="fa fa-download"> </i></span>
+        <h3 class="timer count-value" data-to="561" data-speed="1000">561</h3>
+        <hr class="width25-divider">
+        <small class="count-title">Downloads</small>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
+        <span class="icon"><i class="fa fa-user"> </i></span>
+        <h3 class="timer count-value" data-to="950" data-speed="1000">950</h3>
+        <hr class="width25-divider">
+        <small class="count-title">Developers</small>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
+        <span class="icon"><i class="fa fa-desktop"> </i></span>
+        <h3 class="timer count-value" data-to="978" data-speed="1000">978</h3>
+        <hr class="width25-divider">
+        <small class="count-title">Lines of code written</small>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
+        <span class="icon"><i class="fa fa-coffee"> </i></span>
+        <h3 class="timer count-value" data-to="1700" data-speed="1000">1700</h3>
+        <hr class="width25-divider">
+        <small class="count-title">Cups of coffee consumed</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- facts Section End -->
+
+<!-- Team Section Start -->
+<div id="team" class="team-members-tow section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Our Team</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-xs-12">
+        <!-- Team Item Starts -->
+        <figure>
+          <img src="{{ base_url }}static/img/team/team-05.jpg" alt="">
+          <div class="image-overlay">
+            <div class="overlay-text text-center">
+              <div class="info-text">
+                <strong>Melody Clark</strong>
+                <span>UX Specialist</span>
+              </div>
+              <hr class="small-divider">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </figure>
+        <!-- Team Item Ends -->
+      </div>
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <!-- Team Item Starts -->
+        <figure>
+          <img src="{{ base_url }}static/img/team/team-06.jpg" alt="">
+          <div class="image-overlay">
+            <div class="overlay-text text-center">
+              <div class="info-text">
+                <strong>Danny Burton</strong>
+                <span>Senior Designer</span>
+              </div>
+              <hr class="small-divider">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </figure>
+        <!-- Team Item Ends -->
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <!-- Team Item Starts -->
+        <figure>
+          <img src="{{ base_url }}static/img/team/team-07.jpg" alt="">
+          <div class="image-overlay">
+            <div class="overlay-text text-center">
+              <div class="info-text">
+                <strong>Elizabeth Jones</strong>
+                <span>Art Director</span>
+              </div>
+              <hr class="small-divider">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </figure>
+        <!-- Team Item Ends -->
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <!-- Team Item Starts -->
+        <figure>
+          <img src="{{ base_url }}static/img/team/team-07.jpg" alt="">
+          <div class="image-overlay">
+            <div class="overlay-text text-center">
+              <div class="info-text">
+                <strong>Elizabeth Jones</strong>
+                <span>Art Director</span>
+              </div>
+              <hr class="small-divider">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </figure>
+        <!-- Team Item Ends -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team Section End -->
+
+<!-- About Section Start -->
+<div id="about" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Our Team</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="about block text-center">
+          <img src="{{ base_url }}static/img/about/img1.png" alt="">
+          <h5><a href="#">About Title</a></h5>
+          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="about block text-center">
+          <img src="{{ base_url }}static/img/about/img2.png" alt="">
+          <h5><a href="#">About Title</a></h5>
+          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="about block text-center">
+          <img src="{{ base_url }}static/img/about/img3.png" alt="">
+          <h5><a href="#">About Title</a></h5>
+          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="about block text-center">
+          <img src="{{ base_url }}static/img/about/img4.png" alt="">
+          <h5><a href="#">About Title</a></h5>
+          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Section End -->
+
+<!-- Single testimonial Start -->
+<div class="single-testimonial-area">
+  <div class="container">
+    <div id="single-testimonial-item" class="owl-carousel">
+      <!-- Single testimonial Item -->
+      <div class="item">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-8 col-md-12 col-xs-12 col-md-auto">
+            <div class="testimonial-inner text-md-center">
+              <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsam, non ut molestiae rerum praesentium repellat debitis iure reiciendis, eius culpa beatae commodi facere ad numquam. Quisquam dignissimos similique sunt iure fugit, omnis vel cupiditate repellendus magni nihil molestiae quam, delectus
+              </blockquote>
+              <div class="testimonial-images">
+                <img class="img-circle text-md-center" src="{{ base_url }}static/img/testimonial/img1.jpg" alt="">
+              </div>
+              <div class="testimonial-footer">
+                <i class="fa fa-user"></i> Arman
+                <a href="#"> UIdeck</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single testimonial Item -->
+      <div class="item">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-8 col-md-12 col-xs-12 col-md-auto">
+            <div class="testimonial-inner text-md-center">
+              <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsam, non ut molestiae rerum praesentium repellat debitis iure reiciendis, eius culpa beatae commodi facere ad numquam. Quisquam dignissimos similique sunt iure fugit, omnis vel cupiditate repellendus magni nihil molestiae quam, delectus
+              </blockquote>
+              <div class="testimonial-images">
+                <img class="img-circle text-md-center" src="{{ base_url }}static/img/testimonial/img2.jpg" alt="">
+              </div>
+              <div class="testimonial-footer">
+                <i class="fa fa-user"></i> Jeniffer
+                <a href="#"> GrayGrids</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single testimonial Item -->
+      <div class="item">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-8 col-md-12 col-xs-12 col-md-auto">
+            <div class="testimonial-inner text-md-center">
+              <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsam, non ut molestiae rerum praesentium repellat debitis iure reiciendis, eius culpa beatae commodi facere ad numquam. Quisquam dignissimos similique sunt iure fugit, omnis vel cupiditate repellendus magni nihil molestiae quam, delectus
+              </blockquote>
+              <div class="testimonial-images">
+                <img class="img-circle text-md-center" src="{{ base_url }}static/img/testimonial/img3.jpg" alt="">
+              </div>
+              <div class="testimonial-footer">
+                <i class="fa fa-user"></i> Elon Musk<a href="#"> Tesla</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end -->
+
+<!-- Contact Form Section Start -->
+<section id="contact" class="contact-form section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Contact Us</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-6 col-xs-12">
+        <h3 class="title-head text-left">Get in touch</h3>
+        <form class="contact-form" data-toggle="validator">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-xs-12">
+              <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <input type="text" class="form-control" id="name" placeholder="Full Name" required data-error="Please enter your name">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-xs-12">
+              <div class="form-group">
+                <i class="contact-icon fa fa-envelope-o"></i>
+                <input type="email" class="form-control" id="email" placeholder="Email" required data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-xs-12">
+              <div class="form-group">
+                <i class="contact-icon fa fa-pencil-square-o"></i>
+                <input type="text" class="form-control" id="subject" placeholder="Subject" required data-error="Please enter your Subject">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-xs-12">
+              <textarea class="form-control" id="message" rows="4" placeholder="Message" required data-error="Please enter your message"></textarea>
+              <div class="help-block with-errors"></div>
+              <button type="submit" id="form-submit" class="btn btn-common btn-form-submit">Send Message</button>
+              <div id="msgSubmit" class="h3 text-center hidden"></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-xs-12">
+        <h4 class="contact-info-title text-left">Contact Information</h4>
+        <div class="contact-info">
+          <address>
+          <i class="lni-map-marker icons cyan-color contact-info-icon"></i>
+          Level 13, 2 Elizabeth St, Melbourne,
+        </address>
+          <div class="tel-info">
+            <a href="tel:1800452308"><i class="lni-mobile icons cyan-color contact-info-icon"></i>1800 452 308</a>
+            <a href="tel:+61(8)82343555"><i class="lni-phone icons cyan-color contact-info-icon"></i>+61 (8) 8234 3555</a>
+          </div>
+          <a href="mailto:hello@spiritapp.com"><i class="lni-envelope icons cyan-color contact-info-icon"></i>admin@uideck.com</a>
+          <a href="#"><i class="lni-tab icons cyan-color contact-info-icon"></i>www.uideck.com</a>
+          <ul class="social-links">
+            <li>
+              <a href="#" class="fa fa-facebook"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-twitter"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-instagram"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-linkedin"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Form Section End -->
+
 {% endblock %}
