@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% from "macros/events.html" import render_event %}
+{%- from "macros/users.html" import render_user_index -%}
 
 {% block body %}
 
@@ -8,7 +9,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Our Services</h2>
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Sobre Nosotros</h2>
       </div>
     </div>
     <div class="row">
@@ -118,7 +119,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Portfolio</h2>
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Últimas Reuniones</h2>
       </div>
     </div>
     <div class="row">
@@ -263,96 +264,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Our Team</h2>
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Equipo Organizador</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-4 col-xs-12">
-        <!-- Team Item Starts -->
-        <figure>
-          <img src="{{ base_url }}static/img/team/team-05.jpg" alt="">
-          <div class="image-overlay">
-            <div class="overlay-text text-center">
-              <div class="info-text">
-                <strong>Melody Clark</strong>
-                <span>UX Specialist</span>
-              </div>
-              <hr class="small-divider">
-              <ul class="social-icons">
-                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </figure>
-        <!-- Team Item Ends -->
-      </div>
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <!-- Team Item Starts -->
-        <figure>
-          <img src="{{ base_url }}static/img/team/team-06.jpg" alt="">
-          <div class="image-overlay">
-            <div class="overlay-text text-center">
-              <div class="info-text">
-                <strong>Danny Burton</strong>
-                <span>Senior Designer</span>
-              </div>
-              <hr class="small-divider">
-              <ul class="social-icons">
-                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </figure>
-        <!-- Team Item Ends -->
-      </div>
-
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <!-- Team Item Starts -->
-        <figure>
-          <img src="{{ base_url }}static/img/team/team-07.jpg" alt="">
-          <div class="image-overlay">
-            <div class="overlay-text text-center">
-              <div class="info-text">
-                <strong>Elizabeth Jones</strong>
-                <span>Art Director</span>
-              </div>
-              <hr class="small-divider">
-              <ul class="social-icons">
-                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </figure>
-        <!-- Team Item Ends -->
-      </div>
-
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <!-- Team Item Starts -->
-        <figure>
-          <img src="{{ base_url }}static/img/team/team-07.jpg" alt="">
-          <div class="image-overlay">
-            <div class="overlay-text text-center">
-              <div class="info-text">
-                <strong>Elizabeth Jones</strong>
-                <span>Art Director</span>
-              </div>
-              <hr class="small-divider">
-              <ul class="social-icons">
-                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </figure>
-        <!-- Team Item Ends -->
-      </div>
+    {% set users = site.query('/usuarios', alt=this.alt).filter(F.organizer == 'actual') %}
+    <div class="row justify-content-center">
+      {% for user in users %}
+        {{ render_user_index(user) }}
+      {% endfor %}
     </div>
   </div>
 </div>
