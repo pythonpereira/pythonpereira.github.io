@@ -1,0 +1,8 @@
+html, body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Dosis', sans-serif !important;
+  font-weight: 200;
+}
+
+.row-title {
+  font-weight: 400;
+}
