@@ -1,468 +1,156 @@
 {% extends "layout.html" %}
-{% from "macros/events.html" import render_event %}
-{%- from "macros/users.html" import render_user_index -%}
+{%- block body -%}
 
-{% block body %}
+<div class="container">
 
-<!-- Services Section Start -->
-<section id="services" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Sobre Nosotros</h2>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Start Service Icon 1 -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-cogs"></i>
-          </div>
-          <div class="service-content">
-            <h4><a href="#">Easy to Customize</a></h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Icon 1 -->
+	<div class="row section topspace">
+		<div class="col-md-12">
+			<p class="lead text-center text-muted">Let me tell you something my friend. hope is a dangerous thing. hope
+				can drive a man insane. you <a href="about.html">measure</a> yourself by the people who measure themselves
+				by you. it only took me <a href="sidebar-right.html">six days</a>. </p>
+		</div>
+	</div> <!-- / section -->
 
-      <!-- Start Service Icon 2 -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-cubes"></i>
-          </div>
-          <div class="service-content">
-            <h4><a href="#">100+ Components</a></h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Icon 2 -->
+	<div class="row section featured topspace">
+		<h2 class="section-title"><span>Services</span></h2>
+		<div class="row">
+			<div class="col-sm-6 col-md-3">
+				<h3 class="text-center">Custom website design</h3>
+				<p>I don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same
+					thing to gandhi, he didn't eat for three weeks. i once heard a wise man say there are no perfect men.</p>
+				<p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<h3 class="text-center">Wordpress integration</h3>
+				<p>I don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same
+					thing to gandhi, he didn't eat for three weeks. i once heard a wise man say there are no perfect men.</p>
+				<p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<h3 class="text-center">Application development</h3>
+				<p>I don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same
+					thing to gandhi, he didn't eat for three weeks. i once heard a wise man say there are no perfect men.</p>
+				<p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<h3 class="text-center">SEO &amp; SEM services</h3>
+				<p>I don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same
+					thing to gandhi, he didn't eat for three weeks. i once heard a wise man say there are no perfect men.</p>
+				<p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+			</div>
+		</div>
+	</div> <!-- / section -->
 
-      <!-- Start Service Icon 3 -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-tachometer"></i>
-          </div>
-          <div class="service-content">
-            <h4><a href="#">Super Fast</a></h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Icon 3 -->
+	<div class="row section recentworks topspace">
 
-      <!-- Start Service Icon 4 -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-check"></i>
-          </div>
-          <div class="service-content">
-            <h4><a href="#">Clean Design</a></h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Icon 4 -->
+		<h2 class="section-title"><span>Recent Works</span></h2>
 
-      <!-- Start Service Icon 5 -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-flash"></i>
-          </div>
-          <div class="service-content">
-            <h4><a href="#">Bootstrap 4 UI Kit</a></h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Icon 5 -->
-      
-      <!-- Start Service Icon 6 -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-hand-pointer-o"></i>
-          </div>
-          <div class="service-content">
-            <h4><a href="#">Advanced Features</a></h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto officiis consequuntur vero error excepturi.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Service Icon 6 -->
-    </div>
-  </div>
-</section>
-<!-- Services Section End -->
+		<div class="thumbnails recentworks row">
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="section-padding">
-  <!-- Container Starts -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Últimas Reuniones</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 col-md-12">
-        <!-- Portfolio Controller/Buttons -->
-        <div class="controls text-center wow fadeInUpQuick" data-wow-delay=".6s">
-          <a class="filter active btn btn-common" data-filter="all">
-            All 
-          </a>
-          <a class="filter btn btn-common" data-filter=".branding">
-            Branding 
-          </a>
-          <a class="filter btn btn-common" data-filter=".marketing">
-            Marketing
-          </a>
-          <a class="filter btn btn-common" data-filter=".planning">
-            Planning 
-          </a>
-          <a class="filter btn btn-common" data-filter=".research">
-            Research 
-          </a>
-        </div>
-        <!-- Portfolio Controller/Buttons Ends-->
-      </div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<a class="thumbnail" href="sidebar-right.html">
+					<span class="img">
+						<img src="{{ base_url }}static/images/s1.jpg" alt="">
+						<span class="cover"><span class="more">See details &rarr;</span></span>
+					</span>
+					<span class="title">Sample title - big data solutions</span>
+				</a>
+				<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a> | <a href="">Logotype</a></span>
+				<h4></h4>
+				<p></p>
+			</div>
 
-      <!-- Portfolio Recent Projects -->
-      <div id="portfolio" class="row wow fadeInUpQuick" data-wow-delay="0.8s">
-        <div class="col-lg-4 col-md-6 col-xs-12 mix marketing planning">
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="{{ base_url }}static/img/portfolio/img1.jpg" alt="" />
-            </div>
-            <div class="portfoli-content">
-              <div class="sup-desc-wrap">
-                <div class="sup-desc-inner">
-                  <div class="sup-link">
-                    <a class="left-link" href="#"><i class="fa fa-link"></i></a>
-                    <a class="right-link" href="#"><i class="fa fa-heart"></i></a>
-                  </div>
-                  <div class="sup-meta-wrap">
-                    <a class="sup-title" href="#">
-                      <h4>TITLE HERE</h4>
-                    </a>
-                    <p class="sup-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vel quisquam.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12 mix branding planning">
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="{{ base_url }}static/img/portfolio/img2.jpg" alt="" />
-            </div>
-            <div class="portfoli-content">
-              <div class="sup-desc-wrap">
-                <div class="sup-desc-inner">
-                  <div class="sup-link">
-                    <a class="left-link" href="#"><i class="fa fa-link"></i></a>
-                    <a class="right-link" href="#"><i class="fa fa-heart"></i></a>
-                  </div>
-                  <div class="sup-meta-wrap">
-                    <a class="sup-title" href="#">
-                      <h4>TITLE HERE</h4>
-                    </a>
-                    <p class="sup-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vel quisquam.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12 mix branding research">
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="{{ base_url }}static/img/portfolio/img3.jpg" alt="" />
-            </div>
-            <div class="portfoli-content">
-              <div class="sup-desc-wrap">
-                <div class="sup-desc-inner">
-                  <div class="sup-link">
-                    <a class="left-link" href="#"><i class="fa fa-link"></i></a>
-                    <a class="right-link" href="#"><i class="fa fa-heart"></i></a>
-                  </div>
-                  <div class="sup-meta-wrap">
-                    <a class="sup-title" href="#">
-                      <h4>TITLE HERE</h4>
-                    </a>
-                    <p class="sup-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente vel quisquam.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Container Ends -->
-</section>
-<!-- Portfolio Section Ends -->
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<a class="thumbnail" href="sidebar-right.html">
+					<span class="img">
+						<img src="{{ base_url }}static/images/s1.jpg" alt="">
+						<span class="cover"><span class="more">See details &rarr;</span></span>
+					</span>
+					<span class="title">Pure ipsum - development services for people</span>
+				</a>
+				<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a></span>
+				<h4></h4>
+				<p></p>
+			</div>
 
-<!-- facts Section Start -->
-<div id="counter">
-  <div class="container">
-    <div class="row count-to-sec">
-      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
-        <span class="icon"><i class="fa fa-download"> </i></span>
-        <h3 class="timer count-value" data-to="561" data-speed="1000">561</h3>
-        <hr class="width25-divider">
-        <small class="count-title">Downloads</small>
-      </div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<a class="thumbnail" href="sidebar-right.html">
+					<span class="img">
+						<img src="{{ base_url }}static/images/s1.jpg" alt="">
+						<span class="cover"><span class="more">See details &rarr;</span></span>
+					</span>
+					<span class="title">Lorem studios - interior and patio design</span>
+				</a>
+				<span class="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
+				<h4></h4>
+				<p></p>
+			</div>
 
-      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
-        <span class="icon"><i class="fa fa-user"> </i></span>
-        <h3 class="timer count-value" data-to="950" data-speed="1000">950</h3>
-        <hr class="width25-divider">
-        <small class="count-title">Developers</small>
-      </div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<a class="thumbnail" href="sidebar-right.html">
+					<span class="img">
+						<img src="{{ base_url }}static/images/s1.jpg" alt="">
+						<span class="cover"><span class="more">See details &rarr;</span></span>
+					</span>
+					<span class="title">Pure ipsum - development services for people</span>
+				</a>
+				<span class="details"><a href="">Web design</a> | <a href="">Wordpress</a></span>
+				<h4></h4>
+				<p></p>
+			</div>
 
-      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
-        <span class="icon"><i class="fa fa-desktop"> </i></span>
-        <h3 class="timer count-value" data-to="978" data-speed="1000">978</h3>
-        <hr class="width25-divider">
-        <small class="count-title">Lines of code written</small>
-      </div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<a class="thumbnail" href="sidebar-right.html">
+					<span class="img">
+						<img src="{{ base_url }}static/images/s1.jpg" alt="">
+						<span class="cover"><span class="more">See details &rarr;</span></span>
+					</span>
+					<span class="title">Lorem studios - interior and patio design</span>
+				</a>
+				<span class="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
+				<h4></h4>
+				<p></p>
+			</div>
 
-      <div class="col-lg-3 col-md-6 col-xs-12 count-one">
-        <span class="icon"><i class="fa fa-coffee"> </i></span>
-        <h3 class="timer count-value" data-to="1700" data-speed="1000">1700</h3>
-        <hr class="width25-divider">
-        <small class="count-title">Cups of coffee consumed</small>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- facts Section End -->
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<a class="thumbnail" href="sidebar-right.html">
+					<span class="img">
+						<img src="{{ base_url }}static/images/s1.jpg" alt="">
+						<span class="cover"><span class="more">See details &rarr;</span></span>
+					</span>
+					<span class="title">Lorem studios - interior and patio design</span>
+				</a>
+				<span class="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
+				<h4></h4>
+				<p></p>
+			</div>
+		</div>
 
-<!-- Team Section Start -->
-<div id="team" class="team-members-tow section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Equipo Organizador</h2>
-      </div>
-    </div>
-    {% set users = site.query('/usuarios', alt=this.alt).filter(F.organizer == 'actual') %}
-    <div class="row justify-content-center">
-      {% for user in users %}
-        {{ render_user_index(user) }}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-<!-- Team Section End -->
+	</div> <!-- /section -->
 
-<!-- About Section Start -->
-<div id="about" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Our Team</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="about block text-center">
-          <img src="{{ base_url }}static/img/about/img1.png" alt="">
-          <h5><a href="#">About Title</a></h5>
-          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="about block text-center">
-          <img src="{{ base_url }}static/img/about/img2.png" alt="">
-          <h5><a href="#">About Title</a></h5>
-          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="about block text-center">
-          <img src="{{ base_url }}static/img/about/img3.png" alt="">
-          <h5><a href="#">About Title</a></h5>
-          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="about block text-center">
-          <img src="{{ base_url }}static/img/about/img4.png" alt="">
-          <h5><a href="#">About Title</a></h5>
-          <p>Quisque sit amet libero purus. Nulla a dignissim quam. In hac habitasse platea dictumst.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- About Section End -->
+	<div class="row section topspace">
+		<div class="panel panel-cta">
+			<div class="panel-body">
+				<div class="col-lg-8">
+					<p>A simple, nice-looking <b>call to action box</b>. Boxing is about respect. getting it for yourself,
+						and taking it away from the other guy. no, this is mount everest. </p>
+				</div>
+				<div class="col-lg-4 text-right">
+					<a href="http://www.gettemplate.com/downloads/initio.zip " class="btn btn-primary btn-lg">Download
+						template</a>
+				</div>
+			</div>
+		</div>
+	</div> <!-- /section -->
 
-<!-- Single testimonial Start -->
-<div class="single-testimonial-area">
-  <div class="container">
-    <div id="single-testimonial-item" class="owl-carousel">
-      <!-- Single testimonial Item -->
-      <div class="item">
-        <div class="row justify-content-md-center">
-          <div class="col-lg-8 col-md-12 col-xs-12 col-md-auto">
-            <div class="testimonial-inner text-md-center">
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsam, non ut molestiae rerum praesentium repellat debitis iure reiciendis, eius culpa beatae commodi facere ad numquam. Quisquam dignissimos similique sunt iure fugit, omnis vel cupiditate repellendus magni nihil molestiae quam, delectus
-              </blockquote>
-              <div class="testimonial-images">
-                <img class="img-circle text-md-center" src="{{ base_url }}static/img/testimonial/img1.jpg" alt="">
-              </div>
-              <div class="testimonial-footer">
-                <i class="fa fa-user"></i> Arman
-                <a href="#"> UIdeck</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+	<div class="row section clients topspace">
+		<h2 class="section-title"><span>Clients</span></h2>
+		<div class="col-lg-12">
+			<p>
+				<img src="{{ base_url }}static/images/sample_clients.png" alt="">
+			</p>
+		</div>
+	</div> <!-- /section -->
 
-      <!-- Single testimonial Item -->
-      <div class="item">
-        <div class="row justify-content-md-center">
-          <div class="col-lg-8 col-md-12 col-xs-12 col-md-auto">
-            <div class="testimonial-inner text-md-center">
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsam, non ut molestiae rerum praesentium repellat debitis iure reiciendis, eius culpa beatae commodi facere ad numquam. Quisquam dignissimos similique sunt iure fugit, omnis vel cupiditate repellendus magni nihil molestiae quam, delectus
-              </blockquote>
-              <div class="testimonial-images">
-                <img class="img-circle text-md-center" src="{{ base_url }}static/img/testimonial/img2.jpg" alt="">
-              </div>
-              <div class="testimonial-footer">
-                <i class="fa fa-user"></i> Jeniffer
-                <a href="#"> GrayGrids</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Single testimonial Item -->
-      <div class="item">
-        <div class="row justify-content-md-center">
-          <div class="col-lg-8 col-md-12 col-xs-12 col-md-auto">
-            <div class="testimonial-inner text-md-center">
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsam, non ut molestiae rerum praesentium repellat debitis iure reiciendis, eius culpa beatae commodi facere ad numquam. Quisquam dignissimos similique sunt iure fugit, omnis vel cupiditate repellendus magni nihil molestiae quam, delectus
-              </blockquote>
-              <div class="testimonial-images">
-                <img class="img-circle text-md-center" src="{{ base_url }}static/img/testimonial/img3.jpg" alt="">
-              </div>
-              <div class="testimonial-footer">
-                <i class="fa fa-user"></i> Elon Musk<a href="#"> Tesla</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end -->
-
-<!-- Contact Form Section Start -->
-<section id="contact" class="contact-form section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Contact Us</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 col-md-6 col-xs-12">
-        <h3 class="title-head text-left">Get in touch</h3>
-        <form class="contact-form" data-toggle="validator">
-          <div class="row">
-            <div class="col-lg-4 col-md-12 col-xs-12">
-              <div class="form-group">
-                <i class="contact-icon fa fa-user"></i>
-                <input type="text" class="form-control" id="name" placeholder="Full Name" required data-error="Please enter your name">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-xs-12">
-              <div class="form-group">
-                <i class="contact-icon fa fa-envelope-o"></i>
-                <input type="email" class="form-control" id="email" placeholder="Email" required data-error="Please enter your email">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-xs-12">
-              <div class="form-group">
-                <i class="contact-icon fa fa-pencil-square-o"></i>
-                <input type="text" class="form-control" id="subject" placeholder="Subject" required data-error="Please enter your Subject">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-xs-12">
-              <textarea class="form-control" id="message" rows="4" placeholder="Message" required data-error="Please enter your message"></textarea>
-              <div class="help-block with-errors"></div>
-              <button type="submit" id="form-submit" class="btn btn-common btn-form-submit">Send Message</button>
-              <div id="msgSubmit" class="h3 text-center hidden"></div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-xs-12">
-        <h4 class="contact-info-title text-left">Contact Information</h4>
-        <div class="contact-info">
-          <address>
-          <i class="lni-map-marker icons cyan-color contact-info-icon"></i>
-          Level 13, 2 Elizabeth St, Melbourne,
-        </address>
-          <div class="tel-info">
-            <a href="tel:1800452308"><i class="lni-mobile icons cyan-color contact-info-icon"></i>1800 452 308</a>
-            <a href="tel:+61(8)82343555"><i class="lni-phone icons cyan-color contact-info-icon"></i>+61 (8) 8234 3555</a>
-          </div>
-          <a href="mailto:hello@spiritapp.com"><i class="lni-envelope icons cyan-color contact-info-icon"></i>admin@uideck.com</a>
-          <a href="#"><i class="lni-tab icons cyan-color contact-info-icon"></i>www.uideck.com</a>
-          <ul class="social-links">
-            <li>
-              <a href="#" class="fa fa-facebook"></a>
-            </li>
-            <li>
-              <a href="#" class="fa fa-twitter"></a>
-            </li>
-            <li>
-              <a href="#" class="fa fa-instagram"></a>
-            </li>
-            <li>
-              <a href="#" class="fa fa-linkedin"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Contact Form Section End -->
-
-{% endblock %}
+</div> <!-- /container -->
+{%- endblock -%}

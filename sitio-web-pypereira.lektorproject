@@ -13,14 +13,9 @@ name = English
 url_prefix = /en/
 locale = en
 
-[servers.develop]
-name = Develop
-target = ghpages+https://pythonpereira/sitio-web-desarrollo?cname=develop.pypereira.co
-default = yes
-
 [servers.production]
 name = Production
-target = ghpages+https://pythonpereira/sitio-web-produccion?cname=pypereira.co
+target = ghpages+https://pythonpereira/sitio-web-produccion?cname=develop.pypereira.co
 
 [packages]
 lektor-google-analytics = 0.1.3
