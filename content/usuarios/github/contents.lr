@@ -4,6 +4,6 @@ name: Github
 ---
 type: empresa
 ---
-web: http://github.com
+web:   https://github.com
 ---
 image_alt: github-horizontal.png

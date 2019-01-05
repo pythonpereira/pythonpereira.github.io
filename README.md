@@ -27,7 +27,7 @@ Hay 2 ramas de git, `develop` y `production`.
 
 Es la rama por defecto y se despliega a través de gh-pages con Lektor a
 https://pythonpereira.github.io/sitio-web-desarrollo/
-(en http://develop.pypereira.co)
+(en   https://develop.pypereira.co)
 
 ## ⤴️ Production
 
@@ -35,7 +35,7 @@ Después de que se han ejecutado las pruebas de calidad (QA), los cambios
 realizados en la rama `develop` se unen con la rama `production` y son
 desplegados a través de gh-pages con Lektor a 
 https://pythonpereira/sitio-web-produccion/
-(pronto en http://pypereira.co)
+(pronto en   https://pypereira.co)
 
 # 🛠 Desarrollo local
 
@@ -97,7 +97,7 @@ $ lektor server
 * 🔴 Si en algun momento luego de instalar python3 y crear tu virtualenv. haces `lektor server` y ves este error:
 
 ```
-RuntimeError: Click will abort further execution because Python 3 was configured to use ASCIas encoding for the environment.  Consult http://click.pocoo.org/python3/for mitigation steps.
+RuntimeError: Click will abort further execution because Python 3 was configured to use ASCIas encoding for the environment.  Consult   https://click.pocoo.org/python3/for mitigation steps.
 ```
 Haz esto adentro de tu virtualenv:
 ```
