@@ -1,5 +1,17 @@
 {%- set base_url = '/'|url(alt='es') -%}
 
+{%- from "macros/translation.html" import transbag -%}
+
+{%- macro menu_item(identifier) -%}
+{% set identifier_url = '/' + identifier %}
+{% set trans_url = identifier_url|url(alt=this.alt) %}
+{% set this_is_child = this.is_child_of(identifier_url) %}
+
+<li class="{% if this_is_child %}active{% endif %}">
+  <a href="{{ trans_url }}">{{ transbag('menu', this.alt, identifier) }}</a>
+</li>
+{%- endmacro -%}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +21,9 @@
   <meta name="description" content="">
   <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
 
-  <title>PyPereira - comunidad Python Pereira</title>
+  <title>PyPereira - Comunidad Python Pereira</title>
 
-  <link rel="shortcut icon" href="{{ base_url }}static/images/gt_favicon.png">
+  <link rel="shortcut icon" href="{{ base_url }}static/images/favicon.ico">
 
   <!-- Bootstrap -->
   <link href="  https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -31,8 +43,8 @@
     <div id="head" class="parallax" parallax-speed="2">
       <h1 id="logo" class="text-center">
         <img class="img-circle" src="{{ base_url }}static/images/guy.jpg" alt="">
-        <span class="title">Anthony Russel</span>
-        <span class="tagline">A mystery person<br>
+        <span class="title">PYPEREIRA</span>
+        <span class="tagline">Comunidad Python Pereira<br>
           <a href="">anthony.russel42@example.com</a></span>
       </h1>
     </div>
@@ -49,17 +61,8 @@
         <div class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="sidebar-left.html">Left Sidebar</a></li>
-                <li><a href="sidebar-right.html">Right Sidebar</a></li>
-                <li><a href="single.html">Blog Post</a></li>
-              </ul>
-            </li>
-            <li><a href="blog.html">Blog</a></li>
+            <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/'|url(alt=this.alt) }}">{{ transbag('menu', this.alt,
+                'index') }}</a></li>
           </ul>
 
         </div>
