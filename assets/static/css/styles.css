@@ -128,11 +128,11 @@ body {
   color: #f392b4;
 }
 .nav-side > li > a:hover {
-  color: #bd1550;
+  color: #0096f5;
   background: none;
 }
 .nav-side > li.active > a {
-  color: #bd1550;
+  color: #0096f5;
 }
 /*********************************************************************
 
@@ -192,10 +192,10 @@ h5 {
   font-size: 1.25rem;
 }
 a {
-  color: #bd1550;
+  color: #0096f5;
 }
 a:hover {
-  color: #e93675;
+  color:  #1565c0 ;
 }
 .lead {
   font-weight: 300;
@@ -311,7 +311,7 @@ img {
 }
 .btn-primary {
   color: #fff;
-  background-color: #bd1550;
+  background-color: #0096f5;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -330,8 +330,8 @@ img {
 .btn-action:focus,
 .btn-action:active,
 .btn-action.active {
-  color: #bd1550;
-  border-color: #bd1550;
+  color: #0096f5;
+  border-color: #0096f5;
 }
 .btn-lg {
   padding: 15px 60px;
@@ -450,7 +450,7 @@ img {
   font-size: 0.75rem;
   text-transform: uppercase;
   text-shadow: 0 1px 0px #780d33;
-  background: #bd1550;
+  background: #0096f5;
   color: white;
 }
 .thumbnail img {
@@ -504,7 +504,7 @@ img {
   margin: 0px 0 25px;
   text-align: center;
   font-weight: 300;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 36px;
   font-size: 2.25rem;
   letter-spacing: 1px;
@@ -701,7 +701,7 @@ footer.entry-meta .meta-in {
   color: #333333;
 }
 #comments .comment-meta a:hover {
-  color: #bd1550;
+  color: #0096f5;
 }
 #comments .comment-meta .author {
   margin: 0 20px 0 0;
@@ -795,4 +795,49 @@ footer.entry-meta .meta-in {
   .container {
     max-width: 1080px;
   }
+}
+
+/* Custom */
+
+@font-face {
+  font-family: 'FredokaOne';
+  src: url('../fonts/FredokaOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Viga';
+  src: url('../fonts/Viga-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GTWalsheim';
+  src: url('../fonts/GTWalsheimRegular.ttf') format('truetype');
+}
+
+.primary-color {
+  color: #0096f5;
+}
+
+.logo-pypereira {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#logo .title-text {
+  display: inline-block;
+}
+
+.fredoka {
+  font-family: 'FredokaOne';
+}
+
+.viga {
+  font-family: 'Viga';
+}
+
+.gt-walsheim {
+  font-family: 'GTWalsheim';
 }
