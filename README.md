@@ -3,7 +3,7 @@
 # 🐍 🇨🇴 Sitio Web de la Comunidad de Python Pereira
 
 <a href="https://github.com/pythonpereira">
-  <img width="200" src="assets/static/images/python-pereira.svg">
+  <img width="200" src="assets/static/images/2019.svg">
 </a>
 
 [![Build Status][build-badge]][build]

@@ -2,9 +2,9 @@ title: 3ra Meetup
 ---
 end_date: 2018-02-28 20:30:00 -0500
 ---
-meetup_url:   https://bit.ly/3raPyPereira
+meetup_url: https://bit.ly/3raPyPereira
 ---
-place: Universidad TEcnológica de Pereira. Edificio 15C 204
+place: Universidad Tecnológica de Pereira. Edificio 15C 204
 ---
 pub_date: 2018-02-28 18:30:00 -0500
 ---
@@ -31,3 +31,5 @@ description:
 _slug: 2018/02/3ra-meetup
 ---
 image: meetup.jpg
+---
+thumbnail: portada.png
