@@ -2,7 +2,7 @@ title: 2da meetup
 ---
 _slug: 2017/11/2da-meetup
 ---
-meetup_url:   https://bit.ly/2daPyPereira
+meetup_url: https://bit.ly/2daPyPereira
 ---
 place: Universidad Tecnológica de Pereira. CIDT Edificio 15C Sala 204
 ---
@@ -37,3 +37,5 @@ end_date: 2017-11-22 20:00:00 -0500
 image: flyer.png
 ---
 pub_date: 2017-11-22 18:00:00 -0500
+---
+thumbnail: portada.png
