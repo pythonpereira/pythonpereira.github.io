@@ -1,0 +1,18 @@
+title: Contruyendo APIs modernas con GraphQL
+---
+repository_url: https://github.com/pythonpereira/goodreads-graphql
+---
+speakers:
+
+#### user ####
+username: leiverandres
+----
+description: 
+---
+video_url: https://www.youtube.com/watch?v=OT8_FmRKKyY
+---
+information:
+
+GraphQL es un lenguaje de consulta creado por Facebook que funciona como interfaz entre clientes y servidores permitiendo consumir y manipular los datos de nuestras aplicaciones eficientemente.
+
+En esta charla introduciremos GraphQL, sus conceptos básicos, sus características, sus ventajas frente a otras soluciones como las APIs REST, entre otras cosas. Además dado el contexto de nuestra comunidad veremos como construir una API sencilla usando GraphQL en Python.

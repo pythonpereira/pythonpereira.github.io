@@ -1,0 +1,65 @@
+title: 8va Meetup
+---
+end_date: 2018-09-29 17:00:00 -0500
+---
+meetup_url: https://www.meetup.com/es/pythonpereira/events/254408256/
+---
+place: Edificio 13A, Sala 311, Universidad Tecnológica de pereira
+---
+pub_date: 2018-09-29 14:00:00 -0500
+---
+sponsors:
+
+#### organization ####
+username: monoku
+#### organization ####
+username: 
+---
+team:
+
+#### user ####
+username: aerendon
+----
+description: 
+#### user ####
+username: anaguicas
+----
+description: 
+#### user ####
+username: carogomezt
+----
+description: 
+#### user ####
+username: xergioalex
+----
+description: 
+#### user ####
+username: leiverandres
+----
+description: 
+---
+image: highres_474426210.jpeg
+---
+thumbnail: portada.png
+---
+information:
+
+📣Queremos invitarlos a la 8va Reunión de Python Pereira 🎉
+En esta ocasión contaremos con dos interesantes charlas 🐍💻:
+
+👉 Introducción a DynamoDB por Carolina Gómez
+
+🔎 Descripción:
+DynamoDB 🗃 es una base de datos no relacional que hace parte de los web services de Amazon, en esta charla conocerás un poco más acerca de esta y por medio de ejercicios prácticos aprenderás a crear tablas por medio de Terraform y a agregar, actualizar y eliminar datos por medio de Boto3 con Python.
+
+Twitter: @caro_gomezt
+Github: https://github.com/carogomezt
+
+👉 Contruyendo APIs modernas con GraphQL por Leiver Campeón
+
+🔎 Descripción:
+GraphQL es un lenguaje de consulta creado por Facebook que funciona como interfaz entre clientes y servidores permitiendo consumir y manipular los datos de nuestras aplicaciones eficientemente.
+
+En esta charla introduciremos GraphQL, sus conceptos básicos, sus características, sus ventajas frente a otras soluciones como las APIs REST, entre otras cosas. Además dado el contexto de nuestra comunidad veremos como construir una API sencilla usando GraphQL en Python.
+
+Twitter: @leiverandres
