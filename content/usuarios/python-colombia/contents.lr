@@ -4,6 +4,8 @@ name: Python Colombia
 ---
 type: comunidad
 ---
-web:   https://python.org.co
+web: https://python.org.co
 ---
 image_alt: about-us.jpg.png
+---
+sponsor: actual

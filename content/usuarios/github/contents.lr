@@ -4,6 +4,8 @@ name: Github
 ---
 type: empresa
 ---
-web:   https://github.com
+web: https://github.com
 ---
 image_alt: github-horizontal.png
+---
+sponsor: pasado
