@@ -26,7 +26,7 @@
   <link rel="shortcut icon" href="{{ base_url }}static/images/favicon.ico">
 
   <!-- Bootstrap -->
-  <link href="  https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
   <!-- Icons -->
   <link href="  https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Fonts -->
@@ -61,8 +61,10 @@
         <div class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav">
-            <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/'|url(alt=this.alt) }}">{{ transbag('menu', this.alt,
-                'index') }}</a></li>
+            <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'index') }}</a>
+            </li>
+            <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/patrocinadores'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'sponsors') }}</a>
+            </li>
           </ul>
 
         </div>

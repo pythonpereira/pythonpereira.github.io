@@ -4,6 +4,8 @@ name: Monoku
 ---
 type: empresa
 ---
-web:   https://monoku.com
+web: https://monoku.com
 ---
 image_alt: monoku-horizontal.png
+---
+sponsor: actual
