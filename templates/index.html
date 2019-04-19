@@ -119,5 +119,26 @@
     </div>
   </div> <!-- /section -->
 
+  <div class="row">
+    <h3 class="section-title gt-walsheim primary-color">Organizadores</h3>
+  </div>
+  {% set users = site.query('/usuarios', alt=this.alt).filter(F.organizer == 'actual') %}
+  <div class="row">
+    {%- for user in users -%}
+    <div class="col-md-2">
+      {% if user.image %}
+      <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+      {% endif %}
+      <div>
+        <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
+      </div>
+    </div>
+    {% if loop.index % 6 == 0 %}
+  </div>
+  <div class="row">
+    {% endif %}
+    {% endfor %}
+  </div>
+
 </div> <!-- /container -->
 {%- endblock -%}
