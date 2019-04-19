@@ -13,7 +13,7 @@
 {%- endmacro -%}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -64,6 +64,9 @@
 
           <ul class="nav navbar-nav">
             <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'index') }}</a>
+            </li>
+            <li class="{% if this_is_child %}active{% endif %}"><a
+              href="{{ '/eventos'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'events') }}</a>
             </li>
             <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/patrocinadores'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'sponsors') }}</a>
             </li>

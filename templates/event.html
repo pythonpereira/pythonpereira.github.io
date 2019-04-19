@@ -54,6 +54,29 @@
             {% endif %}
           {% endfor %}
         </div>
+
+        <div class="row">
+          <h3 class="section-title gt-walsheim primary-color">Patrocinadores</h3>
+        </div>
+        <div class="row">
+          {%- for block in this.sponsors.blocks -%}
+          {%- set sponsor = site.get('/usuarios/' + block.username) -%}
+          <div class="col-md-4">
+            {% if sponsor.image_alt %}
+            <img src="{{ sponsor|url }}/{{ sponsor.image_alt }}" alt="{{ sponsor.sponsorname }}" />
+            {% elif sponsor.image %}
+            <img src="{{ sponsor|url }}/{{ sponsor.image }}" alt="{{ sponsor.sponsorname }}" />
+            {% endif %}
+            <div>
+              <p class="section-title gt-walsheim">{{ sponsor.name }} {{ sponsor.last_name }}</p>
+            </div>
+          </div>
+          {% if loop.index % 3 == 0 %}
+        </div>
+        <div class="row">
+          {% endif %}
+          {% endfor %}
+        </div>
   
       </article>
       <!-- /Article -->

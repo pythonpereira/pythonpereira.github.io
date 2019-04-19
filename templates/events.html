@@ -2,19 +2,15 @@
 {% from "macros/events.html" import render_event %}
 {% from "macros/pagination.html" import render_pagination %}
 {% block body %}
-  <!-- Main -->
-  <section id="main" class="container">
-    <header>
-      <img src="{{ base_url }}static/images/python-pereira.svg" style="max-width: 150px;" />
-      <h2>{{ this.title }}</h2>
-      <p>{{ this.body }}</p>
-    </header>
-
-    <div class="row">
-      {% for child in this.pagination.items %} {{ render_event(child, from_index=true) }} {% endfor %}
+  <div class="container">
+    <div class="row section clients topspace">
+      <h2 class="section-title gt-walsheim primary-color"><span>Eventos</span></h2>
+      {% for child in this.pagination.items %} 
+        {{ render_event(child, from_index=true) }}
+      {% endfor %}
     </div>
     
     {{ render_pagination(this.pagination) }}
   
-  </section>
+  </div>
 {% endblock %}

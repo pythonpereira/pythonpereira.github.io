@@ -47,7 +47,7 @@
   <!-- Events -->
 
   <div class="row section recentworks topspace">
-    <h2 class="section-title gt-walsheim primary-color"><span>Últimos Eventos</span></h2>
+    <h2 class="section-title gt-walsheim primary-color">Últimos Eventos</h2>
     <div class="thumbnails recentworks row">
     {% for event in site.query('/eventos/').limit(6) %}
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -92,7 +92,7 @@
   <!-- Sponsors -->
 
   <div class="row section clients topspace">
-    <h2 class="section-title gt-walsheim primary-color"><span>Patrocinadores</span></h2>
+    <h2 class="section-title gt-walsheim primary-color">Patrocinadores</h2>
     {% set sponsors = site.query('/usuarios', alt=this.alt).filter(F.sponsor == 'actual') %}
     <div class="row sponsor-container">
       {% for sponsor in sponsors %}

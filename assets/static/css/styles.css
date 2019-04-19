@@ -472,7 +472,7 @@ img {
   opacity: 1;
 }
 /* pagination */
-.pagination > li > a {
+/* .pagination > li > a {
   color: #808080;
   border: 0 none;
   font-size: 20px;
@@ -490,7 +490,7 @@ img {
 .pagination > li.active > a:hover {
   color: #000000;
   background: none;
-}
+} */
 /*********************************************************************
 
 

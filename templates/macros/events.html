@@ -1,21 +1,13 @@
 {% macro render_event(event, from_index=false) %}
-  <div class="col-lg-6 col-md-6 col-sm-12">
-    <section class="box special">
-      <span class="image featured">
-        {% if event.image %}
-        <img src="{{ event|url }}{{ event.image }}" alt="" />
-        {% else %}
-        <img src="{{ base_url }}static/images/pic02.jpg" alt="" />
-        {% endif %}
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <a class="thumbnail" href="{{ event|url }}">
+      <span class="img">
+        <img
+        src="{{ event|url }}/{%- if event.thumbnail -%}{{ event.thumbnail }}{%- else -%}{{ event.image }}{%- endif -%}"
+        alt="">
+        <span class="cover"><span class="more">Ver detalles &rarr;</span></span>
       </span>
-      <a href="{{ event|url }}">
-        <h3>{{ event.title }}</h3>
-      </a>
-      <p>{{event.summary}}</p>
-      <ul class="actions special">
-        <li><a href="#" class="button small alt">Learn More</a></li>
-      </ul>
-    </section>
-  
+      <span class="title">{{ event.title }} {% if event.pub_date %} | {{ event.pub_date.strftime('%d/%m/%Y') }} {% endif %}</span>
+    </a>
   </div>
 {% endmacro %}
