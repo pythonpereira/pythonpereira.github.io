@@ -28,7 +28,9 @@
   <!-- Bootstrap -->
   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
   <!-- Icons -->
-  <link href="  https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
   <!-- Fonts -->
   <link rel="stylesheet" href="  https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
   <!-- Custom styles -->
@@ -78,39 +80,24 @@
     {%- block body -%}{%- endblock -%}
   </main>
 
-  <footer id="footer">
+  <!-- <footer id="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-3 widget">
-          <h3 class="widget-title">Contact</h3>
+          <h3 class="widget-title">Contacto</h3>
           <div class="widget-body">
-            <p>+234 23 9873237<br>
-              <a href="mailto:#">some.email@somewhere.com</a><br>
+            <p><br>
+              <a href="mailto:python.pereira@gmail.com">python.pereira@gmail.com</a><br><br>
               <br>
               234 Hidden Pond Road, Ashland City, TN 37015
             </p>
           </div>
         </div>
 
-        <div class="col-md-3 widget">
-          <h3 class="widget-title">Follow me</h3>
-          <div class="widget-body">
-            <p class="follow-me-icons">
-              <a href=""><i class="fa fa-twitter fa-2"></i></a>
-              <a href=""><i class="fa fa-dribbble fa-2"></i></a>
-              <a href=""><i class="fa fa-github fa-2"></i></a>
-              <a href=""><i class="fa fa-facebook fa-2"></i></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-3 widget">
+        <div class="col-md-6 widget">
           <h3 class="widget-title">Text widget</h3>
           <div class="widget-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste
-              aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste
-              aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+            <p><a href="{{ '/coc'|url(alt=this.alt) }}">Adoptamos el código de conducta de ColombiaDev</a></p>
           </div>
         </div>
 
@@ -118,40 +105,54 @@
           <h3 class="widget-title">Form widget</h3>
           <div class="widget-body">
             <p>+234 23 9873237<br>
-              <a href="mailto:#">some.email@somewhere.com</a><br>
+              <a href="mailto:python.pereira@gmail.com">python.pereira@gmail.com</a><br>
               <br>
-              234 Hidden Pond Road, Ashland City, TN 37015
+              Pereira, Risaralda. Colombia
             </p>
           </div>
         </div>
 
-      </div> <!-- /row of widgets -->
+      </div>
     </div>
-  </footer>
+  </footer> -->
 
   <footer id="underfooter">
     <div class="container">
       <div class="row">
 
-        <div class="col-md-6 widget">
+        <div class="col-md-3 widget">
           <div class="widget-body">
-            <p>234 Hidden Pond Road, Ashland City, TN 37015 </p>
+            <p class="follow-me-icons">
+              <a href="mailto:python.pereira@gmail.com" target="blank_"><i class="fas fa-envelope fa-2"></i></a>
+              <a href="https://twitter.com/pythonpereira" target="blank_"><i class="fab fa-twitter fa-2"></i></a>
+              <a href="https://instagram.com/pythonpereira" target="blank_"><i class="fab fa-instagram fa-2"></i></a>
+              <a href="https://github.com/pythonpereira" target="blank_"><i class="fab fa-github-alt fa-2"></i></a>
+              <a href="https://facebook.com/pythonpereira" target="blank_"><i class="fab fa-facebook-f fa-2"></i></a>
+              <a href="https://meetup.com/pythonpereira" target="blank_"><i class="fab fa-meetup fa-2"></i></a>
+            </p>
           </div>
         </div>
 
         <div class="col-md-6 widget">
+          <div class="widget-body text-center">
+            <p><a href="{{ '/coc'|url(alt=this.alt) }}">Adoptamos el código de conducta de ColombiaDev</a></p>
+          </div>
           <div class="widget-body">
-            <p class="text-right">
-              Copyright &copy; 2014, Your awesome name here<br>
+            <p class="text-center">
+              Copyright &copy; 2019, Comunidad Python Pereira - PyPereira<br>
               Design: <a href="  https://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> </p>
+          </div>
+        </div>
+
+        <div class="col-md-3 widget">
+          <div class="widget-body text-right">
+            <p>Pereira, Risaralda. Colombia</p>
           </div>
         </div>
 
       </div> <!-- /row of widgets -->
     </div>
   </footer>
-
-
 
   <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
   <script src="  https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
