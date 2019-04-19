@@ -770,9 +770,9 @@ footer.entry-meta .meta-in {
   margin: 0 0 20px;
 }
 #underfooter {
-  background: #191919;
+  background: #010c22;
   padding: 15px 0;
-  color: #777;
+  color: #fff;
   font-size: 12px;
 }
 #underfooter a {
@@ -851,4 +851,8 @@ footer.entry-meta .meta-in {
 
 .sponsor-container {
   margin: 20px 0;
+}
+
+.text-center {
+  text-align: center;
 }
