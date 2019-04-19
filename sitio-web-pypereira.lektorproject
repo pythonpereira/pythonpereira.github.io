@@ -15,7 +15,7 @@ locale = en
 
 [servers.production]
 name = Production
-target = ghpages+https://pythonpereira/sitio-web?cname=develop.pypereira.co
+target = ghpages+https://pythonpereira/sitio-web?cname=pypereira.co
 
 [packages]
 lektor-google-analytics = 0.1.3
