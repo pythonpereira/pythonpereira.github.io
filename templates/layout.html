@@ -63,16 +63,18 @@
         <div class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav">
-            <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'index') }}</a>
+            <li{% if this._path=='/' %} class="active" {% endif %}>
+              <a href="{{ '/'|url }}">Inicio</a>
+              </li>
+              {% for href, title in [
+                  ['/eventos', 'Eventos'],
+                  ['/patrocinadores', 'Patrocinadores'],
+                  ['/calendario', 'Calendario']
+              ] -%}
+            <li{% if this.is_child_of(href) %} class="active" {% endif%}>
+              <a href="{{ href|url }}">{{ title }}</a>
             </li>
-            <li class="{% if this_is_child %}active{% endif %}"><a
-              href="{{ '/eventos'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'events') }}</a>
-            </li>
-            <li class="{% if this_is_child %}active{% endif %}"><a href="{{ '/patrocinadores'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'sponsors') }}</a>
-            </li>
-            <li class="{% if this_is_child %}active{% endif %}"><a
-              href="{{ '/calendario'|url(alt=this.alt) }}">{{ transbag('menu', this.alt, 'calendar') }}</a>
-            </li>
+            {% endfor -%}
           </ul>
 
         </div>

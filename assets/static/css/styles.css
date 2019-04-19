@@ -55,7 +55,7 @@ body {
   display: inline-block;
 }
 .navbar-collapse .navbar-nav > li > a {
-  padding: 20px 30px;
+  padding: 20px 15px;
 }
 .dropdown ul.dropdown-menu {
   top: 85%;
@@ -79,7 +79,7 @@ body {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #000000;
+  color: #0096f5;
   background-color: #ffffff;
 }
 .navbar-default .dropdown ul.dropdown-menu > li > a {
