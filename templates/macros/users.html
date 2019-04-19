@@ -12,13 +12,13 @@
           <hr class="small-divider">
           <ul class="social-icons">
             {% if user.web %}
-            <li><a href="{{ user.web }}" target="blank_"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+            <li><a href="{{ user.web }}" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
             {% endif %}
             {% if user.github_handle %}
-            <li><a href="https://github.com/{{ user.github_handle }}" target="blank_"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/{{ user.github_handle }}" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
             {% endif %}
             {% if user.linkedin_handle %}
-            <li><a href="https://linkedincom/in/{{ user.linkedin_handle }}" target="blank_"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://linkedincom/in/{{ user.linkedin_handle }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
             {% endif %}
           </ul>
         </div>
@@ -30,7 +30,7 @@
 
 {% macro render_sponsor_index(sponsor) %}
   <div class="col-lg-3 col-md-6 col-xs-12">
-    <a href="{{ sponsor.web }}" target="blank_">
+    <a href="{{ sponsor.web }}" target="_blank">
       {% if sponsor.image %}
       <img class="sponsor" src="/usuarios/{{ sponsor._id }}/{{ sponsor.image }}" alt="">
       {% elif sponsor.image_alt %}

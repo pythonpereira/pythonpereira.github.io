@@ -1,112 +1,86 @@
 {% extends "layout.html" %}
-{% from "macros/talks.html" import render_talk %}
-{% from "macros/pagination.html" import render_pagination %}
-{% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <section id="main" class="container">
-    <header>
-      <img src="{{ base_url }}static/images/python-pereira.svg" style="max-width: 150px;" />
-      <h2>{{ this.title }}</h2>
-      <p>{{ this.body }}</p>
-    </header>
+  <div class="container">
+  
+    <div class="row topspace">
+  
+      <!-- Article main content -->
+      <article class="col-sm-8 maincontent">
+        <header class="page-header">
+          <h2 class="section-title gt-walsheim primary-color">{{ this.title }}</h2>
+          <p>{{ this.body }}</p>
+        </header>
 
-    <div class="box">
-      <span class="image featured"><img src="{{ this|url }}{{ this.image }}" alt="" /></span>
+        <p><img src="{{ this|url }}{{ this.image }}" alt=""></p>
 
-      <p>Somos una comunidad enfocada en extender en el territorio nacional el uso y aprendizaje de las distintas tecnologías python y sus numerosas aplicaciones.<br />
-      Nuestra comunidad está conformada por personas con diferentes niveles de conocimiento siempre dispuestas a aprender y compartir nuestro saber mostrando una gran empatía y respeto hacia los demás.<br />
-      Siempre motivados a crecer mucho más y totalmente comprometidos a promover la diversidad y la inclusión en cada una de nuestras actividades y eventos.</p>
+        {% if this.meetup_url %}
+        <p class="text-center">
+          <a href="{{ this.meetup_url }}" class="btn btn-primary btn-lg" target="_blank" >Inscripción</a>
+        </p>
+        {% endif %}
+        <hr />
 
-      {% if this.meetup_url %}
-      <div class="row justify-content-center">
-        <a href="{{ this.meetup_url }}" target="blank_" class="button primary">Inscripción</a>
-      </div>
-      {% endif %}
-    </div>
-    <div class="box">
-      <div class="row justify-content-center">
-        <h2>Lista de Charlas</h2>
-      </div>
-      <div class="row">
-        {% for child in this.pagination.items %}
-        <div class="col-md-6 col-xs-12">
-          <div class="row justify-content-center">
+        <div class="row">
+          <h3 class="section-title gt-walsheim primary-color">Lista de Charlas</h3>
+        </div>
+
+        <ul>
+          {% for child in this.pagination.items %}
+          <li>
             <a href="{{ child|url }}">
-              <h4>{{ child.title }}</h4>
+              {{ child.title }}
             </a>
-            <p>{{ child.summary }}</p>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="box">
+          </li>
+          {% endfor %}
+        </ul>
 
-      <div class="row justify-content-center">
-        <h3>Organizadores</h3>
-      </div>
-      <div class="row justify-content-center">
-        {%- for block in this.team.blocks -%} {%- set user = site.get('/usuarios/' + block.username) -%}
-        <div class="col-3">
-          {% if user.image %}
-          <img class="image fit" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" /> {% endif %}
-          <div class="row justify-content-center">
-            <h4>{{ user.name }} {{ user.last_name }}</h4>
-          </div>
-          <div class="row justify-content-center">
-            <ul class="icons">
-              {% if user.web %}
-              <li>
-                <a href="{{ user.web }}" class="icon fa-globe" target="_blank">
-                  <span class="label">Website</span>
-                </a>
-              </li>
-              {% endif %} {% if user.email %}
-              <li>
-                <a href="mailto:{{ user.email }}" class="icon fa-envelope" target="_blank">
-                  <span class="label">Email</span>
-                </a>
-              </li>
-              {% endif %} {% if user.facebook_handle %}
-              <li>
-                <a href="https://facebook.com/{{ user.facebook_handle}}" class="icon fa-facebook" target="_blank">
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-              {% endif %} {% if user.twitter_handle %}
-              <li>
-                <a href="https://twitter.com/{{ user.twitter_handle}}" class="icon fa-twitter" target="_blank">
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-              {% endif %} {% if user.github_handle %}
-              <li>
-                <a href="https://github.com/{{ user.github_handle}}" class="icon fa-github-alt" target="_blank">
-                  <span class="label">Github</span>
-                </a>
-              </li>
-              {% endif %}
-            </ul>
-          </div>
+        <div class="row">
+          <h3 class="section-title gt-walsheim primary-color">Organizadores</h3>
         </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="box">
-      <div class="row justify-content-center">
-        <h3>Sponsors</h3>
-      </div>
-      <div class="row justify-content-center">
-        {%- for block in this.sponsors.blocks -%} {%- set user = site.get('/usuarios/' + block.username) -%}
-        <div class="col-3">
-          {% if user.image_alt %}
-          <a href="{{ user.web }}" target="blank_">
-            <img class="image fit" src="{{ user|url }}/{{ user.image_alt }}" alt="{{ user.username }}" />
-          </a>
-          {% endif %}
+        <div class="row">
+          {%- for block in this.team.blocks -%} 
+          {%- set user = site.get('/usuarios/' + block.username) -%}
+          <div class="col-md-3">
+            {% if user.image %}
+            <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+            {% endif %}
+            <div>
+              <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
+            </div>
+          </div>
+            {% if loop.index % 4 == 0 %}
+            </div>
+            <div class="row">
+            {% endif %}
+          {% endfor %}
         </div>
-        {% endfor %}
-      </div>
+  
+      </article>
+      <!-- /Article -->
+  
+      <!-- Sidebar -->
+      <aside class="col-md-4 sidebar sidebar-left">
+  
+        <div class="widget">
+          <h5 class="gt-walsheim text-right">Otros Eventos</h5>
+
+          {% for event in site.query('/eventos/').filter(F.title != this.title).limit(5) %}
+          <div class="col-xs-12">
+            <a class="thumbnail" href="{{ event|url }}">
+              <span class="title">{{ event.title }} | {{ event.pub_date.strftime('%d/%m/%Y') }}</span>
+              <span class="img">
+                <img
+                  src="{{ event|url }}/{%- if event.thumbnail -%}{{ event.thumbnail }}{%- else -%}{{ event.image }}{%- endif -%}"
+                  alt="">
+                <span class="cover"><span class="more">Ver detalles &rarr;</span></span>
+              </span>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </aside>
+      <!-- /Sidebar -->
+  
     </div>
-  </section>
+  </div> <!-- /container -->
 {% endblock %}

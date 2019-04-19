@@ -309,7 +309,7 @@ img {
   transition-duration: 0.2s;
   border: 0 none;
   padding: 12px 35px;
-  text-shadow: 0 1px 0px #780d33;
+  text-shadow: 0 1px 0px #0d47a1;
 }
 .btn-primary {
   color: #fff;
@@ -320,7 +320,7 @@ img {
 .btn-primary:active,
 .btn-primary.active {
   color: #fff;
-  background-color: #e61f65;
+  background-color: #1976d2;
 }
 .btn-action {
   font-weight: bold;
@@ -451,7 +451,7 @@ img {
   font-size: 12px;
   font-size: 0.75rem;
   text-transform: uppercase;
-  text-shadow: 0 1px 0px #780d33;
+  text-shadow: 0 1px 0px #0d47a1;
   background: #0096f5;
   color: white;
 }
@@ -505,8 +505,8 @@ img {
   margin: 0px 0 50px;
   text-align: center;
   font-weight: 300;
-  font-size: 36px;
-  font-size: 2.25rem;
+  /* font-size: 36px; */
+  /* font-size: 2.25rem; */
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -852,4 +852,9 @@ footer.entry-meta .meta-in {
 
 .text-center {
   text-align: center;
+}
+
+.avatar-circle {
+  padding: 20px;
+  border-radius: 50%;
 }

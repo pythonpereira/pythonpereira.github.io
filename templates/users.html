@@ -62,7 +62,7 @@ endblock %}
   {% for child in this.pagination.items %} {%- if child.type not in ['comunidad', 'persona'] -%}
   <div class="col-3">
     {% if child.image_alt %}
-    <a href="{{ child.web }}" target="blank_">
+    <a href="{{ child.web }}" target="_blank">
       <img class="image fit" src="{{ child|url }}/{{ child.image_alt }}" alt="{{ child.username }}" /> {% endif %}
     </a>
   </div>
@@ -77,11 +77,11 @@ endblock %}
   {% for child in this.pagination.items %} {%- if child.type == 'comunidad' -%}
   {% if child.image_alt %}
   <div class="col-3">
-    <a href="{{ child.web }}" target="blank_">
+    <a href="{{ child.web }}" target="_blank">
       <img class="image fit" src="{{ child|url }}/{{ child.image_alt }}" alt="{{ child.username }}" />
   {% else %}
   <div class="col-2">
-    <a href="{{ child.web }}" target="blank_">
+    <a href="{{ child.web }}" target="_blank">
       <img class="image fit" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" />
   {% endif %}
     </a>
