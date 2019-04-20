@@ -1,0 +1,17 @@
+title: Introducción a Django
+---
+information:
+
+Django es un framework web gratuito y de código abierto escrito en python. Un framework web es un conjunto de componentes que te ayudan a desarrollar sitios web más fácil y rápidamente.
+En esta charla exploraremos el framework, cuales son sus componentes y como es el flujo para la creación de una aplicación web.
+---
+repository_url: https://github.com/pythonpereira/app_prueba_django
+---
+speakers:
+
+#### user ####
+username: alejandro-marin
+----
+description: 
+---
+video_url: https://youtu.be/Li078qVJLPU

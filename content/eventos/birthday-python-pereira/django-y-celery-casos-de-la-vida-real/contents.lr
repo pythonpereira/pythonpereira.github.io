@@ -1,0 +1,10 @@
+title: Django y Celery: Casos de la vida real
+---
+information: Celery es una herramienta que permite ejecutar grandes cargas de trabajo de manera asíncrona. Hablaremos en detalle de qué es y cuándo usarlo en sus proyectos, así como contarles experiencias en proyectos donde lo he trabajado.
+---
+speakers:
+
+#### user ####
+username: leonel-zambrano
+----
+description: 

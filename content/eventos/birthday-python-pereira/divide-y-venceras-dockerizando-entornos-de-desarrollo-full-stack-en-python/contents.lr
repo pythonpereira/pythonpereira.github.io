@@ -1,0 +1,18 @@
+title:
+
+ ¡Divide y vencerás! Dockerizando entornos de desarrollo full Stack en python.
+---
+information:
+
+Todo proyecto u aplicación nace con el propósito de resolver un problema, el cual en sus inicios suele ser muy simple y luego crece y crece hasta que resuelve demasiados problemas a la vez, convirtiéndose en un monolito con componentes fuertemente acoplados y difíciles de mantener a largo plazo.
+
+En está charla nos adentraremos al mundo de las arquitecturas orientadas a microservicios, tomando como caso de estudio un entorno robusto de desarrollo full stack conformado por tecnologías cómo Django, Webpack, Vue.js, Postgres, Redis y Nginx, donde cada una de ellas podría estar totalmente desligada de las demás, ser mantenida y evolucionar de manera independiente.
+
+Gracias a Docker y su tecnologías de contenedores, aprenderás cómo encapsular cada uno de los componentes de tu aplicación como microservicio, obteniendo grandes ventajas que permitirán que tu componente, funcionalidad o servicio pueda escalar, sea autónomo, isolado, escalable, elástico, automatizado y fácilmente mantenible a largo plazo.
+---
+speakers:
+
+#### user ####
+username: xergioalex
+----
+description: 
