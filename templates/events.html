@@ -7,6 +7,10 @@
       <h2 class="section-title gt-walsheim primary-color"><span>Eventos</span></h2>
       {% for child in this.pagination.items %} 
         {{ render_event(child, from_index=true) }}
+        {% if loop.index % 3 == 0 %}
+        </div>
+        <div class="thumbnails recentworks row">
+        {% endif %}
       {% endfor %}
     </div>
     
