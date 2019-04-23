@@ -1,13 +1,13 @@
 {% macro render_talk(talk, from_index=false) %}
 <div class="col-md-6 col-xs-12">
   {% if from_index %}
-  <div class="row justify-content-center">
+  <div class="row justify-content-center justify-content-center">
     <h2>
       <a href="{{ talk|url }}">{{ talk.title }}</a>
     </h2>
   </div>
   {% else %}
-  <div class="row justify-content-center">
+  <div class="row justify-content-center justify-content-center">
     <h2>{{ talk.title }}</h2>
   </div>
   {% endif %}
@@ -16,10 +16,10 @@
     <div class="col-3">
       {% if child.image %}
       <img class="image fit" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" /> {% endif %}
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-center justify-content-md-center">
         <h4>{{ child.name }} {{ child.last_name }}</h4>
       </div>
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-center justify-content-md-center">
         <ul class="icons">
           {% if child.web %}
           <li>

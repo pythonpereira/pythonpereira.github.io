@@ -2,7 +2,7 @@
 {% block body %}
   <div class="container">
   
-    <div class="row topspace">
+    <div class="row justify-content-center topspace">
   
       <!-- Article main content -->
       <article class="col-sm-8 maincontent">
@@ -11,7 +11,9 @@
           <p>{{ this.body }}</p>
         </header>
 
+        {% if this.image %}
         <p><img src="{{ this|url }}{{ this.image }}" alt=""></p>
+        {% endif %}
 
         {% if this.meetup_url %}
         <p class="text-center">
@@ -20,6 +22,7 @@
         {% endif %}
         <hr />
 
+        {% if this.pagination.items %}
         <div class="row">
           <h3 class="section-title gt-walsheim primary-color">Lista de Charlas</h3>
         </div>
@@ -33,14 +36,16 @@
           </li>
           {% endfor %}
         </ul>
+        {% endif %}
 
+        {% if this.team.blocks %}
         <div class="row">
           <h3 class="section-title gt-walsheim primary-color">Organizadores</h3>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           {%- for block in this.team.blocks -%} 
           {%- set user = site.get('/usuarios/' + block.username) -%}
-          <div class="col-md-3">
+          <div class="col-6 col-md-3">
             {% if user.image %}
             <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
             {% endif %}
@@ -50,11 +55,13 @@
           </div>
             {% if loop.index % 4 == 0 %}
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
             {% endif %}
           {% endfor %}
         </div>
+        {% endif %}
 
+        {% if this.sponsors.blocks %}
         <div class="row">
           <h3 class="section-title gt-walsheim primary-color">Patrocinadores</h3>
         </div>
@@ -77,6 +84,7 @@
           {% endif %}
           {% endfor %}
         </div>
+        {% endif %}
   
       </article>
       <!-- /Article -->

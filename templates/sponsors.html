@@ -4,23 +4,25 @@
 {%- block body -%}
 <div class="container">
 
-  <div class="row topspace">
+  <div class="row justify-content-center topspace">
     <div class="col-sm-12">
       <article class="post">
         <header class="entry-header">
           <h1 class="section-title gt-walsheim primary-color">Quiero Patrocinar</h1>
         </header>
         <div class="entry-content">
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="panel panel-cta">
               <div class="panel-body">
-                <div class="col-lg-8">
-                  <p>Buscamos personas o empresas que quieran apoyarnos para realizar nuestros eventos, recuerden que son
-                    totalmente gratuitos para los participantes pero tenemos otros costos asociados al evento como refrigerios,
-                    papelería, etc.</p>
-                </div>
-                <div class="col-lg-4 text-right">
-                  <a href="{{ '/patrocinadores'|url(alt=this.alt) }}" class="btn btn-primary btn-lg">Acerca de Patrocinios</a>
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <p>Buscamos personas o empresas que quieran apoyarnos para realizar nuestros eventos, recuerden que son
+                      totalmente gratuitos para los participantes pero tenemos otros costos asociados al evento como refrigerios,
+                      papelería, etc.</p>
+                  </div>
+                  <div class="col-lg-4">
+                    <a href="{{ '/patrocinadores'|url(alt=this.alt) }}" class="btn btn-primary btn-lg">Acerca de Patrocinios</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -30,16 +32,16 @@
 
       <article class="post">
         <header class="entry-header">
-          <h2 class="gt-walsheim primary-color"><span>Nuestros Patrocinadores</span></h2>
+          <h2 class="section-title gt-walsheim primary-color">Nuestros Patrocinadores</h2>
         </header>
         <div class="entry-content">
           {% set sponsors = site.query('/usuarios', alt=this.alt).filter(F.sponsor == 'actual') %}
-          <div class="row sponsor-container">
+          <div class="row justify-content-center sponsor-container">
             {% for sponsor in sponsors %}
               {{ render_sponsor_index(sponsor) }}
               {% if loop.index % 4 == 0 %}
                 </div>
-                <div class="row sponsor-container">
+                <div class="row justify-content-center sponsor-container">
               {% endif %}
             {% endfor %}
           </div>
@@ -48,16 +50,16 @@
 
       <article class="post">
         <header class="entry-header">
-          <h3 class="gt-walsheim primary-color"><span>También nos han apoyado</span></h3>
+          <h3 class="section-title gt-walsheim primary-color">También nos han apoyado</h3>
         </header>
         <div class="entry-content">
           {% set sponsors = site.query('/usuarios', alt=this.alt).filter(F.sponsor == 'pasado') %}
-          <div class="row sponsor-container">
+          <div class="row justify-content-center sponsor-container">
             {% for sponsor in sponsors %}
               {{ render_sponsor_index(sponsor) }}
               {% if loop.index % 4 == 0 %}
                 </div>
-                <div class="row sponsor-container">
+                <div class="row justify-content-center sponsor-container">
               {% endif %}
             {% endfor %}
           </div>
@@ -65,7 +67,7 @@
       </article>
 
     </div>
-  </div> <!-- /row post  -->
+  </div> <!-- /row justify-content-center post  -->
 
 </div> <!-- /container -->
 
