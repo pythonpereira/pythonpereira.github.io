@@ -15,10 +15,11 @@
       </iframe>
       {% endif %}
       <hr />
+      {% if this.speakers %}
       <div class="row">
         <h3 class="section-title gt-walsheim primary-color">Ponentes</h3>
       </div>
-      <div class="row">
+      <div class="row justify-content-center">
         {%- for block in this.speakers.blocks -%}
         {%- set speaker = site.get('/usuarios/' + block.username) -%}
         <div class="col-md-3">
@@ -33,10 +34,11 @@
         </div>
         {% if loop.index % 4 == 0 %}
       </div>
-      <div class="row">
+      <div class="row justify-content-center">
         {% endif %}
         {% endfor %}
       </div>
+      {% endif %}
     </article>
 
     <!-- Sidebar -->
