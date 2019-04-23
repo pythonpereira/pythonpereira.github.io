@@ -3,8 +3,8 @@
 {% from "macros/pagination.html" import render_pagination %}
 {% block body %}
   <div class="container">
-    <div class="row section clients topspace">
-      <h2 class="section-title gt-walsheim primary-color"><span>Eventos</span></h2>
+    <div class="row justify-content-center section clients topspace">
+      <h2 class="section-title gt-walsheim primary-color">Eventos</h2>
       {% for child in this.pagination.items %} 
         {{ render_event(child, from_index=true) }}
         {% if loop.index % 3 == 0 %}

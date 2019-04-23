@@ -3,18 +3,18 @@
 endblock %}
 {% block content %}
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-center justify-content-md-center">
   <h2>Usuarios</h2>
 </div>
-<div class="row justify-content-md-center">
+<div class="row justify-content-center justify-content-md-center">
   {% for child in this.pagination.items.filter(F.type == 'persona') %}
   <div class="col-3">
     {% if child.image %}
     <img class="image fit" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" /> {% endif %}
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center justify-content-md-center">
       <h4>{{ child.name }} {{ child.last_name }}</h4>
     </div>
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center justify-content-md-center">
       <ul class="icons">
         {% if child.web %}
         <li>
@@ -55,10 +55,10 @@ endblock %}
   <h1>ERROR</h1>
   {%- endif -%} {% endfor %}
 </div>
-<div class="row justify-content-md-center">
+<div class="row justify-content-center justify-content-md-center">
   <h2>Empresas / Organizaciones / Universidades</h2>
 </div>
-<div class="row justify-content-md-center">
+<div class="row justify-content-center justify-content-md-center">
   {% for child in this.pagination.items %} {%- if child.type not in ['comunidad', 'persona'] -%}
   <div class="col-3">
     {% if child.image_alt %}
@@ -70,10 +70,10 @@ endblock %}
   <h2>ERROR</h2>
   {%- endif -%} {%- endif -%} {% endfor %}
 </div>
-<div class="row justify-content-md-center">
+<div class="row justify-content-center justify-content-md-center">
   <h2>Comunidades</h2>
 </div>
-<div class="row justify-content-md-center">
+<div class="row justify-content-center justify-content-md-center">
   {% for child in this.pagination.items %} {%- if child.type == 'comunidad' -%}
   {% if child.image_alt %}
   <div class="col-3">

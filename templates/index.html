@@ -6,7 +6,7 @@
 <div class="container">
 
   <!-- Summary -->
-  <div class="row section topspace">
+  <div class="row justify-content-center section topspace">
     <div class="col-md-12">
       <p class="lead text-center text-muted">{{ this.summary }}</p>
     </div>
@@ -15,7 +15,7 @@
 
   <!-- Skills -->
 
-  <!-- <div class="row section featured topspace">
+  <!-- <div class="row justify-content-center section featured topspace">
     <h2 class="section-title gt-walsheim primary-color"><span>Services</span></h2>
     <div class="row">
       <div class="col-sm-6 col-md-3">
@@ -47,11 +47,11 @@
 
   <!-- Events -->
 
-  <div class="row section recentworks topspace">
+  <div class="row justify-content-center section recentworks topspace">
     <h2 class="section-title gt-walsheim primary-color">Últimos Eventos</h2>
     <div class="thumbnails recentworks row">
     {% for event in site.query('/eventos/').limit(6) %}
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="col-sm-6 col-md-4 col-lg-4">
         <a class="thumbnail" href="{{ event|url }}">
           <span class="img">
             <img src="{{ event|url }}/{%- if event.thumbnail -%}{{ event.thumbnail }}{%- else -%}{{ event.image }}{%- endif -%}" alt="">
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <!-- <div class="row section topspace">
+  <!-- <div class="row justify-content-center section topspace">
     <div class="panel panel-cta">
       <div class="panel-body">
         <div class="col-lg-8">
@@ -96,40 +96,42 @@
 
   <!-- Sponsors -->
 
-  <div class="row section clients topspace">
+  <div class="row justify-content-center section clients topspace">
     <h2 class="section-title gt-walsheim primary-color">Patrocinadores</h2>
     {% set sponsors = site.query('/usuarios', alt=this.alt).filter(F.sponsor == 'actual') %}
-    <div class="row sponsor-container">
+    <div class="row justify-content-center sponsor-container">
       {% for sponsor in sponsors %}
         {{ render_sponsor_index(sponsor) }}
         {% if loop.index % 4 == 0 %}
           </div>
-          <div class="row sponsor-container">
+          <div class="row justify-content-center sponsor-container">
         {% endif %}
       {% endfor %}
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="panel panel-cta">
         <div class="panel-body">
-          <div class="col-lg-8">
-            <p>Buscamos personas o empresas que quieran apoyarnos para realizar nuestros eventos, recuerden que son totalmente gratuitos para los participantes pero tenemos otros costos asociados al evento como refrigerios,
-            papelería, etc.</p>
-          </div>
-          <div class="col-lg-4 text-right">
-            <a href="{{ '/patrocinadores'|url(alt=this.alt) }}" class="btn btn-primary btn-lg">Acerca de Patrocinios</a>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <p>Buscamos personas o empresas que quieran apoyarnos para realizar nuestros eventos, recuerden que son totalmente gratuitos para los participantes pero tenemos otros costos asociados al evento como refrigerios,
+              papelería, etc.</p>
+            </div>
+            <div class="col-lg-4">
+              <a href="{{ '/patrocinadores'|url(alt=this.alt) }}" class="btn btn-primary btn-lg">Acerca de Patrocinios</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div> <!-- /section -->
 
-  <div class="row">
+  <div class="row justify-content-center section clients topspace">
     <h3 class="section-title gt-walsheim primary-color">Organizadores</h3>
   </div>
   {% set users = site.query('/usuarios', alt=this.alt).filter(F.organizer == 'actual') %}
-  <div class="row">
+  <div class="row justify-content-center">
     {%- for user in users -%}
-    <div class="col-md-2">
+    <div class="col-6 col-md-2">
       {% if user.image %}
       <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
       {% else %}
@@ -141,7 +143,7 @@
     </div>
     {% if loop.index % 6 == 0 %}
   </div>
-  <div class="row">
+  <div class="row justify-content-center">
     {% endif %}
     {% endfor %}
   </div>
