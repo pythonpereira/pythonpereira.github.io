@@ -18,7 +18,7 @@ username:
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -63,3 +63,12 @@ GraphQL es un lenguaje de consulta creado por Facebook que funciona como interfa
 En esta charla introduciremos GraphQL, sus conceptos básicos, sus características, sus ventajas frente a otras soluciones como las APIs REST, entre otras cosas. Además dado el contexto de nuestra comunidad veremos como construir una API sencilla usando GraphQL en Python.
 
 Twitter: @leiverandres
+---
+sponsor:
+
+#### user ####
+username: julian-x
+----
+description: 
+#### organization ####
+username: monoku

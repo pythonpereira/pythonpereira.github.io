@@ -46,7 +46,7 @@ username: el-escondido-bar
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -69,3 +69,14 @@ description:
 username: carogomezt
 ----
 description: 
+---
+sponsor:
+
+#### user ####
+username: julian-x
+----
+description: 
+#### organization ####
+username: monoku
+#### organization ####
+username: el-escondido-bar

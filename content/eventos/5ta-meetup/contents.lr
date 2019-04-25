@@ -28,7 +28,7 @@ username: python-colombia
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -53,3 +53,10 @@ _slug: 2018/05/5ta-meetup
 image: meetup.jpeg
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### organization ####
+username: sirius
+#### organization ####
+username: python-colombia

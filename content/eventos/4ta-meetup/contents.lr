@@ -18,7 +18,7 @@ username: netha
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -56,3 +56,10 @@ Introducción a Django channels, la última y más importante funcionalidad en l
 success: no
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### organization ####
+username: netha
+#### organization ####
+username: python-colombia

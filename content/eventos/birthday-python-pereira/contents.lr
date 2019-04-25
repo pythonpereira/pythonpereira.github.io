@@ -26,13 +26,15 @@ sponsors:
 
 #### organization ####
 username: monoku
-#### organization ####
+#### user ####
 username: julian-x
+----
+description: 
 ---
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -55,3 +57,12 @@ description:
 image: highres_475559672.jpeg
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### user ####
+username: julian-x
+----
+description: 
+#### organization ####
+username: monoku

@@ -16,7 +16,7 @@ username: pereiratechtalks
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -39,3 +39,10 @@ image: flyer.png
 pub_date: 2017-11-22 18:00:00 -0500
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### organization ####
+username: sirius
+#### organization ####
+username: pereiratechtalks

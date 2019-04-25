@@ -16,7 +16,7 @@ username: el-escondido-bar
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -45,3 +45,14 @@ meetup_url: https://www.meetup.com/es/pythonpereira/events/256270743/
 image: highres_476187418.jpeg
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### user ####
+username: julian-x
+----
+description: 
+#### organization ####
+username: monoku
+#### organization ####
+username: el-escondido-bar

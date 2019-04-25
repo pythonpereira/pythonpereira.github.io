@@ -29,7 +29,7 @@ username: monoku
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -52,3 +52,8 @@ description:
 image: meetup.jpeg
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### organization ####
+username: sirius

@@ -43,7 +43,7 @@ username: monoku
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -70,3 +70,12 @@ description:
 image: highres_479443378.jpeg
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### user ####
+username: julian-x
+----
+description: 
+#### organization ####
+username: monoku

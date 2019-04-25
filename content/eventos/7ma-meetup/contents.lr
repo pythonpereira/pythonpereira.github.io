@@ -26,7 +26,7 @@ username: monoku
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -55,3 +55,14 @@ image: highres_473543384.jpeg
 success: no
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### user ####
+username: julian-x
+----
+description: 
+#### organization ####
+username: monoku
+#### organization ####
+username: el-escondido-bar

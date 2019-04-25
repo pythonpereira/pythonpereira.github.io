@@ -16,7 +16,7 @@ username: sirius
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -33,3 +33,8 @@ _slug: 2018/02/3ra-meetup
 image: meetup.jpg
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### organization ####
+username: sirius

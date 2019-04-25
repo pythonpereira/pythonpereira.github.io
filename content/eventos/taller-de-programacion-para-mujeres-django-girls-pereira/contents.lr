@@ -20,7 +20,7 @@ username: utp
 team:
 
 #### user ####
-username: aerendon
+username: arendondiosa
 ----
 description: 
 #### user ####
@@ -49,3 +49,18 @@ _slug: 2017/12/taller-de-programacion-para-mujeres-django-girls-pereira
 image: flyer.jpg
 ---
 thumbnail: portada.png
+---
+sponsor:
+
+#### organization ####
+username: cientificas-de-datos
+#### organization ####
+username: sirius
+#### organization ####
+username: github
+#### organization ####
+username: monoku
+#### organization ####
+username: rocka
+#### organization ####
+username: utp
