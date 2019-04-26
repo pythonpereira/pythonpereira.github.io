@@ -97,17 +97,22 @@
   <!-- Sponsors -->
 
   <div class="row justify-content-center section clients topspace">
-    <h2 class="section-title gt-walsheim primary-color">Patrocinadores</h2>
-    {% set sponsors = site.query('/usuarios', alt=this.alt).filter(F.sponsor == 'actual') %}
-    <div class="row justify-content-center sponsor-container">
-      {% for sponsor in sponsors %}
-        {{ render_sponsor_index(sponsor) }}
-        {% if loop.index % 4 == 0 %}
-          </div>
-          <div class="row justify-content-center sponsor-container">
-        {% endif %}
-      {% endfor %}
+    <header class="entry-header">
+      <h2 class="section-title gt-walsheim primary-color">Nuestros Patrocinadores</h2>
+    </header>
+    <div class="entry-content">
+      {% set sponsors = site.query('/usuarios', alt=this.alt).filter(F.sponsor == 'actual') %}
+      <div class="row justify-content-center sponsor-container">
+        {% for sponsor in sponsors %}
+          {{ render_sponsor_index(sponsor) }}
+          {% if loop.index % 4 == 0 %}
+            </div>
+            <div class="row justify-content-center sponsor-container">
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
+
     <div class="row justify-content-center">
       <div class="panel panel-cta">
         <div class="panel-body">

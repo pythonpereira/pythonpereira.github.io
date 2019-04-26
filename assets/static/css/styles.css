@@ -861,6 +861,10 @@ footer.entry-meta .meta-in {
   border-radius: 50%;
 }
 
+.avatar {
+  padding: 20px;
+}
+
 /* Responsive Menu */
 
 .navbar {

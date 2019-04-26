@@ -1,94 +1,78 @@
 {% extends "page.html" %}
-{% from "macros/pagination.html" import render_pagination %}{% block title %}{{ this.title }}{%
-endblock %}
-{% block content %}
+{% from "macros/pagination.html" import render_pagination %}
 
-<div class="row justify-content-center justify-content-md-center">
-  <h2>Usuarios</h2>
-</div>
-<div class="row justify-content-center justify-content-md-center">
-  {% for child in this.pagination.items.filter(F.type == 'persona') %}
-  <div class="col-3">
+{% block body %}
+
+<div class="container">
+  <div class="row justify-content-center justify-content-md-center section clients topspace">
+    <h2 class="section-title gt-walsheim primary-color">Listado de Usuarios</h2>
+    {% for child in this.pagination.items.filter(F.type == 'persona') %}
+    <div class="col-6 col-md-2">
+      {% if child.image %}
+      <img class="avatar-circle" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" />
+      {% else %}
+      <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ child.username }}" />
+      {% endif %}
+      <div>
+        <p class="section-title gt-walsheim">{{ child.name }} {{ child.last_name }}</p>
+      </div>
+    </div>
+    {% if loop.index % 6 == 0 %}
+    </div>
+    <div class="row justify-content-center">
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="row justify-content-center justify-content-md-center section clients topspace">
+    <h2 class="section-title gt-walsheim primary-color">Empresas / Organizaciones / Universidades</h2>
+    {% for child in this.pagination.items %}
+    {%- if child.type not in ['comunidad', 'persona'] -%}
     {% if child.image %}
-    <img class="image fit" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" /> {% endif %}
-    <div class="row justify-content-center justify-content-md-center">
-      <h4>{{ child.name }} {{ child.last_name }}</h4>
+    <div class="col-6 col-md-2">
+      <a href="{{ child.web }}" target="_blank">
+      <img class="avatar" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" />
+      {% elif child.image_alt %}
+    <div class="col-6 col-md-3">
+      <a href="{{ child.web }}" target="_blank">
+      <img class="avatar" src="{{ child|url }}/{{ child.image_alt }}" alt="{{ child.username }}" />
+      {% else %}
+    <div class="col-6 col-md-2">
+      <a href="{{ child.web }}" target="_blank">
+      <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ child.username }}" />
+    {% endif %}
+      </a>
     </div>
-    <div class="row justify-content-center justify-content-md-center">
-      <ul class="icons">
-        {% if child.web %}
-        <li>
-          <a href="{{ child.web }}" class="icon fa-globe" target="_blank">
-            <span class="label">Website</span>
-          </a>
-        </li>
-        {% endif %} {% if child.email %}
-        <li>
-          <a href="mailto:{{ child.email }}" class="icon fa-envelope" target="_blank">
-            <span class="label">Email</span>
-          </a>
-        </li>
-        {% endif %} {% if child.facebook_handle %}
-        <li>
-          <a href="https://facebook.com/{{ child.facebook_handle}}" class="icon fa-facebook" target="_blank">
-            <span class="label">Facebook</span>
-          </a>
-        </li>
-        {% endif %} {% if child.twitter_handle %}
-        <li>
-          <a href="https://twitter.com/{{ child.twitter_handle}}" class="icon fa-twitter" target="_blank">
-            <span class="label">Twitter</span>
-          </a>
-        </li>
-        {% endif %} {% if child.github_handle %}
-        <li>
-          <a href="https://github.com/{{ child.github_handle}}" class="icon fa-github-alt" target="_blank">
-            <span class="label">Github</span>
-          </a>
-        </li>
-        {% endif %}
-      </ul>
+    {% if loop.index % 6 == 0 %}
+  </div>
+  <div class="row justify-content-center">
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </div>
+  <div class="row justify-content-center justify-content-md-center section clients topspace">
+    <h2 class="section-title gt-walsheim primary-color">Comunidades</h2>
+    {% for child in this.pagination.items.filter(F.type == 'comunidad') %}
+    {% if child.image %}
+    <div class="col-6 col-md-2">
+      <a href="{{ child.web }}" target="_blank">
+      <img class="avatar" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" />
+      {% elif child.image_alt %}
+    <div class="col-6 col-md-3">
+      <a href="{{ child.web }}" target="_blank">
+      <img class="avatar" src="{{ child|url }}/{{ child.image_alt }}" alt="{{ child.username }}" />
+      {% else %}
+    <div class="col-6 col-md-2">
+      <a href="{{ child.web }}" target="_blank">
+      <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ child.username }}" />
+      {% endif %}
+      </a>
     </div>
+    {% if loop.index % 6 == 0 %}
   </div>
-
-  {%- if child._id != child.username -%}
-  <h1>ERROR</h1>
-  {%- endif -%} {% endfor %}
-</div>
-<div class="row justify-content-center justify-content-md-center">
-  <h2>Empresas / Organizaciones / Universidades</h2>
-</div>
-<div class="row justify-content-center justify-content-md-center">
-  {% for child in this.pagination.items %} {%- if child.type not in ['comunidad', 'persona'] -%}
-  <div class="col-3">
-    {% if child.image_alt %}
-    <a href="{{ child.web }}" target="_blank">
-      <img class="image fit" src="{{ child|url }}/{{ child.image_alt }}" alt="{{ child.username }}" /> {% endif %}
-    </a>
+  <div class="row justify-content-center">
+    {% endif %}
+    {% endfor %}
   </div>
-  {%- if child._id != child.username -%}
-  <h2>ERROR</h2>
-  {%- endif -%} {%- endif -%} {% endfor %}
-</div>
-<div class="row justify-content-center justify-content-md-center">
-  <h2>Comunidades</h2>
-</div>
-<div class="row justify-content-center justify-content-md-center">
-  {% for child in this.pagination.items %} {%- if child.type == 'comunidad' -%}
-  {% if child.image_alt %}
-  <div class="col-3">
-    <a href="{{ child.web }}" target="_blank">
-      <img class="image fit" src="{{ child|url }}/{{ child.image_alt }}" alt="{{ child.username }}" />
-  {% else %}
-  <div class="col-2">
-    <a href="{{ child.web }}" target="_blank">
-      <img class="image fit" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" />
-  {% endif %}
-    </a>
-  </div>
-  {%- if child._id != child.username -%}
-  <h2>ERROR</h2>
-  {%- endif -%} {%- endif -%} {% endfor %}
 </div>
 
 {% endblock %}
