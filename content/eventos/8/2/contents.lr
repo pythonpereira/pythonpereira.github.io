@@ -12,3 +12,5 @@ description:
 video_url: https://www.youtube.com/watch?v=18qHguKaHLU
 ---
 information: DynamoDB 🗃 es una base de datos no relacional que hace parte de los web services de Amazon, en esta charla conocerás un poco más acerca de esta y por medio de ejercicios prácticos aprenderás a crear tablas por medio de Terraform y a agregar, actualizar y eliminar datos por medio de Boto3 con Python.
+---
+video_code: 18qHguKaHLU
