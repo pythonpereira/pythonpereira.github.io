@@ -42,7 +42,7 @@
     {% endif %}
       </a>
     </div>
-    {% if loop.index % 6 == 0 %}
+    {% if loop.index % 4 == 0 %}
   </div>
   <div class="row justify-content-center">
     {% endif %}
@@ -57,7 +57,7 @@
       <a href="{{ child.web }}" target="_blank">
       <img class="avatar" src="{{ child|url }}/{{ child.image }}" alt="{{ child.username }}" />
       {% elif child.image_alt %}
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
       <a href="{{ child.web }}" target="_blank">
       <img class="avatar" src="{{ child|url }}/{{ child.image_alt }}" alt="{{ child.username }}" />
       {% else %}

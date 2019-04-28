@@ -65,7 +65,8 @@
             {% for href, title in [
                 ['/eventos', 'Eventos'],
                 ['/patrocinadores', 'Patrocinadores'],
-                ['/calendario', 'Calendario']
+                ['/calendario', 'Calendario'],
+                ['/acerca-de', 'Acerca de']
             ] -%}
             <li {% if this.is_child_of(href) %} class="active" {% endif%}>
               <a href="{{ href|url }}">{{ title }}</a>
