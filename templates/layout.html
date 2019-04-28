@@ -45,12 +45,47 @@
 
   <header id="header">
     <div id="head" class="parallax" parallax-speed="2">
-      <h1 id="logo" class="text-center">
-        <img class="logo-pypereira" src="{{ base_url }}static/images/2019.svg" alt="">
-        <span class="title primary-color"><div class="title-text fredoka">PY</div><div class="title-text viga">PEREIRA</div></span>
-        <span class="tagline gt-walsheim primary-color">Comunidad Python Pereira<br>
-          <a href="">python.pereira@gmail.com</a></span>
-      </h1>
+      <div class="row justify-content-center">
+        <div class="col-sm-4">
+          <h1 id="logo" class="text-center">
+            <img class="logo-pypereira" src="{{ base_url }}static/images/2019.svg" alt="">
+            <span class="title primary-color"><div class="title-text fredoka">PY</div><div class="title-text viga">PEREIRA</div></span>
+            <span class="tagline gt-walsheim primary-color">Comunidad Python Pereira<br>
+              <a href="">python.pereira@gmail.com</a></span>
+          </h1>
+        </div>
+        {% set events = site.query('/eventos', alt=this.alt).filter(F.success) %}
+        {% if events %}
+          <div class="col-sm-4">
+            {% for event in events %}
+              <div class="card-event">
+                <div class="row">
+                  <div class="col-2">
+                    <div class="row justify-content-center text-center">
+                      <h1 class="gt-walsheim primary-color">
+                        {{ event.pub_date.strftime('%d') }}
+                      </h1>
+                      <h5 class="fredoka primary-color text-uppercase">
+                        {{ event.pub_date.strftime('%b') }}
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="gt-walsheim">{{ event.title }}</div>
+                    <hr />
+                    <div class="row justify-content-center text-center">
+                      <a href="{{ event|url(alt=this.alt) }}" class="btn btn-info">Evento</a>
+                      {%- if event.meetup_url -%}
+                        <a href="{{ event.meetup_url }}" class="btn btn-warning" target="_blank">Inscripción</a>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
     </div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-sticky navbar-default">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

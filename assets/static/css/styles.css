@@ -317,6 +317,13 @@ img {
   color: #fff;
   background-color: #0096f5;
 }
+
+.btn-info, 
+.btn-warning,
+.btn-warning:hover {
+  color: #fff;
+}
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -902,6 +909,15 @@ footer.entry-meta .meta-in {
   font-family: 'GTWalsheim';
   color: #0096f5;
   text-align: center;
+}
+
+/* Card Event */
+
+.card-event {
+  padding: 20px 20px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 @media (max-width: 991px) {
