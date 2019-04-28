@@ -5,7 +5,8 @@
   <div class="container">
     <div class="row justify-content-center section clients topspace">
       <h2 class="section-title gt-walsheim primary-color">Eventos</h2>
-      {% for child in this.pagination.items %} 
+      {% set events = this.pagination.items.filter(F.post) %}
+      {% for child in events %} 
         {{ render_event(child, from_index=true) }}
         {% if loop.index % 3 == 0 %}
         </div>

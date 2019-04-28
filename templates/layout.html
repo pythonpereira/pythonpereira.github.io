@@ -45,8 +45,8 @@
 
   <header id="header">
     <div id="head" class="parallax" parallax-speed="2">
-      <div class="row justify-content-center">
-        <div class="col-sm-4">
+      <div class="row justify-content-center no-size">
+        <div class="col-md-4">
           <h1 id="logo" class="text-center">
             <img class="logo-pypereira" src="{{ base_url }}static/images/2019.svg" alt="">
             <span class="title primary-color"><div class="title-text fredoka">PY</div><div class="title-text viga">PEREIRA</div></span>
@@ -54,9 +54,9 @@
               <a href="">python.pereira@gmail.com</a></span>
           </h1>
         </div>
-        {% set events = site.query('/eventos', alt=this.alt).filter(F.success) %}
+        {% set events = site.query('/eventos', alt=this.alt).filter(F.success).filter(F.post) %}
         {% if events %}
-          <div class="col-sm-4">
+          <div class="col-md-4">
             {% for event in events %}
               <div class="card-event">
                 <div class="row">
@@ -65,6 +65,7 @@
                       <h1 class="gt-walsheim primary-color">
                         {{ event.pub_date.strftime('%d') }}
                       </h1>
+                      <br />
                       <h5 class="fredoka primary-color text-uppercase">
                         {{ event.pub_date.strftime('%b') }}
                       </h5>

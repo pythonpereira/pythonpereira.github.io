@@ -46,7 +46,7 @@
   <div class="row justify-content-center section recentworks topspace">
     <h2 class="section-title gt-walsheim primary-color">Últimos Eventos</h2>
     <div class="thumbnails recentworks row">
-    {% for event in site.query('/eventos/').limit(6) %}
+    {% for event in site.query('/eventos/').filter(F.post).limit(6) %}
       <div class="col-sm-6 col-md-4 col-lg-4">
         <a class="thumbnail" href="{{ event|url }}">
           <span class="img">
