@@ -71,9 +71,9 @@
           <div class="col-md-4">
             <a href="{{ sponsor.web }}" target="_blank">
               {% if sponsor.image_alt %}
-              <img src="{{ sponsor|url }}/{{ sponsor.image_alt }}" alt="{{ sponsor.sponsorname }}" />
+              <img class="logo" src="{{ sponsor|url }}/{{ sponsor.image_alt }}" alt="{{ sponsor.sponsorname }}" />
               {% elif sponsor.image %}
-              <img src="{{ sponsor|url }}/{{ sponsor.image }}" alt="{{ sponsor.sponsorname }}" />
+              <img class="logo" src="{{ sponsor|url }}/{{ sponsor.image }}" alt="{{ sponsor.sponsorname }}" />
               {% endif %}
             </a>
           </div>
