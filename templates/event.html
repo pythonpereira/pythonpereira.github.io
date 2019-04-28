@@ -74,9 +74,6 @@
             {% elif sponsor.image %}
             <img src="{{ sponsor|url }}/{{ sponsor.image }}" alt="{{ sponsor.sponsorname }}" />
             {% endif %}
-            <div>
-              <p class="section-title gt-walsheim">{{ sponsor.name }} {{ sponsor.last_name }}</p>
-            </div>
           </div>
           {% if loop.index % 3 == 0 %}
         </div>
