@@ -29,12 +29,12 @@
 {% endmacro %}
 
 {% macro render_sponsor_index(sponsor) %}
-  <div class="col-lg-3 col-md-2 col-12">
+  <div class="col-lg-3 col-md-2 col-6">
     <a href="{{ sponsor.web }}" target="_blank">
       {% if sponsor.image %}
-      <img class="sponsor" src="/usuarios/{{ sponsor._id }}/{{ sponsor.image }}" alt="">
+      <img class="sponsor logo" src="/usuarios/{{ sponsor._id }}/{{ sponsor.image }}" alt="">
       {% elif sponsor.image_alt %}
-      <img class="sponsor" src="/usuarios/{{ sponsor._id }}/{{ sponsor.image_alt }}" alt="">
+      <img class="sponsor logo" src="/usuarios/{{ sponsor._id }}/{{ sponsor.image_alt }}" alt="">
       {% else %}
       <img class="sponsor" src="{{ base_url }}static/img/about/img1.png" alt="">
       {% endif %}

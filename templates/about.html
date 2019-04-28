@@ -12,21 +12,75 @@
       <div class="content">
         {{ this.body }}
       </div>
+
+      {% set team = site.query('/usuarios').filter(F.organizer) %}
+      {% if team %}
+      <div class="row justify-content-center">
+        <h2 class="gt-walsheim primary-color">Equipo PyPereira</h2>
+      </div>
+        {% set actual_team = team.filter(F.organizer == 'actual') %}
+        {% if actual_team %}
+          <div class="row justify-content-center">
+            {%- for user in actual_team -%}
+            <div class="col-6 col-md-3">
+              {% if user.image %}
+              <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+              {% else %}
+              <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ user.username }}" />
+              {% endif %}
+              <div>
+                <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
+              </div>
+            </div>
+            {% if loop.index % 4 == 0 %}
+          </div>
+          <div class="row justify-content-center">
+            {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% set past_team = team.filter(F.organizer == 'pasado') %}
+        {% if past_team %}
+          <div class="row justify-content-center">
+            <h3 class="gt-walsheim primary-color">Han contribuido...</h3>
+          </div>
+          <div class="row justify-content-center">
+            {%- for user in past_team -%}
+            <div class="col-6 col-md-3">
+              {% if user.image %}
+              <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+              {% else %}
+              <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ user.username }}" />
+              {% endif %}
+              <div>
+                <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
+              </div>
+            </div>
+            {% if loop.index % 4 == 0 %}
+          </div>
+          <div class="row justify-content-center">
+            {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
       {% if this.communities %}
       <div class="row">
         <h3 class="section-title gt-walsheim primary-color">Comunidades Aliadas</h3>
       </div>
       <div class="row justify-content-center">
         {%- for block in this.communities.blocks -%}
-        {%- set speaker = site.get('/usuarios/' + block.username) -%}
+        {%- set community = site.get('/usuarios/' + block.username) -%}
         <div class="col-md-3 col-sm-6 col-6">
-          {% if speaker.image %}
-          <img src="{{ speaker|url }}/{{ speaker.image }}" alt="{{ speaker.username }}" />
-          {% elif speaker.image_alt %}
-          <img src="{{ speaker|url }}/{{ speaker.image_alt }}" alt="{{ speaker.username }}" />
-          {% else %}
-          <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ speaker.username }}" />
-          {% endif %}
+          <a href="{{ community.web }}" target="_blank">
+            {% if community.image %}
+            <img class="logo" src="{{ community|url }}/{{ community.image }}" alt="{{ community.username }}" />
+            {% elif community.image_alt %}
+            <img class="logo" src="{{ community|url }}/{{ community.image_alt }}" alt="{{ community.username }}" />
+            {% else %}
+            <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ community.username }}" />
+            {% endif %}
+          </a>
         </div>
         {% if loop.index % 4 == 0 %}
       </div>

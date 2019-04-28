@@ -855,9 +855,8 @@ footer.entry-meta .meta-in {
   padding: 0;
 }
 
-.sponsor {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+.logo {
+  padding: 10px 0;
 }
 
 .sponsor-container {
