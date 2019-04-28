@@ -891,6 +891,19 @@ footer.entry-meta .meta-in {
   border:5px solid #ccc;
 }
 
+/* Content */
+
+.content h1, 
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-family: 'GTWalsheim';
+  color: #0096f5;
+  text-align: center;
+}
+
 @media (max-width: 991px) {
   .navbar-collapse .navbar-nav > li {
     width: 100%;
