@@ -8,11 +8,6 @@ name = Spanish
 primary = yes
 locale = es
 
-[alternatives.en]
-name = English
-url_prefix = /en/
-locale = en
-
 [servers.production]
 name = Production
 target = ghpages+https://pythonpereira/sitio-web?cname=pypereira.co

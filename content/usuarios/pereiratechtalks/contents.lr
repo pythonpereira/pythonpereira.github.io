@@ -3,14 +3,6 @@ username: pereiratechtalks
 members:
 
 #### member ####
-username: aerendon
-----
-position: 
-----
-date_start: 
-----
-date_end: 
-#### member ####
 username: xergioalex
 ----
 position: 
@@ -23,7 +15,7 @@ name: Pereira Tech Talks
 ---
 type: comunidad
 ---
-web:   https://pereiratechtalks.com
+web: https://pereiratechtalks.com
 ---
 image_alt: 
 ---
