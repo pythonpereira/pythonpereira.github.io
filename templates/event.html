@@ -69,11 +69,13 @@
           {%- for block in this.sponsor.blocks -%}
           {%- set sponsor = site.get('/usuarios/' + block.username) -%}
           <div class="col-md-4">
-            {% if sponsor.image_alt %}
-            <img src="{{ sponsor|url }}/{{ sponsor.image_alt }}" alt="{{ sponsor.sponsorname }}" />
-            {% elif sponsor.image %}
-            <img src="{{ sponsor|url }}/{{ sponsor.image }}" alt="{{ sponsor.sponsorname }}" />
-            {% endif %}
+            <a href="{{ sponsor.web }}" target="_blank">
+              {% if sponsor.image_alt %}
+              <img src="{{ sponsor|url }}/{{ sponsor.image_alt }}" alt="{{ sponsor.sponsorname }}" />
+              {% elif sponsor.image %}
+              <img src="{{ sponsor|url }}/{{ sponsor.image }}" alt="{{ sponsor.sponsorname }}" />
+              {% endif %}
+            </a>
           </div>
           {% if loop.index % 3 == 0 %}
         </div>
