@@ -71,7 +71,7 @@ $ source <nombre_entorno>/bin/activate
 
 ### Usando pip:
 ```
-$ pip install -U Lektor unidecode
+$ pip install lektor
 ```
 
 ### Usando conda:
@@ -116,14 +116,6 @@ $ lektor plugins reinstall
 Gracias a _Lektor Bot_ (Plugin de lektor conectado a Github), podemos desplegar nuestra web estática en diferentes repositorios (en la rama seleccionada en configuración - `gh-pages` en nuestro caso).
 
 La configuración de dichos repositorios se encuentra en `python-colombia.lektorproject`
-
-## ✔️ Desarrollo
-
-```
-$ lektor deploy
-```
-
-Se desplegará el contenido de la rama `develop` en `develop.pypereira.co`
 
 ## ✔️✔️ Producción
 
