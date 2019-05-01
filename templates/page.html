@@ -2,11 +2,15 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
 
-<div class="col-xs-12">
-  <h2 class="major"><span>{{ this.title }}</span></h2>
-
-  <div class="content">
-    {%- block content -%} {{ this.body }} {%- endblock -%}
+<div class="row justify-content-center topspace">
+  <div class="container">
+    <header class="page-header">
+      <h2 class="section-title gt-walsheim primary-color">{{ this.title }}</h2>
+      <p class="text-center">{{ this.summary }}</p>
+    </header>
+    <div class="content">
+      {{ this.body }}
+    </div>
   </div>
 </div>
 {% endblock %}
