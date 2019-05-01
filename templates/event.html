@@ -33,15 +33,45 @@
         </p>
         {% endif %}
 
+        <div class="row justify-content-center topspace">
+          {% if this.pub_date %}
+          <div class="col-md-4">
+            <p>
+              <div class="gt-walsheim primary-color"><b>Fecha: </b></div>
+              {% if this.pub_date %}
+              {{ this.pub_date.strftime('%d %b del %Y') }}
+              {% endif %}
+            </p>
+            <p>
+              <div class="gt-walsheim primary-color"><b>Hora: </b></div>
+              {% if this.pub_date %}
+              {{ this.pub_date.strftime('%H:%M') }}
+              {% endif %}
+              {% if this.end_date %}
+              - {{ this.end_date.strftime('%H:%M') }}
+              {% endif %}
+            </p>
+          </div>
+          {% endif %}
+          {% if this.place %}
+          <div class="col-md-8">
+            <p>
+              <div class="gt-walsheim primary-color"><b>Lugar: </b></div>
+              {% if this.place %}
+              {{ this.place }}
+              {% endif %}
+            </p>
+          </div>
+          {% endif %}
+        </div>
+
         {% if this.latitude and this.longitude %}
 
         {%- set lon_ll = this.longitude - 0.001 -%}
         {%- set lon_ur = this.longitude + 0.001 -%}
         {%- set lat_ll = this.latitude - 0.002 -%}
         {%- set lat_ur = this.latitude + 0.002 -%}
-        <div class="row">
-          <p class="section-title gt-walsheim primary-color">Lugar</p>
-        </div>
+
         <div class="embed-container">
           <iframe id="mapsource" scrollwheel="false" width="800" height="600" frameborder="0" scrolling="no" marginheight="0"
             marginwidth="0"
@@ -109,7 +139,7 @@
         <div class="row justify-content-center">
           {%- for block in this.sponsor.blocks -%}
           {%- set sponsor = site.get('/usuarios/' + block.username) -%}
-          <div class="col-md-4">
+          <div class="col-md-4 col-6">
             <a href="{{ sponsor.web }}" target="_blank">
               {% if sponsor.image_alt %}
               <img class="logo" src="{{ sponsor|url }}/{{ sponsor.image_alt }}" alt="{{ sponsor.sponsorname }}" />
