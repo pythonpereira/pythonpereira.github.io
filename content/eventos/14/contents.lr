@@ -57,3 +57,7 @@ image: template.png
 thumbnail: portada.png
 ---
 post: no
+---
+latitude: 4.7956044
+---
+longitude: -75.6924692
