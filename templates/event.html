@@ -81,17 +81,23 @@
           {%- for block in this.team.blocks -%} 
           {%- set user = site.get('/usuarios/' + block.username) -%}
           <div class="col-6 col-md-3">
-            {% if user.image %}
-            <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
-            {% endif %}
-            <div>
-              <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
+            {% if user.image and user.type == 'persona' %}
+              <a href="{{ user|url }}">
+                <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+              </a>
+              {% elif user.image %}
+              <a href="{{ user.web }}" target="_blank">
+                <img class="logo" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+              </a>
+              {% endif %}
+              <div>
+                <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
+              </div>
             </div>
-          </div>
-            {% if loop.index % 4 == 0 %}
-            </div>
-            <div class="row justify-content-center">
-            {% endif %}
+              {% if loop.index % 4 == 0 %}
+              </div>
+              <div class="row justify-content-center">
+              {% endif %}
           {% endfor %}
         </div>
         {% endif %}

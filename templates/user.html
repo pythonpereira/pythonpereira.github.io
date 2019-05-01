@@ -1,149 +1,89 @@
-{% extends "page.html" %}
-{% block title %}{{ this.name }} {{ this.last_name }}{% endblock %}
-{% block content %}
-<section class="about" id="about">
-  <div class="content">
-    <div class="row">
-      <div class="col-lg-4 col-sm-12 col-12">
-        {% if this.image %}
-        <img class="image fit" src="{{ this.image }}" alt="{{ this.username }}"> {% endif %}
-        <div class="row justify-content-center justify-content-center">
-          <h2>{{ this.name }} {{ this.last_name }}</h2>
-        </div>
-        <p>{{ this.summary }}</p>
-        {% if this.web %}
-        <p>
-          <a href="{{ this.web }}" class="icon fa-link" target="_blank">
-            <span class="label">Web</span> {{ this.web }}
-          </a>
-        </p>
-        {% endif %}
+{% extends "layout.html" %}
+{% block body %}
 
-        <div class="row justify-content-center justify-content-center">
-          <ul class="icons">
-            {% if this.email %}
-            <li>
-              <a href="mailto:{{ this.email }}" class="icon fa-envelope" target="_blank">
-                <span class="label">Email</span>
-              </a>
-            </li>
-            {% endif %} {% if this.twitter_handle %}
-            <li>
-              <a href="https://www.twitter.com/{{ this.twitter_handle }}" class="icon fa-twitter" target="_blank">
-                <span class="label">Twitter</span>
-              </a>
-            </li>
-            {% endif %} {% if this.facebook_handle %}
-            <li>
-              <a href="https://www.facebook.com/{{ this.facebook_handle }}" class="icon fa-facebook" target="_blank">
-                <span class="label">Facebook</span>
-              </a>
-            </li>
-            {% endif %} {% if this.instagram_handle %}
-            <li>
-              <a href="https://www.instagram.com/{{ this.instagram_handle }}" class="icon fa-instagram">
-                <span class="label">Instagram</span>
-              </a>
-            </li>
-            {% endif %} {% if this.github_handle %}
-            <li>
-              <a href="https://github.com/{{ this.github_handle }}" class="icon fa-github-alt">
-                <span class="label">Github</span>
-              </a>
-            </li>
-            {% endif %} {% if this.telegram_handle %}
-            <li>
-              <a href="https://t.me/{{ this.telegram_handle }}" class="icon fa-telegram">
-                <span class="label">Telegram</span>
-              </a>
-            </li>
-            {% endif %} {% if this.linkedin_handle %}
-            <li>
-              <a href="https://https://www.linkedin.com/in/{{ this.linkedin_handle }}" class="icon fa-linkedin">
-                <span class="label">Linkedin</span>
-              </a>
-            </li>
-            {% endif %} {% if this.meetup_url %}
-            <li>
-              <a href="{{ this.meetup_url }}" class="icon fa-meetup">
-                <span class="label">Meetup</span>
-              </a>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-8 col-sm-12 col-12">
-        <h3>Información</h3>
-        <div class="content">
-          {% if this.information %} {{ this.information }} {% else %}
-          <p>No hay información disponible</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {%- if this.members -%}
-    <div class="row">
-      <div class="col-12">
-        <h2>Equipo Organizador</h2>
-
-        <div class="row justify-content-center justify-content-center">
-          {%- for block in this.members.blocks -%}
-          {%- set user = site.get('/usuarios/' + block.username) -%}
-          <div class="col-lg-3 col-md-3 col-xs-12">
-
-            <a href="{{ user|url }}">
-              {% if image_alt and user.image_alt %}
-              <img class="image fit" src="{{ user|url }}/{{ user.image_alt }}" alt="{{ user.username }}" /> {% elif not image_alt and user.image %}
-              <img class="image fit" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" /> {% elif image_alt and not user.image_alt %}
-              <img class="image fit" src="{{ base_url }}static/images/empty-2x1.png" alt="{{ user.username }}" /> {% elif not image_alt and not user.image %}
-              <img class="image fit" src="{{ base_url }}static/images/empty-avatar.png" alt="{{ user.username }}" /> {% endif %}
-            </a>
-
-            <div class="row justify-content-center justify-content-center">
-              <h4>{{ user.name }} {{ user.last_name }}</h4>
-            </div>
-            <div class="row justify-content-center justify-content-center">
-              <ul class="icons">
-                {% if user.web %}
-                <li>
-                  <a href="{{ user.web }}" class="icon fa-globe" target="_blank">
-                    <span class="label">Website</span>
-                  </a>
-                </li>
-                {% endif %} {% if user.email %}
-                <li>
-                  <a href="mailto:{{ user.email }}" class="icon fa-envelope" target="_blank">
-                    <span class="label">Email</span>
-                  </a>
-                </li>
-                {% endif %} {% if user.facebook_handle %}
-                <li>
-                  <a href="https://facebook.com/{{ user.facebook_handle}}" class="icon fa-facebook" target="_blank">
-                    <span class="label">Facebook</span>
-                  </a>
-                </li>
-                {% endif %} {% if user.twitter_handle %}
-                <li>
-                  <a href="https://twitter.com/{{ user.twitter_handle}}" class="icon fa-twitter" target="_blank">
-                    <span class="label">Twitter</span>
-                  </a>
-                </li>
-                {% endif %} {% if user.github_handle %}
-                <li>
-                  <a href="https://github.com/{{ user.github_handle}}" class="icon fa-github" target="_blank">
-                    <span class="label">Github</span>
-                  </a>
-                </li>
-                {% endif %}
-              </ul>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    {%- endif -%}
+<div class="container">
+  <div class="row justify-content-center topspace">
+    <header class="page-header">
+      <h1 class="section-title gt-walsheim primary-color">{{ this.name }} {{ this.last_name }}</h1>
+    </header>
   </div>
-</section>
+  <div class="row justify-content-center topspace">
+    <div class="col-md-4 col-sm-12 col-12">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          {% if this.image %}
+          <img class="avatar-circle" src="{{ this|url }}/{{ this.image }}" alt="{{ this.username }}" />
+          {% endif %}
+          <div>
+            <p class="section-title gt-walsheim">{{ this.name }} {{ this.last_name }}</p>
+          </div>
+        </div>
+        {% if this.summary %}
+        <p>{{ this.summary }}</p>
+        {% endif %}
+      </div>
+      {% if this.web %}
+      <p>
+        <a href="{{ this.web }}" target="_blank">
+          <i class="fas fa-globe-americas"></i> {{ this.web }}
+        </a>
+      </p>
+      {% endif %}
+      <div class="row justify-content-center">
+        <p class="follow-me-icons">
+          {% if this.email %}
+            <a href="mailto:{{ this.email }}" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          {% endif %} 
+          {% if this.twitter_handle %}
+            <a href="https://www.twitter.com/{{ this.twitter_handle }}" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          {% endif %} 
+          {% if this.facebook_handle %}
+            <a href="https://www.facebook.com/{{ this.facebook_handle }}"  target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          {% endif %} 
+          {% if this.instagram_handle %}
+            <a href="https://www.instagram.com/{{ this.instagram_handle }}" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          {% endif %} 
+          {% if this.github_handle %}
+            <a href="https://github.com/{{ this.github_handle }}" target="_blank">
+              <i class="fab fa-github-alt"></i>
+            </a>
+          {% endif %} 
+          {% if this.telegram_handle %}
+            <a href="https://t.me/{{ this.telegram_handle }}" target="_blank">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+          {% endif %} 
+          {% if this.linkedin_handle %}
+            <a href="https://www.linkedin.com/in/{{ this.linkedin_handle }}" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          {% endif %} 
+          {% if this.meetup_url %}
+            <a href="{{ this.meetup_url }}" target="_blank">
+              <i class="fab fa-meetup"></i>
+            </a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+    <div class="col-md-8 col-12">
+      <h2 class="gt-walsheim primary-color">Información</h2>
+      <div class="content">
+        {% if this.information %}
+        {{ this.information }} 
+        {% else %}
+        <p>No hay información disponible</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
