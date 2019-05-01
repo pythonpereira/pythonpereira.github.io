@@ -23,11 +23,13 @@
           <div class="row justify-content-center">
             {%- for user in actual_team -%}
             <div class="col-6 col-md-3">
-              {% if user.image %}
-              <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
-              {% else %}
-              <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ user.username }}" />
-              {% endif %}
+              <a href="{{ user|url }}">
+                {% if user.image %}
+                <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+                {% else %}
+                <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ user.username }}" />
+                {% endif %}
+              </a>
               <div>
                 <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
               </div>
@@ -47,11 +49,13 @@
           <div class="row justify-content-center">
             {%- for user in past_team -%}
             <div class="col-6 col-md-3">
-              {% if user.image %}
-              <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
-              {% else %}
-              <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ user.username }}" />
-              {% endif %}
+              <a href="{{ user|url }}">
+                {% if user.image %}
+                <img class="avatar-circle" src="{{ user|url }}/{{ user.image }}" alt="{{ user.username }}" />
+                {% else %}
+                <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ user.username }}" />
+                {% endif %}
+              </a>
               <div>
                 <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
               </div>
