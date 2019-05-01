@@ -32,6 +32,29 @@
           <a href="{{ this.meetup_url }}" class="btn btn-primary btn-lg" target="_blank" >Inscripción</a>
         </p>
         {% endif %}
+
+        {% if this.latitude and this.longitude %}
+
+        {%- set lon_ll = this.longitude - 0.001 -%}
+        {%- set lon_ur = this.longitude + 0.001 -%}
+        {%- set lat_ll = this.latitude - 0.002 -%}
+        {%- set lat_ur = this.latitude + 0.002 -%}
+        <div class="row">
+          <p class="section-title gt-walsheim primary-color">Lugar</p>
+        </div>
+        <div class="embed-container">
+          <iframe id="mapsource" scrollwheel="false" width="800" height="600" frameborder="0" scrolling="no" marginheight="0"
+            marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox={{ lon_ll }}%2C{{ lat_ll }}%2C{{ lon_ur }}%2C{{ lat_ur }}&amp;layer=mapnik&amp;marker={{ this.latitude }}%2C{{ this.longitude }}">
+          </iframe>
+        </div>
+        <small>
+          <a href="https://www.openstreetmap.org/#map=18/{{ this.latitude }}/{{ this.longitude }}" target="_blank">
+            Ver mapa de mayor tamaño
+          </a>
+        </small>
+        {% endif %}
+
         <hr />
 
         {% if this.pagination.items %}
