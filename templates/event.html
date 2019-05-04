@@ -165,7 +165,7 @@
         <div class="widget">
           <h5 class="gt-walsheim text-right">Otros Eventos</h5>
 
-          {% for event in site.query('/eventos/').filter(F.title != this.title).filter(F.post).limit(5) %}
+          {% for event in site.query('/eventos/').filter(F.title != this.title).limit(5) %}
           <div class="col-xs-12">
             <a class="thumbnail" href="{{ event|url }}">
               <span class="title">{{ event.title }} | {{ event.pub_date.strftime('%d/%m/%Y') }}</span>

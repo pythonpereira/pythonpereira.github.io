@@ -92,6 +92,6 @@ image: flyer.jpg
 ---
 thumbnail: flyer.jpg
 ---
-post: yes
+post: no
 ---
 meetup_url: https://pereira.pyday.co
