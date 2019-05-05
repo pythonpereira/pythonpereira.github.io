@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+  <div class="row justify-content-center section clients topspace">
+    <article class="maincontent">
+      <header class="page-header">
+        <h2 class="section-title gt-walsheim primary-color">{{ this.title }}</h2>
+      </header>
+      <div class="content">
+        {{ this.body }}
+      </div>
+      <hr />
+      <div class="content">
+        <form id="contact-form">
+          <div class="row justify-content-center">
+            <h3 class="section-title gt-walsheim primary-color">Información de Contacto</h3>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Nombre Completo <span>*</span></label>
+                <input type="text" class="form-control" placeholder="Nombre Completo" id="name name="name" required="">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Correo Electrónico <span>*</span></label>
+                <input type="text" class="form-control" placeholder="Correo Electrónico" id="email" name="email" required="">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Celular <span>*</span></label>
+                <input type="text" class="form-control" placeholder="Título" id="phone" name="phone" required="">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Medio alternativo de contacto redes sociales <span>*</span></label>
+                <input type="text" class="form-control" placeholder="Medio alternativo de contacto redes sociales" id="social" name="social" required="">
+                <small class="form-text text-muted">Facebook, Twitter o Github</small>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Cuéntanos un poco sobre ti <span>*</span></label>
+                <textarea class="form-control" placeholder="Cuéntanos un poco sobre ti" id="about" name="about"
+                  required=""></textarea>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Link a una foto tuya para incluirla en la publicidad <span>*</span></label>
+                <input type="text" class="form-control" placeholder="Link a una foto tuya para incluirla en la publicidad" id="photo" name="photo" required="">
+              </div>
+            </div>
+            <h3 class="section-title gt-walsheim primary-color">Sobre la Charla</h3>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Título <span>*</span></label>
+                <input type="text" class="form-control"
+                  placeholder="Título" id="title" name="title"
+                  required="">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Nivel de la charla <span>*</span></label>
+                <select class="form-control" name="audience" id="audience">
+                  <option value="Básico">Básico</option>
+                  <option value="Intermedio">Intermedio</option>
+                  <option value="Avanzado">Avanzado</option>
+                  <option value="Todos">Todos</option>
+                </select>
+                <small class="form-text text-muted">De acuerdo al publico al cual esta dirigido</small>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Descripción de la charla <span>*</span></label>
+                <textarea class="form-control" placeholder="Descripción de la charla" id="description" name="description"
+                  required=""></textarea>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Requerimientos especiales <span>*</span></label>
+                <input type="text" class="form-control" placeholder="Requerimientos especiales" id="requirements"
+                  name="requirements" required="">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label>Comentarios Adicionales</label>
+                <textarea class="form-control" placeholder="Descripción de la charla" id="comments" name="comments"
+                  required=""></textarea>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <blockquote>
+                <strong>NOTA:</strong> Verifica toda tu información antes de enviar.
+              </blockquote>
+              <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  ENVIAR PROPUESTA
+                </button>
+              </div>
+              <br />
+            </div>
+          </div>
+        </form>
+      </div>
+    </article>
+  </div>
+</div>
+{% endblock %}
