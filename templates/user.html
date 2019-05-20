@@ -17,12 +17,12 @@
           <div>
             <p class="section-title gt-walsheim">{{ this.name }} {{ this.last_name }}</p>
           </div>
+          {% if this.summary %}
+          <div class="text-center">
+            <p>{{ this.summary }}</p>
+          </div>
+          {% endif %}
         </div>
-        {% if this.summary %}
-        <div class="text-center">
-          <p>{{ this.summary }}</p>
-        </div>
-        {% endif %}
       </div>
       {% if this.web %}
       <p>

@@ -1,0 +1,10 @@
+title: Programación web con asyncio y aiohttp
+---
+information: En la charla conoceremos aiohttp, un servidor y framework web asíncrono para Python usando asyncio. Veremos como crear una aplicación sencilla pero funcional, y conceptos básicos como vistas, corrutinas, rutas, plantillas, entre otros.
+---
+speakers:
+
+#### user ####
+username: jonathan-sandoval
+----
+description: 
