@@ -19,7 +19,7 @@ username: utp
 #### organization ####
 username: monoku
 ---
-success: yes
+success: no
 ---
 team:
 
@@ -56,7 +56,7 @@ image: template.png
 ---
 thumbnail: portada.png
 ---
-post: yes
+post: no
 ---
 latitude: 4.7956044
 ---
