@@ -1,10 +1,10 @@
-title: La historia de Kiwibot y aceleradores
+title: Instagram y el álgebra lineal: ¿Qué relación existe?
 ---
-information: Deep learning is a new exciting field of machine learning that is helping to build the future, at Kiwi Campus we are levering this new field into creating the next generation of robots and embedded devices that will make the future of next door delivery. We want to talk about our development cycles and how have we used python for deployment of our models and our data pipeline characteristics.
+information: Muchas personas saben cómo aplicar filtros a sus fotos pero muy pocos saben cómo es que funcionan, es decir, la matemática que hace eso posible. Esta charla no es técnica, sino informativa. ¿Cuál es el papel del álgebra lineal? ¿Qué es un pixel y una matriz? ¿Qué es un filtro? Averiguémoslo!
 ---
 speakers:
 
 #### user ####
-username: david-cardozo
+username: german-diego-guisasola-plejo
 ----
 description: 
