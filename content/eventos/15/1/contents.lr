@@ -1,0 +1,10 @@
+title: Centraliza logs de Django con ELK
+---
+information: ELK (Elasticsearch, Logstash, Kibana) son un conjunto de herramientas de código abierto que combinadas ofrecen un potente sistema de administración de registros permitiendo la monitorización, consolidación y análisis de logs que tenemos en nuestras apps. En esta charla, haré una introducción a dichas herramientas y cómo conectar un proyecto de django a un stack ELK
+---
+speakers:
+
+#### user ####
+username: felipe-salazar
+----
+description: 
