@@ -201,6 +201,9 @@ a {
 a:hover {
   color:  #1565c0 ;
 }
+
+.bold { font-weight: bold; }
+
 .lead {
   font-weight: 300;
   font-size: 21px;
@@ -955,4 +958,21 @@ footer.entry-meta .meta-in {
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     margin: 0 -20px;
   }
+}
+
+/* Form */
+
+.form-control {
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.alert {
+  border: none;
+  border-radius: 0;
+}
+
+.alert-success {
+  color: #fff;
+  background-color: #4caf50;
 }
