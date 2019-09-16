@@ -2,9 +2,9 @@ title: Pereira - Saturday Tech Talks 2019
 ---
 meetup_url: https://www.meetup.com/es/Pereira-Tech-Talks/events/264304830/
 ---
-post: yes
+post: no
 ---
-success: yes
+success: no
 ---
 end_date: 2019-09-07 12:00:00 -0500
 ---
@@ -32,4 +32,8 @@ username: perjs
 ---
 image: STT.png
 ---
-thumbnail: STT.png
+thumbnail: portada.png
+---
+latitude: 4.7921978
+---
+longitude: -75.6905907

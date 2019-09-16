@@ -1,0 +1,12 @@
+title: Next.js: Server-side rendering your React App
+---
+slides_url: https://slides.com/pythonpereira/next-js
+---
+speakers:
+
+#### user ####
+username: andres-rodriguez-escudero
+----
+description: 
+---
+information: Next.js es una herramienta que te permite hacer una aplicación web con React renderizando desde el lado del Server. Veremos las ventajas que hay cuando renderizas desde el lado del servidor, versus las ventajas de redenrizar desde el lado del cliente (Browsers) y como Next.js puede convivir con estos dos tipos de ventajas.

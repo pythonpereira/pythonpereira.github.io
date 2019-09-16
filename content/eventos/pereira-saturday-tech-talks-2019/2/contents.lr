@@ -1,0 +1,14 @@
+title: Introducción a Amazon Web Services (AWS)
+---
+information: Haremos un recorrido por varios de los servicios más populares de esta plataforma, incluyendo casos de uso. Encontrarás formas de facilitar y potencializar tus proyectos. EC2, RDS, IAM, SNS, SQS y S3 ya no serán solo siglas que escuchaste alguna vez. Veremos también Lambda, Athena y DynamoDB.
+---
+slides_url: https://speakerdeck.com/pythonpereira/introduccion-a-amazon-web-services-aws
+---
+speakers:
+
+#### user ####
+username: steven-pineda
+----
+description: 
+---
+video_code: ACEl34qjghY
