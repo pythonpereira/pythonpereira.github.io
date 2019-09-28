@@ -8,3 +8,5 @@ speakers:
 username: felipe-salazar
 ----
 description: 
+---
+slides_url: https://slides.com/pythonpereira/django-channels
