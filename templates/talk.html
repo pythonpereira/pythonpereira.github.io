@@ -35,13 +35,15 @@
         {%- for block in this.speakers.blocks -%}
         {%- set speaker = site.get('/usuarios/' + block.username) -%}
         <div class="col-md-3 col-sm-6 col-6">
-          {% if speaker.image %}
-          <img class="avatar-circle" src="{{ speaker|url }}/{{ speaker.image }}" alt="{{ speaker.username }}" />
-          {% else %}
-          <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ speaker.username }}" />
-          {% endif %}
+          <a href="{{ speaker|url }}">
+            {% if speaker.image %}
+              <img class="avatar-circle" src="{{ speaker|url }}/{{ speaker.image }}" alt="{{ speaker.username }}" />
+              {% else %}
+              <img class="avatar-circle" src="{{ base_url }}static/images/avatar.png" alt="{{ speaker.username }}" />
+            {% endif %}
+          </a>
           <div>
-            <p class="section-title gt-walsheim">{{ speaker.name }} {{ speaker.last_name }}</p>
+            <p class="section-title gt-walsheim"><a href="{{ speaker|url }}">{{ speaker.name }} {{ speaker.last_name }}</a></p>
           </div>
         </div>
         {% if loop.index % 4 == 0 %}

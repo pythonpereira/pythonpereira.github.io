@@ -127,7 +127,7 @@
               </a>
               {% endif %}
               <div>
-                <p class="section-title gt-walsheim">{{ user.name }} {{ user.last_name }}</p>
+                <p class="section-title gt-walsheim"><a href="{{ user|url }}">{{ user.name }} {{ user.last_name }}</a></p>
               </div>
             </div>
               {% if loop.index % 4 == 0 %}
