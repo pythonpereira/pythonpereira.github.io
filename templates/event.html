@@ -108,8 +108,14 @@
           <h3 class="section-title gt-walsheim primary-color">Organizadores</h3>
         </div>
         <div class="row justify-content-center">
+          {% set users = [] %}
+
           {%- for block in this.team.blocks -%} 
-          {%- set user = site.get('/usuarios/' + block.username) -%}
+            {%- set user = site.get('/usuarios/' + block.username) -%}
+            {% set aux = users.append(user) %}
+          {% endfor %}
+
+          {% for user in users | sort(attribute='name') %}
           <div class="col-6 col-md-3">
             {% if user.image and user.type == 'persona' %}
               <a href="{{ user|url }}">
