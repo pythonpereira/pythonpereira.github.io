@@ -143,8 +143,14 @@
           <h3 class="section-title gt-walsheim primary-color">Patrocinadores</h3>
         </div>
         <div class="row justify-content-center">
+          {% set sponsors = [] %}
+
           {%- for block in this.sponsor.blocks -%}
-          {%- set sponsor = site.get('/usuarios/' + block.username) -%}
+            {%- set sponsor = site.get('/usuarios/' + block.username) -%}
+            {% set aux = sponsors.append(sponsor) %}
+          {% endfor %}
+
+          {% for sponsor in sponsors | sort(attribute='username') %}
           <div class="col-md-4 col-6">
             <a href="{{ sponsor.web }}" target="_blank">
               {% if sponsor.image_alt %}
