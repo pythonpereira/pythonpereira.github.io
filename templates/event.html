@@ -87,6 +87,16 @@
 
         <hr />
 
+        {% if this.gallery %}
+          <div class="row justify-content-center">
+            <a data-flickr-embed="true" data-header="true" data-footer="true"
+              href="{{ this.gallery }}" title="Meetup #1"><img
+                src="https://live.staticflickr.com/65535/48813913586_1a1aec246a_c.jpg" width="800" height="800" alt="{{ this.title }}"></a>
+          </div>
+        {% endif %}
+
+        <hr />
+
         {% if this.pagination.items %}
         <div class="row">
           <h3 class="section-title gt-walsheim primary-color">Lista de Charlas</h3>
@@ -167,7 +177,6 @@
           {% endfor %}
         </div>
         {% endif %}
-
       </article>
       <!-- /Article -->
   
