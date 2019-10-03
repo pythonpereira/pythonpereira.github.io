@@ -85,3 +85,28 @@ latitude: 4.7956044
 longitude: -75.6924692
 ---
 _hidden: no
+---
+<<<<<<< HEAD
+gallery: https://www.flickr.com/photos/184699615@N02/albums/72157711167262921
+=======
+gallery:
+
+#### photo ####
+url: https://drive.google.com/uc?id=1x6aK_0ZwgQgtn_480FjH9h66XqvdSIHG
+----
+date: 
+----
+title: Meetup 13
+----
+description:
+
+Descripción de la foto 
+#### photo ####
+url: https://drive.google.com/uc?id=1oLEQpw_jOFMVotnTMgNUn6801sGpZsFn
+----
+date: 
+----
+title: 
+----
+description: 
+>>>>>>> 69d25201502a17312fe7ed8aa554713729902094
