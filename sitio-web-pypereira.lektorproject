@@ -10,7 +10,7 @@ locale = es
 
 [servers.production]
 name = Production
-target = ghpages+https://pythonpereira/sitio-web?cname=pypereira.co
+target = ghpages+https://pythonpereira/pythonpereira.github.io?cname=pypereira.co
 
 [packages]
 lektor-google-analytics = 0.1.3
