@@ -1,0 +1,14 @@
+title: Introducción a motores de busqueda con Elasticsearch
+---
+information:
+
+Conoce qué es y como funciona Elasticsearch, un potente motor de búsqueda que permite indexar y analizar en tiempo real grandes cantidades de datos de manera distribuida.
+
+Analizarémos sus ventajas y desventajas, en qué casos aplica y ejemplos de consultas simples a las más complejas.
+---
+speakers:
+
+#### user ####
+username: steven-pineda
+----
+description: 
