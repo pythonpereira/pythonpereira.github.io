@@ -2,10 +2,21 @@ username: germangrandas
 ---
 last_name: Grandas
 ---
-name: German
+name: Germán
+---
+email: german.grandas@utp.edu.co
+---
+linkedin_handle: germangrandas
+---
+github_handle: germangrandas
+---
+information:
+- 👨‍💻Data Analyst [@UTP](https://www.utp.edu.co/)
+- 🎓Computer Engineer 
+- ☕Coffee Lover
 ---
 type: persona
 ---
-image: GERMAN.png
+image: profile.jpg
 ---
 organizer: actual
