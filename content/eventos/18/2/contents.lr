@@ -1,0 +1,12 @@
+title: Getting started with Google BigQuery
+---
+information: En esta charla haremos una introducción a a qué es BigQuery. Qué características de su arquitectura hacen que sea un perfecta solución como data warehousing. Describiremos sus características y casos de uso. Haremos ejemplos de queries y su conexión con DataFlow.
+---
+speakers:
+
+#### user ####
+username: william-gomez
+----
+description: 
+---
+video_code: uoX77dgS5CI
