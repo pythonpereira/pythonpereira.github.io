@@ -5,10 +5,20 @@ title: En vivo: 🐍💻 Python Pereira Meetup 18
 body:
 
 <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-    <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uoX77dgS5CI" id="video" allowscriptaccess="always"></iframe> -->
-    <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=uoX77dgS5CI&embed_domain=www.pypereira.co" ></iframe>
+
+<div class="row">
+        <div class="col-md-9 col-sm-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uoX77dgS5CI" id="video" allowscriptaccess="always"></iframe> 
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=uoX77dgS5CI&embed_domain="pypereira.co" ></iframe>
+             </div>
+        </div>
 </div>
+
 <hr />
 
 
