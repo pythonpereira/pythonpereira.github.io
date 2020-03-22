@@ -1,0 +1,23 @@
+_model: page
+---
+title: En vivo: 🐍💻 Python Pereira Meetup 18
+---
+body:
+
+<!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uoX77dgS5CI" id="video" allowscriptaccess="always"></iframe>
+</div>
+<hr />
+
+En esta ocasión contaremos con dos interesantes charlas 🐍💻:
+
+👉 Demystifying Jupyter por Melissa Escobar Gutiérrez
+
+🔎 Descripción:
+En esta charla profundizaremos en Jupyter, una importante herramienta y entorno de trabajo open source orientado a científicos, que está revolucionando la forma de trabajar en el mundo de los datos. Veremos qué es realmente, cómo funciona y lo que esconde esta misteriosa Black Box.
+
+👉 Getting started with Google BigQuery por William Gomez
+
+🔎 Descripción:
+En esta charla haremos una introducción a a qué es BigQuery. Qué características de su arquitectura hacen que sea un perfecta solución como data warehousing. Describiremos sus características y casos de uso. Haremos ejemplos de queries y su conexión con DataFlow.

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+
+<div class="row justify-content-center topspace">
+  <div class="container">
+    <header class="page-header">
+      <h2 class="section-title gt-walsheim primary-color">{{ this.title }}</h2>
+      <p class="text-center">{{ this.summary }}</p>
+    </header>
+    <div class="content">
+      {{ this.body }}
+
+      <table id="tab"></table>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+<script>
+  $(document).ready(function () {
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CSaMgKdrOCB0yGDcDcKsNptqvXkuurZ25RJk1aExUaQ/edit#gid=0';
+    $('#tab').sheetrock({
+      url: mySpreadsheet
+    });
+    console.log($('#tab tr td').length)
+  });
+
+</script>
+
+</body>
+{% endblock %}
