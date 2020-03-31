@@ -1,6 +1,6 @@
 _model: page
 ---
-title: En vivo: 🐍💻 Python Pereira Meetup 18
+title: En vivo: 🐍💻 Python Pereira Meetup #19
 ---
 body:
 
@@ -9,26 +9,27 @@ body:
 <div class="row">
         <div class="col-md-9 col-sm-12">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uoX77dgS5CI" id="video" allowscriptaccess="always"></iframe> 
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ohIyF9akoHE" id="video" allowscriptaccess="always"></iframe> 
             </div>
         </div>
         <div class="col-md-3 col-sm-12" style="padding: 0;">
-                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=uoX77dgS5CI&embed_domain=pypereira.co" width="100%" height="300px"
+                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=ohIyF9akoHE&embed_domain=pypereira.co" width="100%" height="300px"
         frameborder="0" scrolling="no"></iframe>
         </div>
 </div>
 
-<hr />
-
+----
 
 En esta ocasión contaremos con dos interesantes charlas 🐍💻:
 
-👉 Demystifying Jupyter por Melissa Escobar Gutiérrez
+👉 Buenas Prácticas en Proyectos Python por Gary Briceño Cervantes
 
 🔎 Descripción:
-En esta charla profundizaremos en Jupyter, una importante herramienta y entorno de trabajo open source orientado a científicos, que está revolucionando la forma de trabajar en el mundo de los datos. Veremos qué es realmente, cómo funciona y lo que esconde esta misteriosa Black Box.
+Buenas prácticas en el desarrollo de lambdas con Python en AWS.
 
-👉 Getting started with Google BigQuery por William Gomez
+👉 Una guía rápida de Docker por Mauricio Collazos
 
 🔎 Descripción:
-En esta charla haremos una introducción a a qué es BigQuery. Qué características de su arquitectura hacen que sea un perfecta solución como data warehousing. Describiremos sus características y casos de uso. Haremos ejemplos de queries y su conexión con DataFlow.
+Docker es la herramienta de contenerización mas popular en la actualidad, su lanzamiento en 2014 permitió que propuestas interesantes como los microservicios y los devops se establecieran fuertemente en el mercado.
+
+En esta charla profundizamos en los conceptos fundamentales de docker, su API y algunas maneras apropiadas para solucionar problemas de contenerización
