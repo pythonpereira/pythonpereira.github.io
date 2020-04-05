@@ -1,0 +1,18 @@
+title: Una guía rápida de Docker
+---
+information:
+
+"Docker es la herramienta de contenerización mas popular en la actualidad, su lanzamiento en 2014 permitió que propuestas interesantes como los microservicios y los devops se establecieran fuertemente en el mercado.
+
+En esta charla profundizamos en los conceptos fundamentales de docker, su API y algunas maneras apropiadas para solucionar problemas de contenerización"
+---
+slides_url: https://contraslash.github.io/una-guia-rapida-de-docker/
+---
+speakers:
+
+#### user ####
+username: mauricio-collazos
+----
+description: 
+---
+video_code: ohIyF9akoHE
