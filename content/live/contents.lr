@@ -9,11 +9,11 @@ body:
 <div class="row">
         <div class="col-md-9 col-sm-12">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KysExEDT6ZU" id="video" allowscriptaccess="always"></iframe> 
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L0VIyvQOwWo" id="video" allowscriptaccess="always"></iframe> 
             </div>
         </div>
         <div class="col-md-3 col-sm-12" style="padding: 0;">
-                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=KysExEDT6ZU&embed_domain=pypereira.co" width="100%" height="300px"
+                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=L0VIyvQOwWo&embed_domain=pypereira.co" width="100%" height="300px"
         frameborder="0" scrolling="no"></iframe>
         </div>
 </div>
@@ -22,14 +22,12 @@ body:
 
 En esta ocasión contaremos con dos interesantes charlas 🐍💻:
 
-👉 Como iniciar en el mundo de la automatización de pruebas por Daniela Zuluaga
+👉 Automatizacion de Geoporcesos utilizando arcpy por Jhoan Sebastian Atehortua
 
 🔎 Descripción:
-¿No sabes por donde empezar? El mundo de la automatización de pruebas puede ser un dolor de cabeza si no sabemos para que nos sirve o que herramientas usar. En esta charla se dará una pequeña introducción a este mundo, se definirá que es la automatización de pruebas, porque es importante, cuando se debe automatizar y algunas herramientas para empezar con estas practicas
-https://github.com/Nany262
+Se mostrara de manera agil la versatilidad del modulo arcpy para la automatizacion de geoprocesos, se incluira una breve descripción de arcgis, arcpy , las herramientas a utilizar, y se mostrara brevemente ejemplos de algoritmos y herramientas desarrolladas.
 
-👉 Web scraping con python por German David Gómez Gutiérrez
+👉 Introducción a Pandas por Cristian Narvaez
 
 🔎 Descripción:
-Automatizar la recolección de información de páginas web usando python
-https://twitter.com/German_2G?s=09
+En esta charla podrás ver, de una manera muy sencilla, porqué Pandas se ha convertido en una de las herramientas más populares para limpiar, transformar y analizar datos.

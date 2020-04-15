@@ -1,17 +1,19 @@
-title: 🐍💻 Python Pereira Meetup #20
+title: 🐍💻 Python Pereira Meetup #21
 ---
-end_date: 2020-04-08 20:30:00 -0500
+end_date: 2020-04-15 20:30:00 -0500
 ---
-post: no
+meetup_url: https://www.meetup.com/es/pythonpereira/events/270024138/
 ---
-pub_date: 2020-04-08 18:30:00 -0500
+post: yes
+---
+pub_date: 2020-04-15 18:30:00 -0500
 ---
 sponsor:
 
 #### organization ####
 username: python-colombia
 ---
-success: no
+success: yes
 ---
 team:
 
@@ -27,13 +29,7 @@ description:
 username: germangrandas
 ----
 description: 
-#### user ####
-username: anaguicas
-----
-description: 
 ---
 image: flyer.png
 ---
 thumbnail: portada.png
----
-meetup_url: https://www.meetup.com/es/pythonpereira/events/269834772/
