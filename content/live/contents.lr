@@ -1,6 +1,6 @@
 _model: page
 ---
-title: En vivo: 🐍💻 Python Pereira Meetup #21
+title: En vivo: 🐍💻 Python Pereira Meetup #22
 ---
 body:
 
@@ -9,11 +9,11 @@ body:
 <div class="row">
         <div class="col-md-9 col-sm-12">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L0VIyvQOwWo" id="video" allowscriptaccess="always"></iframe> 
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Rd-KrHZYxZE" id="video" allowscriptaccess="always"></iframe> 
             </div>
         </div>
         <div class="col-md-3 col-sm-12" style="padding: 0;">
-                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=L0VIyvQOwWo&embed_domain=pypereira.co" width="100%" height="300px"
+                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=Rd-KrHZYxZE&embed_domain=pypereira.co" width="100%" height="300px"
         frameborder="0" scrolling="no"></iframe>
         </div>
 </div>
@@ -22,12 +22,13 @@ body:
 
 En esta ocasión contaremos con dos interesantes charlas 🐍💻:
 
-👉 Automatizacion de Geoporcesos utilizando arcpy por Jhoan Sebastian Atehortua
+👉 #StayHome: Modelando Epidemias con Python por Fabio Andrés Pinto Oviedo
 
 🔎 Descripción:
-Se mostrara de manera agil la versatilidad del modulo arcpy para la automatizacion de geoprocesos, se incluira una breve descripción de arcgis, arcpy , las herramientas a utilizar, y se mostrara brevemente ejemplos de algoritmos y herramientas desarrolladas.
+Estaré explicando el concepto de modelización matemática y los modelos SIR y SEIR para modelado de enfermedades infecciosas utilizando el paquete científico de python.
 
-👉 Introducción a Pandas por Cristian Narvaez
+👉 View and Analyze logs of your applications in Python por José Danilo Sánchez Torres
 
 🔎 Descripción:
-En esta charla podrás ver, de una manera muy sencilla, porqué Pandas se ha convertido en una de las herramientas más populares para limpiar, transformar y analizar datos.
+Currently it is important to define metrics at the different stages of software development. In our cloud applications and local applications is an added value in our work to use information from the logs generated in our applications in python as part of possible decisions either to fix an error in your application or analyze our application more detailed way
+

@@ -4,7 +4,7 @@ end_date: 2020-04-15 20:30:00 -0500
 ---
 meetup_url: https://www.meetup.com/es/pythonpereira/events/270024138/
 ---
-post: yes
+post: no
 ---
 pub_date: 2020-04-15 18:30:00 -0500
 ---
@@ -13,7 +13,7 @@ sponsor:
 #### organization ####
 username: python-colombia
 ---
-success: yes
+success: no
 ---
 team:
 
