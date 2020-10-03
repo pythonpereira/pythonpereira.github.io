@@ -1,6 +1,6 @@
 _model: page
 ---
-title: En vivo: 🐍💻 Python Pereira Meetup #22
+title: En vivo: 🐍💻 Python Pereira Meetup #29
 ---
 body:
 
@@ -9,26 +9,53 @@ body:
 <div class="row">
         <div class="col-md-9 col-sm-12">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Rd-KrHZYxZE" id="video" allowscriptaccess="always"></iframe> 
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cxC5dsKriqs" id="video" allowscriptaccess="always"></iframe>
             </div>
         </div>
         <div class="col-md-3 col-sm-12" style="padding: 0;">
-                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=Rd-KrHZYxZE&embed_domain=pypereira.co" width="100%" height="300px"
+                <iframe class="embed-responsive-item"  allowscriptaccess="always" src="https://www.youtube.com/live_chat?v=cxC5dsKriqs&embed_domain=pypereira.co" width="100%" height="300px"
         frameborder="0" scrolling="no"></iframe>
         </div>
 </div>
 
 ----
 
-En esta ocasión contaremos con dos interesantes charlas 🐍💻:
+En esta ocasión contaremos con una interesante charla 🐍💻:
 
-👉 #StayHome: Modelando Epidemias con Python por Fabio Andrés Pinto Oviedo
-
-🔎 Descripción:
-Estaré explicando el concepto de modelización matemática y los modelos SIR y SEIR para modelado de enfermedades infecciosas utilizando el paquete científico de python.
-
-👉 View and Analyze logs of your applications in Python por José Danilo Sánchez Torres
+👉 Procesamiento de Imágenes con Python por Carlos Alberto Bustillo López
 
 🔎 Descripción:
-Currently it is important to define metrics at the different stages of software development. In our cloud applications and local applications is an added value in our work to use information from the logs generated in our applications in python as part of possible decisions either to fix an error in your application or analyze our application more detailed way
 
+Introducción:
+
+Esta charla será una breve explicación para iniciarse en el amplió campo del procesamiento de imágenes basándonos en la librería OpenCV.
+
+En primera instancia mostraremos un caso de uso sobre un agente racional que aprende, no omnisciente, que al entrenarlo aprenda a partir de sus percepciones y le permita ser autónomo gracias a la experiencia adquirida.
+
+Luego se hablará de las etapas esenciales que se debe tener en cuenta para el procesamiento de imágenes tales como: Adquisición de imágenes; Transformación; Prepocesamiento; Filtración; Extracción de rasgos y Clasificación de objetos.
+
+
+
+El objetivo es que aprendamos las bases del procesamiento de imágenes mediante un ejemplo teórico-práctico. Muy útil cuando tenemos las ganas de arrancar con un proyecto de este tipo pero no sabemos por donde arrancar.
+
+
+
+Presentación:
+
+Yo vivo en la capital del vino Mendoza, Argentina. La provincia, representa más del 60% de la producción de vino del país.
+
+Hay una gran variedad de varietales, y para alguien que no es de la región es difícil reconocer cada uno a simple vista.
+
+Se pueden clasificar a partir de distintas características: color, pH, acidez, momentos de Hu, etc.
+
+Propongo un modelo de juguete para analizar uvas blancas, rosadas y azules.
+
+En el cual  le presentamos una imagen al algoritmo y éste nos diga a qué clase de uva pertenece.
+
+
+
+Recursos:
+
+Se analizaron las clases grape Blue, Pink y White del dataset Fruits 360  en Kaggle.
+
+Ver: https://www.kaggle.com/moltean/fruits

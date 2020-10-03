@@ -1,0 +1,35 @@
+username: carlos-alberto-bustillo-lopez
+---
+email: damiansire@hotmail.com
+---
+last_name: Bustillo López
+---
+name: Carlos Alberto
+---
+type: persona
+---
+image: carlos-bustillo.jpg
+---
+github_handle: cabustillo13
+---
+facebook_handle: carlosalberto.bustillolopez
+---
+information: Soy estudiante avanzado de Ingeniería Mecatrónica en la Universidad Nacional de Cuyo en Mendoza, Argentina. Me interesa mucho el tema del procesamiento de imágenes, últimamente he estado realizando proyectos relacionados con el mismo. Participo de la comunidad Python en Español y Python Argentina.
+Y también en el 2019 forme parte del grupo de investigación sobre Desarrollo de videojuegos con el motor Godot en el Instituto de Capacitación Especial y Desarrollo de Ingeniería Asistida por Computadora (CEDIAC) de la Facultad de Ingeniería de la UNCUYO. Donde aplicábamos distintas técnicas de IA a juegos simples.
+
+Proyectos relacionados con el Computer Vision:
+
+- Sistema para clasificación de piezas de   ferretería (2020)
+Es proyecto de visión artificial consiste en la clasificación de piezas metálicas (tornillos, clavos, tuercas y arandelas) en Python. Fue un proyecto final para la cátedra de Inteligencia Artificial 1 de la Facultad de Ingeniería de la UNCUYO.
+
+- Resolvedor de Sudoku mediante visión artificial y algoritmos de Backtracking (2020)
+Es un proyecto personal de investigación en Python para resolver un sudoku de la app para Android "Sudoku" de genina.com. Se toma un screenshot del juego, luego se extrae información útil a partir de visión artificial y posteriormente se analiza con un algoritmo de satisfacción de restricciones con backtracking.
+Adjunto mi publicación al respecto: https://medium.com/@carlosbustillo/solve-sudoku-9x9-with-computer-vision-and-a-constraint-satisfaction-algorithm-in-python-7bb27769c1eb
+
+- Sistema de clasificación de clases de uva (2020)
+Es un proyecto personal para agilizar la clasificación de varietales de uva en Mendoza, Argentina mediante visión artificial.
+Adjunto presentación para el canal de youtube DevTeam504: https://www.youtube.com/watch?v=5THIT2mFFNA
+
+- Reconocimiento de movimiento aplicado a los videojuegos para evitar el Sedentarismo (2020)
+Consiste en realizar un object Tracking del usuario, analizar, interpretar y realizar un acción el teclado para que realice un movimiento en el videojuegos.
+Adjunto mi charla sobre el tema en el Freedom Software Day: http://wiki.softwarefreedomday.org/2020/Argentina/Salta/SaltaLUG
