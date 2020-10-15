@@ -130,8 +130,8 @@ ___
 
 💪 Colaboradores
 
-|[<img src="https://avatars3.githubusercontent.com/u/14989202?s=400&v=4" width="100px;"/><br /><sub><b>Alejandro E. Rendon</b></sub>](https://github.com/aerendon)|
-| :---: |
+|[<img src="https://avatars3.githubusercontent.com/u/14989202?s=400&v=4" width="100px;"/><br /><sub><b>Alejandro E. Rendon</b></sub>](https://github.com/aerendon)| [<img src="https://avatars3.githubusercontent.com/u/17128791?s=460&u=af957f800bb089c0cdd16792fc1f930e6bc587dd&v=4" width="100px;"/><br /><sub><b>Carolina Gómez T</b></sub>](https://github.com/carogomezt)|
+| :---: | :---: |
 
 </div>
 
