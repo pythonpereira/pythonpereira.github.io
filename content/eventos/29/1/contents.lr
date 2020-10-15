@@ -1,0 +1,29 @@
+title: Procesamiento de Imágenes con Python
+---
+information: Esta charla será una breve explicación para iniciarse en el amplió campo del procesamiento de imágenes basándonos en la librería OpenCV.
+En primera instancia mostraremos un caso de uso sobre un agente racional que aprende, no omnisciente, que al entrenarlo aprenda a partir de sus percepciones y le permita ser autónomo gracias a la experiencia adquirida.
+Luego se hablará de las etapas esenciales que se debe tener en cuenta para el procesamiento de imágenes tales como: Adquisición de imágenes; Transformación; Prepocesamiento; Filtración; Extracción de rasgos y Clasificación de objetos.
+
+El objetivo es que aprendamos las bases del procesamiento de imágenes mediante un ejemplo teórico-práctico. Muy útil cuando tenemos las ganas de arrancar con un proyecto de este tipo pero no sabemos por donde arrancar.
+
+Presentación:
+Yo vivo en la capital del vino Mendoza, Argentina. La provincia, representa más del 60% de la producción de vino del país.
+Hay una gran variedad de varietales, y para alguien que no es de la región es difícil reconocer cada uno a simple vista.
+Se pueden clasificar a partir de distintas características: color, pH, acidez, momentos de Hu, etc.
+Propongo un modelo de juguete para analizar uvas blancas, rosadas y azules.
+En el cual le presentamos una imagen al algoritmo y éste nos diga a qué clase de uva pertenece.
+
+Recursos:
+Se analizaron las clases grape Blue, Pink y White del dataset Fruits 360 en Kaggle.
+Ver: https://www.kaggle.com/moltean/fruits
+---
+slides_url: https://github.com/cabustillo13/Charla-procesamiento-de-imagenes
+---
+speakers:
+
+#### user ####
+username: carlos-alberto-bustillo-lopez
+----
+description:
+---
+video_code: cxC5dsKriqs

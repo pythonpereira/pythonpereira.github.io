@@ -1,0 +1,14 @@
+title: GINO orm: orm para trabajar con asyncio
+---
+information: Trata sobre las necesidades de un orm para trabajar con asyncio y la solución brindada por Gino, también de los planes que tenemos como mantenedores de la librería.
+---
+slides_url: https://drive.google.com/file/d/1eEd5uy4wOL8hjEeueM0i_vQrGKg0Cihm/view
+---
+speakers:
+
+#### user ####
+username: pedro-rivera
+----
+description:
+---
+video_code: LOC3lOyIeJE
