@@ -60,9 +60,9 @@
               <a href="">python.pereira@gmail.com</a></span>
           </h1>
         </div>
+        <div class="col-md-4">
         {% set events = site.query('/eventos', alt=this.alt).filter(F.success).filter(F.post) %}
         {% if events %}
-          <div class="col-md-4">
             {% for event in events %}
               <div class="card-event">
                 <div class="row">
@@ -90,8 +90,11 @@
                 </div>
               </div>
             {% endfor %}
-          </div>
         {% endif %}
+              <div class="row justify-content-center">
+                <a href="{{ '/charlas'|url(alt=this.alt) }}" class="btn btn-primary btn-lg">¡Póstula tu Charla!</a>
+              </div>
+        </div>
       </div>
     </div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-sticky navbar-default">
