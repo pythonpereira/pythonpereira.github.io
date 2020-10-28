@@ -2,6 +2,8 @@ title: Regresión Lineal - Más allá del R^2
 ---
 information: La regresión lineal es quizás el modelo matemático más utilizado como primera aproximación para encontrar la relación entre dos variables, también es la base conceptual para muchos modelos más avanzados de Machine Learning, sin embargo, pocas veces se exploran todos los aspectos que se deben tener en cuenta para fijar un parámetro de confiabilidad en sus resultados, en esta charla se busca explorar los supuestos de la regresión y varias de sus aplicaciones.
 ---
+slides_url: https://github.com/delany-ramirez/charlas/tree/main/PyPereira_LR
+---
 speakers:
 
 #### user ####
